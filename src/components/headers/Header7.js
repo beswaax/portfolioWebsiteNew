@@ -140,7 +140,7 @@ export default function Header(props) {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Fade in={true} timeout={1000}>
+              <Grow in={true} timeout={1000} mountOnEnter>
                 <Image
                   src={content["image"]}
                   width={512}
@@ -149,7 +149,7 @@ export default function Header(props) {
                   align={matchesSM ? "center" : "inherit"}
                   layout={matchesXS ? "" : matchesSM ? "fixed" : "responsive"}
                 />
-              </Fade>
+              </Grow>
             </Grid>
           </Grid>
         </Box>

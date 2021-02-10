@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Image from "next/image";
 import { useTheme } from "@material-ui/styles";
-import { useMediaQuery } from "@material-ui/core";
+import { Grow, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -40,15 +40,21 @@ export default function Content(props) {
         <Box py={12}>
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Grid item xs={12} md={6}>
-              <Image
-                src={content["image"]}
-                width={512}
-                height={matchesSM ? 300 : 300}
-                align={matchesSM ? "center" : "inherit"}
-                layout={
-                  matchesXS ? "responsive" : matchesSM ? "fixed" : "responsive"
-                }
-              />
+              <Grow in={true} mountOnEnter timeout={1000}>
+                <Image
+                  src={content["image"]}
+                  width={512}
+                  height={matchesSM ? 300 : 300}
+                  align={matchesSM ? "center" : "inherit"}
+                  layout={
+                    matchesXS
+                      ? "responsive"
+                      : matchesSM
+                      ? "fixed"
+                      : "responsive"
+                  }
+                />
+              </Grow>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box display="flex" height="100%">

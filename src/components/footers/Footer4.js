@@ -82,10 +82,10 @@ export default function Footer(props) {
       width: 210,
     },
     copy: "© 2021 RangoJango. All rights reserved.",
-    link1: "About",
-    link2: "Services",
-    link3: "Contact",
-    link4: "Privacy Policy",
+    link1: "Home",
+    link2: "About",
+    link3: "Services",
+    link4: "Contact Us",
     ...props.content,
   };
 
@@ -114,25 +114,21 @@ export default function Footer(props) {
             {brand}
           </Link>
           <Box component="nav" ml="auto" className={classes.footerNav}>
-            <Link href="/about" variant="body1" className={classes.footerLink}>
+            <Link href="/" variant="body1" className={classes.footerLink}>
               {content["link1"]}
+            </Link>
+            <Link href="/about" variant="body1" className={classes.footerLink}>
+              {content["link2"]}
             </Link>
             <Link
               href="/services"
               variant="body1"
               className={classes.footerLink}
             >
-              {content["link2"]}
-            </Link>
-            <Link
-              href="/contact"
-              variant="body1"
-              className={classes.footerLink}
-            >
               {content["link3"]}
             </Link>
             <Link
-              href="/privacy-policy"
+              href="/contact"
               variant="body1"
               className={classes.footerLink}
             >
@@ -156,19 +152,27 @@ export default function Footer(props) {
             {content["copy"]}
           </Typography>
           <Box ml="auto" className={classes.icons}>
-            <IconButton className={classes.icon} aria-label="Facebook">
-              <FacebookIcon />
-            </IconButton>
+            {/*
+        <IconButton className={classes.icon} aria-label="Facebook">
+          <FacebookIcon />
+        </IconButton>
+        */}
             <IconButton
+              disableRipple
+              component={"a"}
+              href="https://www.instagram.com/rangojangoweb/"
+              target="_blank"
               style={{ marginLeft: "0.3rem", marginRight: "0.3rem" }}
               className={classes.icon}
               aria-label="Instagram"
             >
               <InstagramIcon />
             </IconButton>
+            {/*
             <IconButton className={classes.icon} aria-label="LinkedIn">
               <LinkedInIcon />
             </IconButton>
+              */}
           </Box>
         </Box>
       </Container>

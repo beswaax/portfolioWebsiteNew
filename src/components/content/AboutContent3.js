@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Image from "next/image";
 import { useTheme } from "@material-ui/styles";
-import { Fade, Hidden, useMediaQuery } from "@material-ui/core";
+import { Fade, Grow, Hidden, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -35,7 +35,7 @@ export default function Content(props) {
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Hidden mdUp>
               <Grid item xs={12} md={6}>
-                <Fade in={true} timeout={1000}>
+                <Grow mountOnEnter in={true} timeout={1000}>
                   <Image
                     src={content["image"]}
                     width={512}
@@ -49,7 +49,7 @@ export default function Content(props) {
                         : "responsive"
                     }
                   />
-                </Fade>
+                </Grow>
               </Grid>
             </Hidden>
             <Grid item xs={12} md={6}>
@@ -75,7 +75,7 @@ export default function Content(props) {
             </Grid>
             <Hidden smDown>
               <Grid item xs={12} md={6}>
-                <Fade in={true} timeout={1000}>
+                <Grow in={true} mountOnEnter timeout={1000}>
                   <Image
                     src={content["image"]}
                     width={512}
@@ -89,7 +89,7 @@ export default function Content(props) {
                         : "responsive"
                     }
                   />
-                </Fade>
+                </Grow>
               </Grid>
             </Hidden>
           </Grid>

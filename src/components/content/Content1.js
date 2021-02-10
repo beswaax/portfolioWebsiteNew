@@ -5,11 +5,10 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
+i;
 import Link from "../../Link";
 import Image from "next/image";
-import { Fade, Hidden, useMediaQuery, useTheme } from "@material-ui/core";
+import { Grow, Hidden, useMediaQuery, useTheme } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -58,7 +57,7 @@ export default function Content(props) {
                 align="center"
                 sm={12}
               >
-                <Fade in={true} timeout={1000}>
+                <Grow mountOnEnter in={true} timeout={1000}>
                   <Image
                     src={content["image"]}
                     width={512}
@@ -72,7 +71,7 @@ export default function Content(props) {
                         : "responsive"
                     }
                   />
-                </Fade>
+                </Grow>
               </Grid>
             </Hidden>
             <Grid item xs={12} md={6}>
@@ -124,7 +123,7 @@ export default function Content(props) {
                 md={6}
                 sm={12}
               >
-                <Fade in={true} timeout={1000}>
+                <Grow mountOnEnter in={true} timeout={1000}>
                   <Image
                     src={content["image"]}
                     width={512}
@@ -138,7 +137,7 @@ export default function Content(props) {
                         : "responsive"
                     }
                   />
-                </Fade>
+                </Grow>
               </Grid>
             </Hidden>
           </Grid>

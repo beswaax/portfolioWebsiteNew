@@ -35,7 +35,7 @@ export default function Content(props) {
         <Box py={12}>
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Grid item xs={12} md={6}>
-              <Fade in={true} timeout={1000}>
+              <Grow in={true} mountOnEnter timeout={1000}>
                 <Image
                   src={content["image"]}
                   width={512}
@@ -49,7 +49,7 @@ export default function Content(props) {
                       : "responsive"
                   }
                 />
-              </Fade>
+              </Grow>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box display="flex" height="100%">
