@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Link from "../../Link";
-import { Fade, useMediaQuery } from "@material-ui/core";
+import { Grow, useMediaQuery } from "@material-ui/core";
 import Image from "next/image";
 
 const useStyles = makeStyles((theme) => ({
