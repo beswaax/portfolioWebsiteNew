@@ -30,7 +30,7 @@
     "postbuild": "node scripts/sitemap.js"
   },
   "devDependencies": {
-    "eslint": "^7.15.0",
+    "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1"
   }
 }

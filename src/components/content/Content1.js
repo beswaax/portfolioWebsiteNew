@@ -5,7 +5,6 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-i;
 import Link from "../../Link";
 import Image from "next/image";
 import { Grow, Hidden, useMediaQuery, useTheme } from "@material-ui/core";
