@@ -25,6 +25,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "postbuild": "node scripts/sitemap.js"
   },
