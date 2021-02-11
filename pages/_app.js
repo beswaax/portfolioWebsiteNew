@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
@@ -7,6 +7,7 @@ import Footer from "../src/components/footers/Footer4";
 import theme from "../src/theme";
 import { useRouter } from "next/router";
 import { PageTransition } from "next-page-transitions";
+import * as gtag from "../lib/gtag";
 
 const App = (props) => {
   const { Component, pageProps } = props;
@@ -32,6 +33,16 @@ const App = (props) => {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <React.Fragment>

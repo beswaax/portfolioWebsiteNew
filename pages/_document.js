@@ -4,6 +4,7 @@ import { StylesProvider } from "@material-ui/core/styles";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import theme from "../src/theme";
 import { JssProvider } from "react-jss";
+import { GA_TRACKING_ID } from "../lib/gtag";
 
 export default class MyDocument extends Document {
   render() {
@@ -37,6 +38,22 @@ export default class MyDocument extends Document {
             type="image/png"
             sizes="16x16"
             href="/favicon/favicon-16x16.png"
+          />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
           />
           <link rel="manifest" href="/favicon/site.webmanifest" />
         </Head>
