@@ -116,6 +116,9 @@ export default function Header(props) {
                         variant="contained"
                         color="primary"
                         component={Link}
+                        disableRipple
+                        disableFocusRipple
+                        disableTouchRipple
                         href="/contact"
                         className={classes.primaryAction}
                       >
@@ -124,6 +127,9 @@ export default function Header(props) {
                       <Button
                         variant="contained"
                         component={Link}
+                        disableRipple
+                        disableFocusRipple
+                        disableTouchRipple
                         href="/about"
                         style={{
                           color: theme.palette.white,
