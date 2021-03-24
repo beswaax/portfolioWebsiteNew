@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1rem",
     paddingTop: 20,
     paddingBottom: 20,
+    border: "1px solid lightgray",
+    borderRadius: 20,
     "&:hover": {
       backgroundColor: "#FFFFFF",
     },
@@ -61,6 +63,8 @@ const useStyles = makeStyles((theme) => ({
   },
   collapse: {
     backgroundColor: "#FFFFFF",
+    border: "1px solid lightgray",
+    borderRadius: 20,
   },
   button: {
     backgroundColor: [theme.palette.common.redNice],

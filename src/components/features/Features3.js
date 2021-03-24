@@ -75,7 +75,7 @@ export default function Features(props) {
   };
 
   return (
-    <section className={classes.section}>
+    <section className={classes.section} data-aos="fade-right">
       <Container maxWidth="lg">
         <Box py={6}>
           <Grid container spacing={matchesSM ? 4 : 6}>

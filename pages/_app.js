@@ -8,6 +8,7 @@ import theme from "../src/theme";
 import { useRouter } from "next/router";
 import { PageTransition } from "next-page-transitions";
 import * as gtag from "../lib/gtag";
+import AOS from "aos";
 
 const App = (props) => {
   const { Component, pageProps } = props;
@@ -43,6 +44,15 @@ const App = (props) => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      delay: 50,
+      duration: 500,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   return (
     <React.Fragment>

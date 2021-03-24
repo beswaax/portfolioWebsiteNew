@@ -20,7 +20,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
     marginTop: "1rem",
     paddingTop: 20,
+    paddingLeft: 14,
     paddingBottom: 20,
+    borderRadius: 20,
+    border: "1px solid lightgray",
     "&:hover": {
       backgroundColor: "#FFFFFF",
     },
@@ -60,6 +63,9 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
   },
   collapse: {
+    borderRadius: 20,
+    border: "1px solid lightgray",
+    borderTop: "0",
     backgroundColor: "#FFFFFF",
   },
   button: {
@@ -114,8 +120,6 @@ export default function Team() {
     },
   ];
 
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
-
   return (
     <Grid
       container
@@ -146,6 +150,9 @@ export default function Team() {
                   key={member.name}
                   button
                   disableRipple
+                  disableTouchRipple
+                  disableFocusRipple
+                  disableGutters
                   onClick={() => member.setOpenPosition(!member.openPosition)}
                   className={classes.listItem}
                 >

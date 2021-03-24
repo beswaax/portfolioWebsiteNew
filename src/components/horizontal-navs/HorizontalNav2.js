@@ -174,6 +174,8 @@ export default function Navigation({ tabValue, setTabValue }) {
           edge="start"
           color="inherit"
           aria-label="menu"
+          disableRipple
+          disableTouchRipple
           className={classes.menuButton}
           onClick={toggleDrawer(!state.open)}
         >
@@ -205,6 +207,9 @@ export default function Navigation({ tabValue, setTabValue }) {
           <List>
             <ListItem
               className={classes.listItem}
+              disableRipple
+              disableTouchRipple
+              disableFocusRipple
               button
               key={content["link1"]}
               selected={tabValue === 0}
@@ -216,6 +221,9 @@ export default function Navigation({ tabValue, setTabValue }) {
             </ListItem>
             <ListItem
               className={classes.listItem}
+              disableRipple
+              disableTouchRipple
+              disableFocusRipple
               button
               key={content["link2"]}
               selected={tabValue === 1}
@@ -227,6 +235,9 @@ export default function Navigation({ tabValue, setTabValue }) {
             </ListItem>
             <ListItem
               className={classes.listItem}
+              disableRipple
+              disableTouchRipple
+              disableFocusRipple
               button
               key={content["link3"]}
               selected={tabValue === 2}
@@ -238,6 +249,9 @@ export default function Navigation({ tabValue, setTabValue }) {
             </ListItem>
             <ListItem
               className={classes.listItem}
+              disableRipple
+              disableTouchRipple
+              disableFocusRipple
               button
               key={content["link4"]}
               selected={tabValue === 3}
