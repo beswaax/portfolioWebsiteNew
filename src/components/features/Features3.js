@@ -16,7 +16,6 @@ import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    backgroundImage: 'url("nereus-assets/img/bg/pattern1.png")',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     marginTop: "2rem",
@@ -75,7 +74,7 @@ export default function Features(props) {
   };
 
   return (
-    <section className={classes.section} data-aos="fade-right">
+    <section className={classes.section} data-aos="fade-up">
       <Container maxWidth="lg">
         <Box py={6}>
           <Grid container spacing={matchesSM ? 4 : 6}>

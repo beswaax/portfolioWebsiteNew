@@ -157,14 +157,13 @@ export default function Team() {
     },
   ];
 
-  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
-
   return (
     <Grid
       container
       justify="center"
       direction="column"
       alignItems="center"
+      data-aos="fade-up"
       style={{ marginTop: "3rem", paddingBottom: "10rem" }}
     >
       {/* Team List */}
@@ -184,9 +183,8 @@ export default function Team() {
         >
           {teamData.map((member, i) => {
             return (
-              <>
+              <div key={member.question}>
                 <ListItem
-                  key={member.name}
                   button
                   disableRipple
                   onClick={() => member.setOpenPosition(!member.openPosition)}
@@ -223,7 +221,7 @@ export default function Team() {
                     </ListItem>
                   </List>
                 </Collapse>
-              </>
+              </div>
             );
           })}
         </List>

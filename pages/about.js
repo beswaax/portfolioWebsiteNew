@@ -7,7 +7,6 @@ import Content2 from "../src/components/content/AboutContent2";
 import Content3 from "../src/components/content/AboutContent3";
 import FAQ from "../src/components/FAQ/FAQ";
 import CallToAction from "../src/components/call-to-action/CallToAction2";
-import Contact from "../src/components/contacts/Contact1";
 
 const useStyles = makeStyles((theme) => ({
   bodyMargin: {
@@ -18,8 +17,6 @@ const useStyles = makeStyles((theme) => ({
 const About = ({ tabValue, setTabValue }) => {
   const classes = useStyles();
   const theme = useTheme();
-
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className={classes.bodyMargin}>

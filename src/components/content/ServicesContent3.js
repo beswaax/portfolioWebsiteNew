@@ -41,21 +41,20 @@ export default function Content(props) {
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Hidden mdUp>
               <Grid item xs={12} md={6}>
-                <Grow in={true} mountOnEnter timeout={1000}>
-                  <Image
-                    src={content["image"]}
-                    width={512}
-                    height={matchesSM ? 300 : 390}
-                    align={matchesSM ? "center" : "inherit"}
-                    layout={
-                      matchesXS
-                        ? "responsive"
-                        : matchesSM
-                        ? "fixed"
-                        : "responsive"
-                    }
-                  />
-                </Grow>
+                <Image
+                  src={content["image"]}
+                  data-aos="fade-up"
+                  width={512}
+                  height={matchesSM ? 300 : 390}
+                  align={matchesSM ? "center" : "inherit"}
+                  layout={
+                    matchesXS
+                      ? "responsive"
+                      : matchesSM
+                      ? "fixed"
+                      : "responsive"
+                  }
+                />
               </Grid>
             </Hidden>
             <Grid item xs={12} md={6}>
@@ -81,21 +80,20 @@ export default function Content(props) {
             </Grid>
             <Hidden smDown>
               <Grid item xs={12} md={6}>
-                <Grow in={true} mountOnEnter timeout={1000}>
-                  <Image
-                    src={content["image"]}
-                    width={512}
-                    height={matchesSM ? 300 : 390}
-                    align={matchesSM ? "center" : "inherit"}
-                    layout={
-                      matchesXS
-                        ? "responsive"
-                        : matchesSM
-                        ? "fixed"
-                        : "responsive"
-                    }
-                  />
-                </Grow>
+                <Image
+                  src={content["image"]}
+                  width={512}
+                  data-aos="fade-up"
+                  height={matchesSM ? 300 : 390}
+                  align={matchesSM ? "center" : "inherit"}
+                  layout={
+                    matchesXS
+                      ? "responsive"
+                      : matchesSM
+                      ? "fixed"
+                      : "responsive"
+                  }
+                />
               </Grid>
             </Hidden>
           </Grid>

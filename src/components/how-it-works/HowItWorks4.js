@@ -66,7 +66,7 @@ export default function HowItWorks(props) {
       "Start generating more traffic and more interest in your business today.",
   };
   return (
-    <section className={classes.section}>
+    <section className={classes.section} data-aos="fade-up">
       <Container maxWidth="lg">
         <Box py={10} textAlign="center">
           <Box mb={8}>

@@ -94,7 +94,7 @@ export default function Contact(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <section style={{ paddingBottom: "0rem" }}>
+    <section style={{ paddingBottom: "5rem" }} data-aos="fade-up">
       <Container maxWidth="md">
         <Box pt={8} pb={10}>
           <Box mb={6} textAlign="center">

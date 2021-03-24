@@ -1,14 +1,11 @@
 import React from "react";
-import { makeStyles, useMediaQuery, useTheme } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core";
 import Head from "next/head";
 import PageHeader from "../src/components/headers/PageHeader";
-//import Content1 from "../src/components/content/ServicesContent1";
-//import Content2 from "../src/components/content/ServicesContent2";
 import Content3 from "../src/components/content/ServicesContent3";
 import Content4 from "../src/components/content/ServicesContent4";
 import FAQ from "../src/components/FAQ/ServicesFAQ";
 import CallToAction from "../src/components/call-to-action/CallToAction2";
-//import Contact from "../src/components/contacts/Contact1";
 
 const useStyles = makeStyles((theme) => ({
   bodyMargin: {
@@ -19,8 +16,6 @@ const useStyles = makeStyles((theme) => ({
 const Services = ({ tabValue, setTabValue }) => {
   const classes = useStyles();
   const theme = useTheme();
-
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className={classes.bodyMargin}>

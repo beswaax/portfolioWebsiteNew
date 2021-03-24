@@ -9,7 +9,6 @@ import Link from "../../Link";
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    backgroundImage: 'url("nereus-assets/img/bg/pattern2.png")',
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundColor: theme.palette.heavyBlue,

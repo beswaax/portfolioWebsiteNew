@@ -40,21 +40,16 @@ export default function Content(props) {
         <Box py={12}>
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Grid item xs={12} md={6}>
-              <Grow in={true} mountOnEnter timeout={1000}>
-                <Image
-                  src={content["image"]}
-                  width={512}
-                  height={matchesSM ? 300 : 300}
-                  align={matchesSM ? "center" : "inherit"}
-                  layout={
-                    matchesXS
-                      ? "responsive"
-                      : matchesSM
-                      ? "fixed"
-                      : "responsive"
-                  }
-                />
-              </Grow>
+              <Image
+                src={content["image"]}
+                width={512}
+                data-aos="fade-up"
+                height={matchesSM ? 300 : 300}
+                align={matchesSM ? "center" : "inherit"}
+                layout={
+                  matchesXS ? "responsive" : matchesSM ? "fixed" : "responsive"
+                }
+              />
             </Grid>
             <Grid item xs={12} md={6}>
               <Box display="flex" height="100%">

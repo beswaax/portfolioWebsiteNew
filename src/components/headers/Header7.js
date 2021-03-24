@@ -70,9 +70,9 @@ export default function Header(props) {
         <Box pt={8} pb={6}>
           <Grid
             container
-            direction={matchesSM ? "column" : "inherit"}
-            justify={matchesSM ? "center" : "inherit"}
-            alignItems={matchesSM ? "center" : "inherit"}
+            direction={matchesSM ? "column" : "row"}
+            justify={matchesSM ? "center" : "center"}
+            alignItems={matchesSM ? "center" : "center"}
             spacing={4}
           >
             <Grid item xs={12} md={6}>
@@ -146,16 +146,15 @@ export default function Header(props) {
               </Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Grow in={true} timeout={1000} mountOnEnter>
-                <Image
-                  src={content["image"]}
-                  width={512}
-                  className={classes.img}
-                  height={matchesSM ? 370 : 390}
-                  align={matchesSM ? "center" : "inherit"}
-                  layout={matchesXS ? "" : matchesSM ? "fixed" : "responsive"}
-                />
-              </Grow>
+              <Image
+                src={content["image"]}
+                width={512}
+                className={classes.img}
+                height={matchesSM ? 370 : 390}
+                align={matchesSM ? "center" : "inherit"}
+                layout={matchesXS ? "" : matchesSM ? "fixed" : "responsive"}
+                data-aos="fade-up"
+              />
             </Grid>
           </Grid>
         </Box>

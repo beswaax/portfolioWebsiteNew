@@ -127,6 +127,7 @@ export default function Team() {
       direction="column"
       alignItems="center"
       style={{ marginTop: "3rem", paddingBottom: "10rem" }}
+      data-aos="fade-up"
     >
       {/* Team List */}
       <Grid item style={{ maxWidth: "80rem", padding: 11, width: "100%" }}>
@@ -145,13 +146,11 @@ export default function Team() {
         >
           {teamData.map((member, i) => {
             return (
-              <>
+              <div key={member.question}>
                 <ListItem
-                  key={member.name}
                   button
                   disableRipple
                   disableTouchRipple
-                  disableFocusRipple
                   disableGutters
                   onClick={() => member.setOpenPosition(!member.openPosition)}
                   className={classes.listItem}
@@ -187,7 +186,7 @@ export default function Team() {
                     </ListItem>
                   </List>
                 </Collapse>
-              </>
+              </div>
             );
           })}
         </List>

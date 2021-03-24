@@ -35,7 +35,7 @@ export default function Contact(props) {
   };
 
   return (
-    <section>
+    <section data-aos="fade-up">
       <Container maxWidth="lg">
         <Box py={10}>
           <Grid container spacing={3}>

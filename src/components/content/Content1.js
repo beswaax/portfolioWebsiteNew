@@ -43,7 +43,7 @@ export default function Content(props) {
   };
 
   return (
-    <section data-aos="fade-right">
+    <section data-aos="fade-up">
       <Container maxWidth="lg">
         <Box py={12}>
           <Grid container spacing={2}>

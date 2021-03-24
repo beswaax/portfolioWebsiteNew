@@ -10,6 +10,8 @@ import { PageTransition } from "next-page-transitions";
 import * as gtag from "../lib/gtag";
 import AOS from "aos";
 
+import "aos/dist/aos.css";
+
 const App = (props) => {
   const { Component, pageProps } = props;
   const router = useRouter();
@@ -65,7 +67,7 @@ const App = (props) => {
       </Head>
       <ThemeProvider theme={theme}>
         <Navbar tabValue={tabValue} setTabValue={setTabValue} />
-        <PageTransition timeout={300} classNames="page-transition">
+        <PageTransition timeout={100} classNames="page-transition">
           <Component
             {...pageProps}
             tabValue={tabValue}
