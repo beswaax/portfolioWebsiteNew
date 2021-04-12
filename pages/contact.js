@@ -34,8 +34,8 @@ const LandingPage = ({ tabValue, setTabValue }) => {
           content="Contact | RangoJango Web Design & Development"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="/contact" />
-        <link rel="canonical" key="canonical" href="rangojango.com/contact" />
+        <meta property="og:url" key="og:url" content="rangojango.com/contact" />
+        <link rel="canonical" key="canonical" href="/contact" />
       </Head>
       <Header text={"Contact Us"} />
       <div style={{ marginTop: "5rem" }}></div>
