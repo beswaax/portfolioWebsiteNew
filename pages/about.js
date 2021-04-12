@@ -27,7 +27,7 @@ const About = ({ tabValue, setTabValue }) => {
         <meta
           name="description"
           key="description"
-          content="Are you looking for web design or web development in Europe? We feel that we can provide one of the best experiences when it comes to web development, web design and SEO."
+          content="Are you looking for web design or web development in Europe and North America? We provide one of the best experiences when it comes to web development, web design and SEO."
         />
         <meta
           name="keywords"

@@ -27,7 +27,7 @@ const LandingPage = ({ tabValue, setTabValue }) => {
         <meta
           name="description"
           key="description"
-          content="One of the best web development & web design companies in Europe and North America. We are a team of experienced developers and designers from Germany. We feel that we can provide one of the best experiences when it comes to web development, UI-UX design and SEO."
+          content="One of the best web development & web design companies in Europe and North America. We are a team of experienced developers and designers from Europe."
         />
         <meta
           name="keywords"
