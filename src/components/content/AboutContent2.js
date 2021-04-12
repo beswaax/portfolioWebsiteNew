@@ -36,6 +36,7 @@ export default function Content(props) {
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Grid item xs={12} md={6}>
               <Image
+                alt="a lady jumping up with a website behind her"
                 src={content["image"]}
                 width={512}
                 height={matchesSM ? 300 : 390}

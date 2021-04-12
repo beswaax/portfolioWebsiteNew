@@ -43,7 +43,11 @@ export default function CTA({ text }) {
         <Box py={8}>
           <Grid container spacing={4}>
             <Grid item xs={12} md={7}>
-              <Typography variant="h2" className={classes.description}>
+              <Typography
+                variant="h2"
+                component="h1"
+                className={classes.description}
+              >
                 {text}
               </Typography>
             </Grid>

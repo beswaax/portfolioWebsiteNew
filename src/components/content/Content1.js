@@ -58,6 +58,7 @@ export default function Content(props) {
               >
                 <Grow mountOnEnter in={true} timeout={1000}>
                   <Image
+                    alt="a lady with a futuristic design to the left"
                     src={content["image"]}
                     width={512}
                     height={matchesSM ? 300 : 390}

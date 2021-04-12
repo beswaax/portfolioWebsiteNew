@@ -27,15 +27,15 @@ const LandingPage = ({ tabValue, setTabValue }) => {
         <meta
           name="description"
           key="description"
-          content="One of the best web development & web design companies in Europe. We are a team of experienced developers and designers from Germany. We feel that we can provide one of the best experiences when it comes to web development, UI-UX design and SEO."
+          content="One of the best web development & web design companies in Europe and North America. We are a team of experienced developers and designers from Germany. We feel that we can provide one of the best experiences when it comes to web development, UI-UX design and SEO."
         />
         <meta
           name="keywords"
-          content="seo europe, best seo in germany,best seo europe, web design germany, web designer germany, web development germany, web development europe, web design europe, web developer germany, web developer europe, best website design europe, best website design europe"
+          content="seo vancouver, best seo in vancouver, best seo europe, best vancouver web design, canada web design, ux design canada, vancouver seo, vancouver web design, toronto web design, germany web design, best canada web design, web design london, best web design london, web designer vancouver, web designer london, web designer toronto, web development united kingdom, web design manchester, web dev north america, usa web design, web design seattle, web dev seattle, seo usa, seo canada, best seo london, deutschland web design, frankfurt web design, frankfurt web dev, frankfurt webseiten design, frankfurt seo, deutschland webseiten machen, deutschland web design, web development germany, web design europe, web developer toronto, germany web developer, vancouver web developer, web developer canada, web developer north america, best website design europe, best website design toronto, best web design vancouver, best web design london, ecommerce build vancouver, ecommerce help toronto, ecommerce europe build, ecommerce north america build"
         />
         <meta
           property="og:title"
-          content="RangoJango | Web Design & Development Europe"
+          content="RangoJango | Web Design & Development"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/" />

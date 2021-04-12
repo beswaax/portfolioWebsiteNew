@@ -5,6 +5,7 @@ import {
   makeStyles,
   useTheme,
   Typography,
+  Container,
 } from "@material-ui/core";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 20,
     paddingBottom: 20,
     border: "1px solid lightgray",
-    borderRadius: 20,
+    borderRadius: 5,
     "&:hover": {
       backgroundColor: "#FFFFFF",
     },
@@ -64,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   collapse: {
     backgroundColor: "#FFFFFF",
     border: "1px solid lightgray",
-    borderRadius: 20,
+    borderRadius: 5,
   },
   button: {
     backgroundColor: [theme.palette.common.redNice],
@@ -167,65 +168,74 @@ export default function Team() {
       style={{ marginTop: "3rem", paddingBottom: "10rem" }}
     >
       {/* Team List */}
-      <Grid item style={{ maxWidth: "80rem", padding: 11, width: "100%" }}>
-        <Grid item>
-          <Typography variant="h3" align="center">
-            FAQ
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary" align="center">
-            Here are some of our most frequently asked questions and answers.
-          </Typography>
-        </Grid>
-        <List
-          component="nav"
-          aria-labelledby="nested-list-subheader"
-          className={classes.root}
-        >
-          {teamData.map((member, i) => {
-            return (
-              <div key={member.question}>
-                <ListItem
-                  button
-                  disableRipple
-                  onClick={() => member.setOpenPosition(!member.openPosition)}
-                  className={classes.listItem}
-                >
-                  <Grid container direction={matchesTeam ? "column" : "row"}>
-                    <Grid item>
-                      <Typography className={classes.listeText}>
-                        {member.question}
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                  {member.openPosition ? (
-                    <ExpandLess className={classes.expand} />
-                  ) : (
-                    <ExpandMore className={classes.expand} />
-                  )}
-                </ListItem>
-                <Collapse
-                  className={classes.collapse}
-                  in={member.openPosition}
-                  timeout="auto"
-                  unmountOnExit
-                >
-                  <List component="div" disablePadding>
-                    <ListItem key={member.position} className={classes.nested}>
-                      <Grid container direction="column">
-                        <Grid item>
-                          <Typography className={classes.responseText}>
-                            {member.answer}
-                          </Typography>
-                        </Grid>
+      <Container maxWidth="lg">
+        <Grid item style={{ width: "100%" }}>
+          <Grid item>
+            <Typography variant="h3" align="center">
+              FAQ
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              color="textSecondary"
+              align="center"
+            >
+              Here are some of our most frequently asked questions and answers.
+            </Typography>
+          </Grid>
+          <List
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+            className={classes.root}
+          >
+            {teamData.map((member, i) => {
+              return (
+                <div key={member.question}>
+                  <ListItem
+                    button
+                    disableRipple
+                    onClick={() => member.setOpenPosition(!member.openPosition)}
+                    className={classes.listItem}
+                  >
+                    <Grid container direction={matchesTeam ? "column" : "row"}>
+                      <Grid item>
+                        <Typography className={classes.listeText}>
+                          {member.question}
+                        </Typography>
                       </Grid>
-                    </ListItem>
-                  </List>
-                </Collapse>
-              </div>
-            );
-          })}
-        </List>
-      </Grid>
+                    </Grid>
+                    {member.openPosition ? (
+                      <ExpandLess className={classes.expand} />
+                    ) : (
+                      <ExpandMore className={classes.expand} />
+                    )}
+                  </ListItem>
+                  <Collapse
+                    className={classes.collapse}
+                    in={member.openPosition}
+                    timeout="auto"
+                    unmountOnExit
+                  >
+                    <List component="div" disablePadding>
+                      <ListItem
+                        key={member.position}
+                        className={classes.nested}
+                      >
+                        <Grid container direction="column">
+                          <Grid item>
+                            <Typography className={classes.responseText}>
+                              {member.answer}
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                      </ListItem>
+                    </List>
+                  </Collapse>
+                </div>
+              );
+            })}
+          </List>
+        </Grid>
+      </Container>
     </Grid>
   );
 }

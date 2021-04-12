@@ -42,6 +42,7 @@ export default function Content(props) {
             <Hidden mdUp>
               <Grid item xs={12} md={6}>
                 <Image
+                  alt="minions editing a website"
                   src={content["image"]}
                   data-aos="fade-up"
                   width={512}
@@ -81,6 +82,7 @@ export default function Content(props) {
             <Hidden smDown>
               <Grid item xs={12} md={6}>
                 <Image
+                  alt="minions editing a website"
                   src={content["image"]}
                   width={512}
                   data-aos="fade-up"

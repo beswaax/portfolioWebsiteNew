@@ -27,7 +27,7 @@ const LandingPage = ({ tabValue, setTabValue }) => {
         />
         <meta
           name="keywords"
-          content="website design, website development, ecommerce germany, ecommerce europe, e-commerce development, web development europe, website design germany, web design, best web design germany, best web developer germany, seo germany, seo europe"
+          content="ecommerce build toronto, help ecommerce london, how build ecommerce vancouver, how build ecommerce usa, build ecommerce europe, build ecommerce canada, website design, website development, ecommerce germany, ecommerce canada, ecommerce usa, ecommerce uk, ecommerce europe, e-commerce development, web development europe, website design germany, web design, best web design germany, best web developer germany, seo germany, seo europe, seo uk, seo canada, seo usa, website design uk, website design canada, website design usa, web dev canada, usa web dev, seo deutschland, web design deutschland"
         />
         <meta
           property="og:title"

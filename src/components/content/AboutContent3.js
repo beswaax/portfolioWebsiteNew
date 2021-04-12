@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Image from "next/image";
 import { useTheme } from "@material-ui/styles";
-import { Fade, Grow, Hidden, useMediaQuery } from "@material-ui/core";
+import { Hidden, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -24,7 +24,7 @@ export default function Content(props) {
   const content = {
     "header-p1": "What Makes Us Different",
     description:
-      "We launched RangoJango, as a response to the limited web development options available worldwide. Simply put, most traditional web design companies focus too much on the design of the website, while we focus on helping you grow your business. A beautiful website does not mean anything if it is not put to good use . We know first hand because we’ve been there. Our experience draws us to the most efficient solution – a solution that meets your needs and ours. We provide a fast, no nonsense turnaround.",
+      "We launched RangoJango, as a response to the limited web development options available worldwide. Simply put, most traditional web design companies focus too much on the design of the website, while we focus on helping you grow your business. A beautiful website does not mean anything if it is not put to good use. We know first hand because we’ve been there. Our experience draws us to the most efficient solution – a solution that meets your needs and ours. We provide a fast, no nonsense turnaround.",
     image: "/assets/devices2.svg",
   };
 
@@ -36,6 +36,7 @@ export default function Content(props) {
             <Hidden mdUp>
               <Grid item xs={12} md={6}>
                 <Image
+                  alt="a lady looking at a website and changing some things on the website"
                   src={content["image"]}
                   width={512}
                   height={matchesSM ? 300 : 390}
@@ -75,6 +76,7 @@ export default function Content(props) {
             <Hidden smDown>
               <Grid item xs={12} md={6}>
                 <Image
+                  alt="a lady looking at a website and changing some things on the website"
                   src={content["image"]}
                   width={512}
                   height={matchesSM ? 300 : 390}

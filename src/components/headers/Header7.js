@@ -82,7 +82,7 @@ export default function Header(props) {
                     <Typography
                       align={matchesSM ? "center" : "inherit"}
                       variant="h3"
-                      component="h2"
+                      component="h1"
                       gutterBottom={true}
                     >
                       <Typography
@@ -154,6 +154,7 @@ export default function Header(props) {
                 align={matchesSM ? "center" : "inherit"}
                 layout={matchesXS ? "" : matchesSM ? "fixed" : "responsive"}
                 data-aos="fade-up"
+                alt="image of a chart and a person"
               />
             </Grid>
           </Grid>

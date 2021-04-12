@@ -31,7 +31,7 @@ const About = ({ tabValue, setTabValue }) => {
         />
         <meta
           name="keywords"
-          content="seo europe, best seo in germany,best seo europe, web design germany, web designer germany, web development germany, web development europe, web design europe, web developer germany, web developer europe, best website design europe, best website design europe"
+          content="seo europe, best seo in europe, best seo canada, best seo usa, web design deutschland, germany web design , web designer deutschland, web development deutschland, web development europe, web design uk, web design canada, web design usa, best seo canada, vancouver seo, london web dev, london web design, web design europe, web developer deutschland, web developer europe, best website design uk, seo uk, london seo, best website design usa"
         />
         <meta
           property="og:title"

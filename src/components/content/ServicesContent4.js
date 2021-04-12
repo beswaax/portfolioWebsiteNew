@@ -41,6 +41,7 @@ export default function Content(props) {
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Grid item xs={12} md={6}>
               <Image
+                alt="a picture showing the logos of yandex, google, yahoo and bing"
                 src={content["image"]}
                 width={512}
                 data-aos="fade-up"
