@@ -39,6 +39,15 @@ const About = ({ tabValue, setTabValue }) => {
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/about" />
+
+        <meta
+          property="og:description"
+          key="og:description"
+          content="Looking for a reliable web design & web development company? We provide one of the best experiences when it comes to web development, web design and SEO."
+        />
+        <meta property="og:locale" key="og:locale" content="en_US" />
+        <meta property="og:type" key="og:type" content="website" />
+
         <link rel="canonical" key="canonical" href="/about" />
       </Head>
       <PageHeader text={"About Us"} />

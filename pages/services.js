@@ -42,6 +42,15 @@ const Services = ({ tabValue, setTabValue }) => {
           key="og:url"
           content="rangojango.com/services"
         />
+
+        <meta
+          property="og:description"
+          key="og:description"
+          content="Developing and designing websites suitable for your digital needs. From simple websites to sophisticated e-commerce systems, we provide our services to clients big and small."
+        />
+        <meta property="og:locale" key="og:locale" content="en_US" />
+        <meta property="og:type" key="og:type" content="website" />
+
         <link rel="canonical" key="canonical" href="/services" />
       </Head>
       <PageHeader text={"Services"} />

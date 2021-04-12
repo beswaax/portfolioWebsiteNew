@@ -39,6 +39,15 @@ const LandingPage = ({ tabValue, setTabValue }) => {
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/" />
+
+        <meta
+          property="og:description"
+          key="og:description"
+          content="One of the best web development & web design companies in Europe and North America. We are a team of experienced developers and designers from Europe."
+        />
+        <meta property="og:locale" key="og:locale" content="en_US" />
+        <meta property="og:type" key="og:type" content="website" />
+
         <link rel="canonical" key="canonical" href="/" />
       </Head>
       <Header />
