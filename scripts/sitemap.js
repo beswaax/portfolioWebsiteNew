@@ -23,7 +23,7 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
     ${
       path === "/index"
         ? `<loc>https://rangojango.com</loc>`
-        : `<loc>https://rangojango.com${path}</loc>`
+        : `<loc>https://${path}</loc>`
     }
     <lastmod>${
       pathsObj[path].lastModified
