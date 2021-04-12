@@ -95,7 +95,11 @@ export default function Navigation({ tabValue, setTabValue }) {
 
   if (content.brand.image) {
     brand = (
-      <img src={content.brand.image} alt="" width={content.brand.width} />
+      <img
+        src={content.brand.image}
+        alt="logo of RangoJango"
+        width={content.brand.width}
+      />
     );
   } else {
     brand = content.brand.text || "";
