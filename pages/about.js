@@ -38,7 +38,7 @@ const About = ({ tabValue, setTabValue }) => {
           content="About Us | RangoJango Web Design & Development"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="rangojango.com/about" />
+        <meta property="og:url" key="og:url" content="/about" />
         <link rel="canonical" key="canonical" href="rangojango.com/about" />
       </Head>
       <PageHeader text={"About Us"} />

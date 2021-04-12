@@ -37,11 +37,7 @@ const Services = ({ tabValue, setTabValue }) => {
           content="Services | RangoJango Web Design & Development"
           key="og:title"
         />
-        <meta
-          property="og:url"
-          key="og:url"
-          content="rangojango.com/services"
-        />
+        <meta property="og:url" key="og:url" content="/services" />
         <link rel="canonical" key="canonical" href="rangojango.com/services" />
       </Head>
       <PageHeader text={"Services"} />

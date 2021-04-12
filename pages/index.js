@@ -38,7 +38,7 @@ const LandingPage = ({ tabValue, setTabValue }) => {
           content="RangoJango | Web Design & Development"
           key="og:title"
         />
-        <meta property="og:url" key="og:url" content="rangojango.com/" />
+        <meta property="og:url" key="og:url" content="/" />
         <link rel="canonical" key="canonical" href="rangojango.com/" />
       </Head>
       <Header />
