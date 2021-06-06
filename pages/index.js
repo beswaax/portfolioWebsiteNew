@@ -27,11 +27,11 @@ const LandingPage = ({ tabValue, setTabValue }) => {
         <meta
           name="description"
           key="description"
-          content="One of the best web development & web design companies in Europe and North America. We are a team of experienced developers and designers from Europe."
+          content="Affordable web design, web development and e-commerce in North America and Europe. We serve dentists, accountants, lawyers, construction companies and many other sectors. Web Design in Vancouver, Toronto, New York and all other major North American cities."
         />
         <meta
           name="keywords"
-          content="seo vancouver, best seo in vancouver, best seo europe, best vancouver web design, canada web design, ux design canada, vancouver seo, vancouver web design, toronto web design, germany web design, best canada web design, web design london, best web design london, web designer vancouver, web designer london, web designer toronto, web development united kingdom, web design manchester, web dev north america, usa web design, web design seattle, web dev seattle, seo usa, seo canada, best seo london, deutschland web design, frankfurt web design, frankfurt web dev, frankfurt webseiten design, frankfurt seo, deutschland webseiten machen, deutschland web design, web development germany, web design europe, web developer toronto, germany web developer, vancouver web developer, web developer canada, web developer north america, best website design europe, best website design toronto, best web design vancouver, best web design london, ecommerce build vancouver, ecommerce help toronto, ecommerce europe build, ecommerce north america build"
+          content="seo vancouver, best seo in vancouver, best seo canada, best vancouver web design, canada web design, ux design canada, vancouver seo, vancouver web design, toronto web design, best canada web design, web design london, best web design london, web designer vancouver, web designer london, web designer toronto, web development united kingdom,web design toronto, web design new york, detists vancouver buidl website, web design manchester, web dev north america, usa web design, web design seattle, web dev seattle, seo usa, seo canada, best seo london, web design, web design europe, web developer toronto, vancouver web developer, web developer canada, web developer north america, best website design europe, best website design toronto, best web design vancouver, best web design london, ecommerce build vancouver, ecommerce help toronto, ecommerce europe build, ecommerce north america build, accountant web design, dentist build website, build website lawyer, construction new website vancouver, vancouver accountant build website, dentist web design, accountant web design, lawyer web design, construction web design, build website accountants, build website lawyers, build website construction, plumber website build, web design plumber"
         />
         <meta
           property="og:title"
@@ -43,7 +43,7 @@ const LandingPage = ({ tabValue, setTabValue }) => {
         <meta
           property="og:description"
           key="og:description"
-          content="One of the best web development & web design companies in Europe and North America. We are a team of experienced developers and designers from Europe."
+          content="Affordable web design, web development and e-commerce in North America and Europe. We serve dentists, accountants, lawyers, construction companies and many other sectors. Web Design in Vancouver, Toronto, New York and all other major North American cities."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

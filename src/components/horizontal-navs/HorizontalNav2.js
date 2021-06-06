@@ -17,7 +17,7 @@ import { useRouter } from "next/router";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    backgroundColor: "#F9FAFB",
+    backgroundColor: theme.palette.backgroundPage,
     zIndex: theme.zIndex.modal + 1,
     boxShadow: "none",
     borderBottom: "1px solid #cccccc",
@@ -84,7 +84,7 @@ export default function Navigation({ tabValue, setTabValue }) {
   const router = useRouter();
 
   const content = {
-    brand: { image: "/assets/vector/default-monochrome.svg", width: 220 },
+    brand: { image: "/assets/vector/logo.svg", width: 200 },
     link1: "Home",
     link2: "About",
     link3: "Services",

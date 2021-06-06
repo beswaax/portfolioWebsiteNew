@@ -22,6 +22,8 @@ const theme = createMuiTheme({
     black: "#000",
     white: "#fff",
     heavyBlue: "#111827",
+    backgroundPage: "#F9FAFB",
+    coolNav: "#EBF2F2",
     primary: {
       main: "#059669",
     },

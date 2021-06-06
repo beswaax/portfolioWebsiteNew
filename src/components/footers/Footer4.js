@@ -78,7 +78,7 @@ export default function Footer(props) {
 
   const content = {
     brand: {
-      image: "/assets/vector/default-monochrome-2.svg",
+      image: "/assets/vector/logo-white.svg",
       width: 210,
     },
     copy: "© 2021 RangoJango. All rights reserved.",
@@ -167,6 +167,16 @@ export default function Footer(props) {
               aria-label="Instagram"
             >
               <InstagramIcon />
+            </IconButton>
+            <IconButton
+              disableRipple
+              target="_blank"
+              style={{ marginLeft: "0.3rem", marginRight: "0.3rem" }}
+              className={classes.icon}
+              aria-label="Instagram"
+              href="https://www.linkedin.com/company/rangojango/"
+            >
+              <LinkedInIcon />
             </IconButton>
             {/*
             <IconButton className={classes.icon} aria-label="LinkedIn">

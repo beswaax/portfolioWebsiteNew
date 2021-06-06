@@ -27,11 +27,11 @@ const About = ({ tabValue, setTabValue }) => {
         <meta
           name="description"
           key="description"
-          content="Looking for a reliable web design & web development company in Canada, Europe, UK or USA? We provide one of the best experiences when it comes to web development, web design and SEO. "
+          content="We are a web agency that specializes in web design, web development, SEO and e-commerce. We are focused on driving quality traffic that can drastically increase your bottom line."
         />
         <meta
           name="keywords"
-          content="seo europe, best seo in europe, best seo canada, best seo usa, web design deutschland, germany web design , web designer deutschland, web development deutschland, web development europe, web design uk, web design canada, web design usa, best seo canada, vancouver seo, london web dev, london web design, web design europe, web developer deutschland, web developer europe, best website design uk, seo uk, london seo, best website design usa"
+          content="seo europe, best seo in europe, best seo canada, best seo usa, web design vancouver, build website vancouver, dentists build website, dentist webdesign, accountant web design, accountant build website, construction website build, construction vancouver website, toronto web design, toronto build website, toronto dentist, toronto webdesign, web designer canada, web development canada,web design uk, web design canada, web design usa, best seo canada, vancouver seo, london web dev, london web design, web design europe, web developer canada, web developer europe, best website design uk, seo uk, london seo, best website design usa"
         />
         <meta
           property="og:title"
@@ -43,7 +43,7 @@ const About = ({ tabValue, setTabValue }) => {
         <meta
           property="og:description"
           key="og:description"
-          content="Looking for a reliable web design & web development company? We provide one of the best experiences when it comes to web development, web design and SEO."
+          content="We are a web agency that specializes in web design, web development, SEO and e-commerce. We are focused on driving quality traffic that can drastically increase your bottom line."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

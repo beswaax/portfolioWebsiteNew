@@ -23,11 +23,11 @@ const LandingPage = ({ tabValue, setTabValue }) => {
         <meta
           name="description"
           key="description"
-          content="Have a web design or web development question? Are you looking for an SEO quote? We can't wait to hear from you."
+          content="Have a web design or web development question? Are you looking for an SEO quote? You want a new website and don't know where to start? We can't wait to hear from you."
         />
         <meta
           name="keywords"
-          content="ecommerce build toronto, help ecommerce london, how build ecommerce vancouver, how build ecommerce usa, build ecommerce europe, build ecommerce canada, website design, website development, ecommerce germany, ecommerce canada, ecommerce usa, ecommerce uk, ecommerce europe, e-commerce development, web development europe, website design germany, web design, best web design germany, best web developer germany, seo germany, seo europe, seo uk, seo canada, seo usa, website design uk, website design canada, website design usa, web dev canada, usa web dev, seo deutschland, web design deutschland"
+          content="ecommerce build toronto, help ecommerce vancouver, how build ecommerce vancouver, how build ecommerce usa, build ecommerce vancouver, build ecommerce canada, website design, website development, ecommerce canada, ecommerce canada, ecommerce usa, ecommerce uk, ecommerce tornto, e-commerce development, web development british columbia, website design british columbia, web design, best web design canada, best web developer usa, seo usa, seo north america, seo uk, seo canada, seo usa, website design uk, website design canada, website design usa, web dev canada, usa web dev, website lawyers, vancouver design, web design dentists, web design accountants, build website construction, build website vancouver layers"
         />
         <meta
           property="og:title"
@@ -39,7 +39,7 @@ const LandingPage = ({ tabValue, setTabValue }) => {
         <meta
           property="og:description"
           key="og:description"
-          content="Have a web design or web development question? Are you looking for an SEO quote? We can't wait to hear from you."
+          content="Have a web design or web development question? Are you looking for an SEO quote? You want a new website and don't know where to start? We can't wait to hear from you."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />
@@ -50,22 +50,7 @@ const LandingPage = ({ tabValue, setTabValue }) => {
       <div style={{ marginTop: "5rem" }}></div>
       <Contact />
       <Contact2 />
-      <Grid container align="center" style={{ paddingBottom: "0rem" }}>
-        <div
-          style={{
-            padding: 0,
-            width: "100%",
-            height: "30rem",
-          }}
-        >
-          <iframe
-            title="Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.1460628878267!2d6.161105815919567!3d50.75432527330324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c09c3192156943%3A0xc0842f90b51285a4!2sRichard-Wagner-Stra%C3%9Fe%2014%2C%2052078%20Aachen!5e0!3m2!1sen!2sde!4v1607199534817!5m2!1sen!2sde"
-            style={{ border: 0, width: "100%", height: "100%" }}
-            aria-hidden="false"
-          />
-        </div>
-      </Grid>
+      <Grid container align="center" style={{ paddingBottom: "0rem" }}></Grid>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const Services = ({ tabValue, setTabValue }) => {
         />
         <meta
           name="keywords"
-          content="website design, website development, ecommerce germany, ecommerce europe, ecommerce uk, e-commerce development, web development europe, website design germany, web design, best web design germany, best web design usa, best web design canada, ecommerce canada, ecommerce london, ecommerce vancouver, e-commerce toronto, build ecommerce vancouver, build ecommerce toronto, build ecommerce london, best web developer germany, deutschland web design, ecommerce deutschland"
+          content="website design, website development, ecommerce canada, ecommerce europe, ecommerce uk, e-commerce development, web development europe, website design canada, web design, best web design toronto, best web design usa, best web design canada, ecommerce canada, ecommerce london, ecommerce vancouver, e-commerce toronto, build ecommerce vancouver, build ecommerce toronto, build ecommerce london, web design vancouver, toronto web design, ecommerce usa, dentist web design, accountant web design, lawyer web design, construction web design, build website dentists, build website accountants, build website layers, build website construction, plumber website build, web design plumber"
         />
         <meta
           property="og:title"

@@ -7,9 +7,13 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import RoomIcon from "@material-ui/icons/Room";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
+import { Button, IconButton, Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   contactWrapper: {
@@ -18,13 +22,22 @@ const useStyles = makeStyles((theme) => ({
   iconWrapper: {
     backgroundColor: fade("#D1FAE5", 0.6),
   },
+  icon: { color: theme.palette.text.secondary },
+  anchor: {
+    textDecoration: "none",
+    color: theme.palette.text.secondary,
+    "&:hover": {
+      color: theme.palette.text.secondary,
+      textDecoration: "none",
+    },
+  },
 }));
 
 export default function Contact(props) {
   const classes = useStyles();
 
   const content = {
-    contact1: "Address",
+    contact1: "Social",
     "contact1-desc1": "Richard-Wagner",
     "contact1-desc2": "Str. 14-16, 52078 Aachen",
     contact2: "Email",
@@ -50,12 +63,20 @@ export default function Contact(props) {
                   <Typography variant="h6" gutterBottom={true}>
                     {content["contact1"]}
                   </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    {content["contact1-desc1"]}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    {content["contact1-desc2"]}
-                  </Typography>
+                  <IconButton
+                    className={classes.icon}
+                    target="_blank"
+                    href="https://www.instagram.com/rangojangoweb/"
+                  >
+                    <InstagramIcon />
+                  </IconButton>
+                  <IconButton
+                    className={classes.icon}
+                    href="https://www.linkedin.com/company/rangojango/"
+                    target="_blank"
+                  >
+                    <LinkedInIcon />
+                  </IconButton>
                 </Box>
               </div>
             </Grid>
@@ -71,7 +92,12 @@ export default function Contact(props) {
                     {content["contact2"]}
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    {content["contact2-desc"]}
+                    <a
+                      href="mailto:office@rangojango.com"
+                      className={classes.anchor}
+                    >
+                      {content["contact2-desc"]}
+                    </a>
                   </Typography>
                   <br />
                 </Box>
@@ -89,7 +115,9 @@ export default function Contact(props) {
                     {content["contact3"]}
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    {content["contact3-desc"]}
+                    <a href="tel:+4915901954867" className={classes.anchor}>
+                      {content["contact3-desc"]}
+                    </a>
                   </Typography>
                   <br />
                 </Box>
