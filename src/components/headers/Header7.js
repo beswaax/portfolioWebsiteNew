@@ -119,7 +119,8 @@ export default function Header(props) {
                         disableRipple
                         disableFocusRipple
                         disableTouchRipple
-                        href="/contact"
+                        href="https://calendly.com/rangojango/business-strategy-email"
+                        target="_blank"
                         className={classes.primaryAction}
                       >
                         {content["primary-action"]}

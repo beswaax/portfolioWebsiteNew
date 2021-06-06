@@ -38,7 +38,7 @@ export default function CTA(props) {
   const content = {
     description:
       "We offer you a complete package of web services. Increase your sales today!",
-    "primary-action": "Contact Us",
+    "primary-action": "BOOK CONSULTATION",
   };
 
   return (
@@ -56,7 +56,10 @@ export default function CTA(props) {
                 <Box my="auto">
                   <Button
                     component={Link}
-                    href="/contact"
+                    disableRipple
+                    disableTouchRipple
+                    disableFocusRipple
+                    href="https://calendly.com/rangojango/business-strategy-email"
                     variant="contained"
                     color="secondary"
                     className={classes.primaryAction}
