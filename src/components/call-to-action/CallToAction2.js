@@ -61,6 +61,7 @@ export default function CTA(props) {
                     disableFocusRipple
                     href="https://calendly.com/rangojango/business-strategy-email"
                     variant="contained"
+                    target="_blank"
                     color="secondary"
                     className={classes.primaryAction}
                   >

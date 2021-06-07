@@ -25,7 +25,7 @@ export default function Content(props) {
   const content = {
     "header-p1": "What We Do",
     description:
-      "RangoJango offers you professional web services at the best prices. We provide services like UI-UX design, web development and SEO to help you take your business to the next level. Our services do not stop at web design, we can also provide full e-Commerce solutions.",
+      "RangoJango offers you professional web services at the best prices. We provide UI-UX design, web development and SEO services to help you take your business to the next level. We also provide full e-Commerce solutions.",
     image: "/assets/devices9.svg",
   };
 

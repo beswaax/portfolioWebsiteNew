@@ -35,7 +35,7 @@ export default function Blog(props) {
     date: "Jan 16, 2020",
     "header-p1": "Who we are",
     paragraph1:
-      "We are a team of developers and designers from all over Europe. Our company is still young, but we feel that we can provide one of the best experiences when it comes to helping you solve the problems of your business. Design is important, but at RangoJango we focus more on your business as a whole.",
+      "We are a team of veteran designers and engineers. With years of experience in the industry, we are confident that we can solve any problem of any size. Our goal is to solve your business problems by doing what we do best.",
   };
 
   return (
