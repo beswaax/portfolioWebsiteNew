@@ -21,18 +21,17 @@ let mailOptions = {
 
 exports.sendMail = functions.https.onRequest((request, response) => {
   cors(request, response, () => {
-    const { name, email, phone, message, service } = request.query;
+    const { name, email, message } = request.query;
 
     mailOptions = {
       from: `RangoJango <${config.user.email}>`,
       to: "office@rangojango.com",
       subject: "Message received!",
       html: `
+      <p style="font-size:16px">New message received!</p>
       <p style="font-size:16px">From: ${name}</p>
       <p style="font-size:16px">Email: ${email}</p>
-      <p style="font-size:16px">Phone: ${phone}</p>
       <p style="font-size:16px">Message: ${message}</p> 
-      <p style="font-size:16px">Service: ${service}</p> 
       `,
     };
 
@@ -46,116 +45,30 @@ exports.sendMail = functions.https.onRequest((request, response) => {
   });
 });
 
-exports.sendConsultation = functions.https.onRequest((request, response) => {
-  cors(request, response, () => {
-    const { firstName, lastName, email, phone } = request.query;
+exports.sendFreeAuditRequest = functions.https.onRequest(
+  (request, response) => {
+    cors(request, response, () => {
+      const { name, email, website } = request.query;
 
-    mailOptions = {
-      from: `RangoJango <${config.user.email}>`,
-      to: "office@rangojango.com",
-      subject: "Consultation query received!",
-      html: `
-      <p style="font-size:16px">From: ${firstName} ${lastName}</p>
-      <p style="font-size:16px">Email: ${email}</p>
-      <p style="font-size:16px">Phone: ${phone}</p>
-      `,
-    };
+      mailOptions = {
+        from: `RangoJango <${config.user.email}>`,
+        to: "office@rangojango.com",
+        subject: "New audit request received!",
+        html: `
+        <p style="font-size:16px">New audit request received!</p>
+        <p style="font-size:16px">From: ${name}</p>
+        <p style="font-size:16px">Email: ${email}</p>
+        <p style="font-size:16px">Website Url: ${website}</p>
+        `,
+      };
 
-    transporter.sendMail(mailOptions, (error) => {
-      if (error) {
-        response.send(error);
-      } else {
-        response.send("Message sent successfully");
-      }
+      transporter.sendMail(mailOptions, (error) => {
+        if (error) {
+          response.send(error);
+        } else {
+          response.send("Free audit request sent!");
+        }
+      });
     });
-  });
-});
-
-{
-  /* <tr>
-<td
-  align="center"
-  style="padding: 0px 44px 0px 0px"
-  class="mob_pr12"
->
-  <table
-    align="right"
-    border="0"
-    cellspacing="0"
-    cellpadding="0"
-  >
-    <tr>
-      <td
-        align="center"
-        style="padding: 0px 14px"
-        class="spacer"
-      >
-        <a
-          href="https://www.instagram.com/development_arc"
-          target="_blank"
-        >
-          <img
-            align="center"
-            src="https://i.imgur.com/auxeind.png"
-            alt=""
-            width="31"
-            height="31"
-            style="
-              width: 31px;
-              max-width: 31px;
-              display: block;
-            "
-            class="social_icon"
-          />
-        </a>
-      </td>
-      <td
-        align="center"
-        style="padding: 0px 14px"
-        class="spacer"
-      >
-        <a
-          href="https://twitter.com/development_arc"
-          target="_blank"
-        >
-          <img
-            align="center"
-            src="https://i.imgur.com/QV0qmLC.png"
-            alt=""
-            width="30"
-            height="25"
-            style="
-              width: 30px;
-              max-width: 30px;
-              display: block;
-            "
-            class="social_icon"
-          />
-        </a>
-      </td>
-      <td
-        align="center"
-        style="padding: 0px 14px"
-        class="spacer"
-      >
-        <a
-          href="https://www.facebook.com/"
-          target="_blank"
-        >
-          <img
-            align="center"
-            src="https://i.imgur.com/wPb7ijk.png"
-            alt=""
-            width="17"
-            height="31"
-            style="
-              width: 17px;
-              max-width: 17px;
-              display: block;
-            "
-            class="social_icon"
-          />
-        </a>
-      </td>
-    </tr> */
-}
+  }
+);

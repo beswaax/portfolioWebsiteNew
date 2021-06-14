@@ -19,19 +19,19 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     color: "black",
   },
+  mainText: {
+    fontWeight: 700,
+  },
 }));
 
 export default function Contact(props) {
   const theme = useTheme();
   const classes = useStyles();
 
-  const [emailCorrect, setEmailCorrect] = useState(false);
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [message, setMessage] = useState("");
-  const [service, setService] = useState("");
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({
     open: false,
@@ -67,7 +67,7 @@ export default function Contact(props) {
         setAlert({
           open: true,
           message: "Message sent successfully",
-          backgroundColor: "#4BB543",
+          backgroundColor: theme.palette.success.main,
         });
       })
       .catch((err) => {
@@ -79,7 +79,7 @@ export default function Contact(props) {
         setAlert({
           open: true,
           message: "Something went wrong, please try again!",
-          backgroundColor: "#FF3232",
+          backgroundColor: theme.palette.error.main,
         });
       });
   };
@@ -101,14 +101,16 @@ export default function Contact(props) {
             <Typography
               align={matchesSM ? "center" : "left"}
               variant="h3"
+              className={classes.mainText}
               component="h2"
+              color="textPrimary"
               gutterBottom={true}
             >
               {content["header"]}
             </Typography>
             <Typography
               align={matchesSM ? "center" : "left"}
-              variant="subtitle1"
+              variant="body1"
               color="textSecondary"
               paragraph={true}
             >
@@ -123,7 +125,7 @@ export default function Contact(props) {
                     className={classes.textField}
                     variant="outlined"
                     required
-                    color="textSecondary"
+                    color="primary"
                     fullWidth
                     autoComplete="fname"
                     name="firstName"
@@ -139,6 +141,7 @@ export default function Contact(props) {
                   <TextField
                     variant="outlined"
                     required
+                    color="primary"
                     fullWidth
                     name="lastName"
                     value={lastName}
@@ -148,13 +151,13 @@ export default function Contact(props) {
                     id="lastName"
                     label="Last name"
                     autoComplete="lname"
-                    style={{ color: "#000000" }}
                   />
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
                     variant="outlined"
                     required
+                    color="primary"
                     fullWidth
                     name="email"
                     value={email}
@@ -172,6 +175,7 @@ export default function Contact(props) {
                     required
                     multiline
                     rows={5}
+                    color="primary"
                     value={message}
                     onChange={(e) => {
                       setMessage(e.target.value);

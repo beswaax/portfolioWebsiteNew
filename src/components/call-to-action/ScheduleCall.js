@@ -11,21 +11,37 @@ const useStyles = makeStyles((theme) => ({
   section: {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundColor: theme.palette.heavyBlue,
-    marginBottom: "3rem",
+    backgroundColor: theme.palette.primary.main,
   },
   description: {
     color: theme.palette.background.secondary,
+    fontWeight: 700,
   },
   actions: {
     [theme.breakpoints.up("md")]: {
       paddingLeft: theme.spacing(2),
     },
   },
+  secondaryButton: {
+    fontWeight: 600,
+    borderBottomRightRadius: 0,
+    color: theme.palette.primary.dark,
+    backgroundColor: theme.palette.common.white,
+    "&:hover": {
+      color: theme.palette.primary.dark,
+      backgroundColor: theme.palette.primary.light,
+      fontWeight: 600,
+    },
+    marginRight: theme.spacing(2),
+    paddingTop: 9,
+    paddingBottom: 9,
+    paddingRight: 19,
+    paddingLeft: 19,
+    borderRadius: 9,
+  },
   primaryAction: {
     marginRight: theme.spacing(2),
     borderRadius: 8,
-    color: theme.palette.grey[300],
     borderBottomRightRadius: 0,
     [theme.breakpoints.down("sm")]: {
       display: "block",
@@ -39,9 +55,8 @@ export default function CTA(props) {
   const classes = useStyles();
 
   const content = {
-    description:
-      "Whether you're a dentist from Vancouver or a construction company from London, we achieve great results for everyone!",
-    "primary-action": "BOOK CONSULTATION",
+    description: "Lets talk about your next project",
+    "primary-action": "BOOK YOUR FREE STRATEGY CALL",
   };
 
   return (
@@ -50,7 +65,7 @@ export default function CTA(props) {
         <Box py={8} color="common.white">
           <Grid container spacing={4}>
             <Grid item xs={12} md={7}>
-              <Typography variant="h5" className={classes.description}>
+              <Typography variant="h4" className={classes.description}>
                 {content["description"]}
               </Typography>
             </Grid>
@@ -64,10 +79,10 @@ export default function CTA(props) {
                     disableTouchRipple
                     disableFocusRipple
                     href="https://calendly.com/rangojango/business-strategy-email"
-                    variant="outlined"
+                    variant="contained"
                     target="_blank"
                     color="primary"
-                    className={classes.primaryAction}
+                    className={classes.secondaryButton}
                   >
                     {content["primary-action"]}
                   </Button>

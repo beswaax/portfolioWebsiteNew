@@ -5,6 +5,7 @@ import {
   makeStyles,
   useTheme,
   Typography,
+  Box,
   Container,
 } from "@material-ui/core";
 import List from "@material-ui/core/List";
@@ -15,66 +16,38 @@ import ExpandMore from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: 7,
+    padding: 1,
   },
   listItem: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: theme.palette.common.white,
     marginTop: "1rem",
     paddingTop: 20,
     paddingLeft: 14,
     paddingBottom: 20,
-    borderRadius: 5,
+    borderRadius: 2,
     border: "1px solid lightgray",
     "&:hover": {
-      backgroundColor: "#FFFFFF",
+      backgroundColor: theme.palette.common.white,
     },
   },
   listeText: {
-    fontSize: "22px",
-    lineHeight: "25px",
-    fontFamily: "DM Sans, sans-serif",
     fontWeight: 400,
-    color: "#44444",
     marginLeft: "0.5rem",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "21px",
-      lineHeight: "22px",
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "19px",
-      lineHeight: "22px",
-    },
-    color: "#222222",
-    fontFamily: "DM Sans, sans-serif",
-  },
-
-  responseText: {
-    fontSize: "17px",
-    paddingBottom: 10,
-    paddingLeft: 5,
-    fontFamily: "DM Sans, sans-serif",
-    lineHeight: "24px",
-    color: "#6b6b6b",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 16,
-    },
   },
   expand: {
     marginLeft: "auto",
     paddingRight: "1rem",
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.dark,
   },
   collapse: {
-    borderRadius: 5,
+    borderRadius: 2,
     border: "1px solid lightgray",
     borderTop: "0",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: theme.palette.common.white,
   },
-  button: {
-    backgroundColor: [theme.palette.common.redNice],
-    "&:hover": {
-      backgroundColor: [theme.palette.common.redNice],
-    },
+
+  titleText: {
+    fontWeight: 700,
   },
 }));
 
@@ -89,6 +62,13 @@ export default function Team() {
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
+  const [open5, setOpen5] = useState(false);
+
+  const content = {
+    title: "FAQ",
+    subtitle:
+      "Here are some of our most frequently asked questions and answers.",
+  };
 
   const teamData = [
     {
@@ -120,88 +100,118 @@ export default function Team() {
       openPosition: open4,
       setOpenPosition: setOpen4,
     },
+    {
+      question: "Do you really offer a refund?",
+      answer:
+        "If you are not satisfied with our work, we will give you a full refund on the entire project. No questions asked.",
+      openPosition: open5,
+      setOpenPosition: setOpen5,
+    },
   ];
 
   return (
-    <Grid
-      container
-      justify="center"
-      direction="column"
-      alignItems="center"
-      style={{ marginTop: "3rem", paddingBottom: "10rem" }}
-      data-aos="fade-up"
-    >
-      {/* Team List */}
-      <Container maxWidth="lg">
-        <Grid item style={{ width: "100%" }}>
-          <Grid item>
-            <Typography variant="h3" align="center">
-              FAQ
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              color="textSecondary"
-              align="center"
-            >
-              Here are some of our most frequently asked questions and answers.
-            </Typography>
-          </Grid>
-          <List
-            component="nav"
-            aria-labelledby="nested-list-subheader"
-            className={classes.root}
-          >
-            {teamData.map((member, i) => {
-              return (
-                <div key={member.question}>
-                  <ListItem
-                    button
-                    disableRipple
-                    disableTouchRipple
-                    disableGutters
-                    onClick={() => member.setOpenPosition(!member.openPosition)}
-                    className={classes.listItem}
+    <>
+      <Box py={24}>
+        <Grid
+          container
+          justify="center"
+          direction="column"
+          alignItems="center"
+          data-aos="fade-up"
+        >
+          {/* Team List */}
+          <Container maxWidth="lg">
+            <Grid item style={{ width: "100%" }}>
+              <Grid item>
+                <Box pb={5}>
+                  <Typography
+                    variant="h3"
+                    align="center"
+                    color="textPrimary"
+                    className={classes.titleText}
                   >
-                    <Grid container direction={matchesTeam ? "column" : "row"}>
-                      <Grid item>
-                        <Typography className={classes.listeText}>
-                          {member.question}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                    {member.openPosition ? (
-                      <ExpandLess className={classes.expand} />
-                    ) : (
-                      <ExpandMore className={classes.expand} />
-                    )}
-                  </ListItem>
-                  <Collapse
-                    className={classes.collapse}
-                    in={member.openPosition}
-                    timeout="auto"
-                    unmountOnExit
+                    {content.title}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    color="textSecondary"
+                    align="center"
                   >
-                    <List component="div" disablePadding>
+                    {content.subtitle}
+                  </Typography>
+                </Box>
+              </Grid>
+              <List
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+                className={classes.root}
+              >
+                {teamData.map((member, i) => {
+                  return (
+                    <div key={member.question}>
                       <ListItem
-                        key={member.position}
-                        className={classes.nested}
+                        button
+                        disableRipple
+                        disableTouchRipple
+                        disableGutters
+                        onClick={() =>
+                          member.setOpenPosition(!member.openPosition)
+                        }
+                        className={classes.listItem}
                       >
-                        <Grid container direction="column">
+                        <Grid
+                          container
+                          direction={matchesTeam ? "column" : "row"}
+                        >
                           <Grid item>
-                            <Typography className={classes.responseText}>
-                              {member.answer}
+                            <Typography
+                              variant="h6"
+                              component="h4"
+                              className={classes.listeText}
+                            >
+                              {member.question}
                             </Typography>
                           </Grid>
                         </Grid>
+                        {member.openPosition ? (
+                          <ExpandLess className={classes.expand} />
+                        ) : (
+                          <ExpandMore className={classes.expand} />
+                        )}
                       </ListItem>
-                    </List>
-                  </Collapse>
-                </div>
-              );
-            })}
-          </List>
+                      <Collapse
+                        className={classes.collapse}
+                        in={member.openPosition}
+                        timeout="auto"
+                        unmountOnExit
+                      >
+                        <List component="div" disablePadding>
+                          <ListItem
+                            key={member.position}
+                            className={classes.nested}
+                          >
+                            <Grid container direction="column">
+                              <Grid item>
+                                <Typography
+                                  variant="body1"
+                                  component="span"
+                                  color="textSecondary"
+                                >
+                                  {member.answer}
+                                </Typography>
+                              </Grid>
+                            </Grid>
+                          </ListItem>
+                        </List>
+                      </Collapse>
+                    </div>
+                  );
+                })}
+              </List>
+            </Grid>
+          </Container>
         </Grid>
-      </Container>
-    </Grid>
+      </Box>
+    </>
   );
 }

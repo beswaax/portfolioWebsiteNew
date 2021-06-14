@@ -5,19 +5,18 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
-import { Business } from "@material-ui/icons";
+
 import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   number: {
-    backgroundColor: "#D1FAE5",
+    backgroundColor: theme.palette.primary.light,
     padding: 10,
     borderRadius: 10,
     [theme.breakpoints.down("xs")]: {
       borderRadius: 8,
     },
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.dark,
   },
   img: {
     maxWidth: 256,
@@ -43,6 +42,12 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "1rem",
     },
   },
+  mainText: {
+    fontWeight: 700,
+  },
+  specialText: {
+    color: theme.palette.primary.main,
+  },
 }));
 
 export default function HowItWorks(props) {
@@ -52,9 +57,10 @@ export default function HowItWorks(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const content = {
-    "header-p1": "3 steps to more sales",
+    "header-p1": "3 steps to more",
+    "header-p2": "sales",
     description:
-      "We live and breathe Web Development and SEO. No really, we do. We believe we can offer you the best experience possbile. We never give up until our customers are fully satisfied.",
+      "We live and breathe Web Development and SEO. No really, we do. We offer you the best experience possbile. We never give up until our customers are fully satisfied.",
     "col1-header": "Phone Call",
     "col1-desc":
       "On the call we will get to know each other and discuss the needs of your business.",
@@ -68,12 +74,25 @@ export default function HowItWorks(props) {
   return (
     <section className={classes.section} data-aos="fade-up">
       <Container maxWidth="lg">
-        <Box py={10} textAlign="center">
+        <Box py={21} textAlign="center">
           <Box mb={8}>
             <Container maxWidth="sm">
-              <Typography variant="h3" component="h2" gutterBottom={true}>
-                <Typography variant="h3" component="span">
+              <Typography
+                variant="h3"
+                component="h2"
+                gutterBottom={true}
+                className={classes.mainText}
+              >
+                <Typography
+                  variant="h3"
+                  component="span"
+                  className={classes.mainText}
+                  color="textPrimary"
+                >
                   {content["header-p1"]}{" "}
+                  <span className={classes.specialText}>
+                    {content["header-p2"]}
+                  </span>
                 </Typography>
               </Typography>
               <Typography
@@ -92,10 +111,16 @@ export default function HowItWorks(props) {
                 <Box display="flex" justifyContent="center" mt={1} mb={4}>
                   <Avatar className={classes.number}>1</Avatar>
                 </Box>
-                <Typography variant="h6" component="h3" gutterBottom={true}>
+                <Typography
+                  className={classes.mainText}
+                  variant="h5"
+                  component="h2"
+                  gutterBottom={true}
+                  color="textPrimary"
+                >
                   {content["col1-header"]}
                 </Typography>
-                <Typography variant="body2" component="p" color="textSecondary">
+                <Typography variant="body1" component="p" color="textSecondary">
                   {content["col1-desc"]}
                 </Typography>
               </Box>
@@ -110,10 +135,16 @@ export default function HowItWorks(props) {
                 <Box display="flex" justifyContent="center" mt={1} mb={4}>
                   <Avatar className={classes.number}>2</Avatar>
                 </Box>
-                <Typography variant="h6" component="h3" gutterBottom={true}>
+                <Typography
+                  className={classes.mainText}
+                  variant="h5"
+                  component="h2"
+                  gutterBottom={true}
+                  color="textPrimary"
+                >
                   {content["col2-header"]}
                 </Typography>
-                <Typography variant="body2" component="p" color="textSecondary">
+                <Typography variant="body1" component="p" color="textSecondary">
                   {content["col2-desc"]}
                 </Typography>
               </Box>
@@ -123,10 +154,16 @@ export default function HowItWorks(props) {
                 <Box display="flex" justifyContent="center" mt={1} mb={4}>
                   <Avatar className={classes.number}>3</Avatar>
                 </Box>
-                <Typography variant="h6" component="h3" gutterBottom={true}>
+                <Typography
+                  className={classes.mainText}
+                  variant="h5"
+                  component="h2"
+                  gutterBottom={true}
+                  color="textPrimary"
+                >
                   {content["col3-header"]}
                 </Typography>
-                <Typography variant="body2" component="p" color="textSecondary">
+                <Typography variant="body1" component="p" color="textSecondary">
                   {content["col3-desc"]}
                 </Typography>
               </Box>

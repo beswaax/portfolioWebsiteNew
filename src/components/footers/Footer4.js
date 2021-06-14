@@ -78,14 +78,15 @@ export default function Footer(props) {
 
   const content = {
     brand: {
-      image: "/assets/vector/logo-white.svg",
-      width: 210,
+      image: "/assets/logo2/vector/logo-single-white.svg",
+      width: 190,
     },
     copy: "© 2021 RangoJango. All rights reserved.",
     link1: "Home",
     link2: "About",
     link3: "Services",
-    link4: "Contact Us",
+    link4: "Free Audit",
+    link5: "Contact Us",
     ...props.content,
   };
 
@@ -128,11 +129,18 @@ export default function Footer(props) {
               {content["link3"]}
             </Link>
             <Link
-              href="/contact"
+              href="/free-website-audit"
               variant="body1"
               className={classes.footerLink}
             >
               {content["link4"]}
+            </Link>
+            <Link
+              href="/contact"
+              variant="body1"
+              className={classes.footerLink}
+            >
+              {content["link5"]}
             </Link>
           </Box>
         </Box>

@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "auto",
   },
   iconWrapper: {
-    backgroundColor: "#D1FAE5",
+    backgroundColor: theme.palette.primary.light,
     padding: 10,
     borderRadius: 10,
     [theme.breakpoints.down("xs")]: {
@@ -40,13 +40,16 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     marginBottom: theme.spacing(3),
-    backgroundColor: "#FFFFFF",
+    backgroundColor: theme.palette.common.white,
   },
   paperDown: {
     marginTop: -1 * theme.spacing(3),
     [theme.breakpoints.up("md")]: {
       marginTop: theme.spacing(3),
     },
+  },
+  text: {
+    fontWeight: 700,
   },
 }));
 
@@ -57,7 +60,7 @@ export default function Features(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const content = {
-    badge: "Motivated to be the best",
+    badge: "Save time. Make more money.",
     "header-p1": "Our Services",
     "col1-header": "Web Development",
     "col1-desc":
@@ -76,7 +79,7 @@ export default function Features(props) {
   return (
     <section className={classes.section} data-aos="fade-up">
       <Container maxWidth="lg">
-        <Box py={6}>
+        <Box pt={15} pb={13}>
           <Grid container spacing={matchesSM ? 4 : 6}>
             <Grid item xs={12} lg={12}>
               <Box display="flex" height="100%">
@@ -88,7 +91,7 @@ export default function Features(props) {
                   <Typography
                     align="center"
                     variant="body1"
-                    style={{ fontWeight: 700 }}
+                    className={classes.text}
                     color="primary"
                   >
                     {content["badge"]}
@@ -96,10 +99,17 @@ export default function Features(props) {
                   <Typography
                     align="center"
                     variant="h3"
+                    className={classes.text}
                     component="h2"
+                    color="textPrimary"
                     gutterBottom={true}
                   >
-                    <Typography variant="h3" component="span">
+                    <Typography
+                      variant="h3"
+                      className={classes.text}
+                      component="span"
+                      color="textPrimary"
+                    >
                       {content["header-p1"]}
                     </Typography>
                   </Typography>
@@ -124,11 +134,12 @@ export default function Features(props) {
                           variant="h6"
                           component="h3"
                           gutterBottom={true}
+                          className={classes.text}
                         >
                           {content["col1-header"]}
                         </Typography>
                         <Typography
-                          variant="body2"
+                          variant="body1"
                           component="p"
                           color="textSecondary"
                         >
@@ -151,13 +162,14 @@ export default function Features(props) {
                       <div>
                         <Typography
                           variant="h6"
+                          className={classes.text}
                           component="h3"
                           gutterBottom={true}
                         >
                           {content["col2-header"]}
                         </Typography>
                         <Typography
-                          variant="body2"
+                          variant="body1"
                           component="p"
                           color="textSecondary"
                         >
@@ -181,13 +193,14 @@ export default function Features(props) {
                       <div>
                         <Typography
                           variant="h6"
+                          className={classes.text}
                           component="h3"
                           gutterBottom={true}
                         >
                           {content["col3-header"]}
                         </Typography>
                         <Typography
-                          variant="body2"
+                          variant="body1"
                           component="p"
                           color="textSecondary"
                         >
@@ -209,6 +222,7 @@ export default function Features(props) {
                       </Box>
                       <div>
                         <Typography
+                          className={classes.text}
                           variant="h6"
                           component="h3"
                           gutterBottom={true}
@@ -216,7 +230,7 @@ export default function Features(props) {
                           {content["col4-header"]}
                         </Typography>
                         <Typography
-                          variant="body2"
+                          variant="body1"
                           component="p"
                           color="textSecondary"
                         >

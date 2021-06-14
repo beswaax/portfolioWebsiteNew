@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "100%",
     borderRadius: theme.shape.borderRadius,
   },
+  mainText: {
+    fontWeight: 700,
+  },
 }));
 
 export default function Blog(props) {
@@ -45,8 +48,16 @@ export default function Blog(props) {
           <Box textAlign="center" mb={5}>
             <Container maxWidth="sm">
               <Box my={4}>
-                <Typography variant="h3" component="h2">
-                  <Typography variant="h3" component="span">
+                <Typography
+                  variant="h3"
+                  className={classes.mainText}
+                  component="h2"
+                >
+                  <Typography
+                    className={classes.mainText}
+                    variant="h3"
+                    component="span"
+                  >
                     {content["header-p1"]}{" "}
                   </Typography>
                 </Typography>

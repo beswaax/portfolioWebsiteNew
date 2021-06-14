@@ -2,7 +2,7 @@ import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { StylesProvider } from "@material-ui/core/styles";
 import { ServerStyleSheets } from "@material-ui/core/styles";
-import theme from "../src/theme";
+import theme from "../src/theme/index";
 import { JssProvider } from "react-jss";
 import { GA_TRACKING_ID } from "../lib/gtag";
 

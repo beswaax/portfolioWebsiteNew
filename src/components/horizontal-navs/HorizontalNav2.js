@@ -14,13 +14,13 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
 import { useRouter } from "next/router";
+import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
-    backgroundColor: theme.palette.backgroundPage,
+    backgroundColor: theme.palette.heavyBlue,
     zIndex: theme.zIndex.modal + 1,
     boxShadow: "none",
-    borderBottom: "1px solid #cccccc",
   },
   toolbar: {
     minHeight: 70,
@@ -31,11 +31,34 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     marginRight: theme.spacing(5),
+    color: theme.palette.grey[400],
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
     "&:hover": {
-      color: [theme.palette.primary.main],
+      color: [theme.palette.common.white],
+      textDecoration: "none",
+    },
+  },
+  linkDifferent: {
+    marginRight: "auto",
+    color: theme.palette.grey[400],
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+    "&:hover": {
+      color: [theme.palette.common.white],
+      textDecoration: "none",
+    },
+  },
+  linkSelectedDifferent: {
+    marginRight: "auto",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+    color: theme.palette.common.white,
+    "&:hover": {
+      color: [theme.palette.common.white],
       textDecoration: "none",
     },
   },
@@ -44,9 +67,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
-    color: [theme.palette.primary.main],
+    color: theme.palette.common.white,
     "&:hover": {
-      color: [theme.palette.primary.main],
+      color: [theme.palette.common.white],
       textDecoration: "none",
     },
   },
@@ -56,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   menuButton: {
+    color: theme.palette.common.white,
     [theme.breakpoints.up("md")]: {
       display: "none",
     },
@@ -73,9 +97,40 @@ const useStyles = makeStyles((theme) => ({
     width: 240,
   },
   listItem: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: theme.palette.common.white,
     boxShadow: "none",
     borderRadius: 10,
+  },
+  calendlyListItem: {
+    marginTop: "0.2rem",
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.common.white,
+    borderRadius: 2,
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+      color: theme.palette.common.white,
+    },
+  },
+  calendlyLink: {
+    textDecoration: "none",
+    fontWeight: 600,
+    borderBottomRightRadius: 0,
+    color: theme.palette.primary.dark,
+    backgroundColor: theme.palette.common.white,
+    "&:hover": {
+      color: theme.palette.primary.dark,
+      backgroundColor: theme.palette.grey[200],
+      textDecoration: "none",
+    },
+    marginRight: theme.spacing(2),
+    paddingTop: 9,
+    paddingBottom: 9,
+    paddingRight: 19,
+    paddingLeft: 19,
+    borderRadius: 9,
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
 }));
 
@@ -84,11 +139,14 @@ export default function Navigation({ tabValue, setTabValue }) {
   const router = useRouter();
 
   const content = {
-    brand: { image: "/assets/vector/logo.svg", width: 200 },
+    brand: { image: "/assets/logo2/vector/logo-single-white.svg", width: 180 },
+    drawerBrand: "/assets/logo2/vector/logo-single.svg",
     link1: "Home",
     link2: "About",
     link3: "Services",
-    link4: "Contact Us",
+    link4: "Free Audit",
+    link5: "Contact Us",
+    link6: "Book a Call",
   };
 
   let brand;
@@ -125,8 +183,10 @@ export default function Navigation({ tabValue, setTabValue }) {
       setTabValue(1);
     } else if (router.pathname === "/services" && tabValue !== 2) {
       setTabValue(2);
-    } else if (router.pathname === "/contact" && tabValue !== 3) {
+    } else if (router.pathname === "/free-website-audit" && tabValue !== 3) {
       setTabValue(3);
+    } else if (router.pathname === "/contact" && tabValue !== 4) {
+      setTabValue(4);
     }
   }, [setTabValue, tabValue, router.pathname]);
 
@@ -145,7 +205,7 @@ export default function Navigation({ tabValue, setTabValue }) {
         <Link
           href="/"
           color="textPrimary"
-          variant="body2"
+          variant="body1"
           className={tabValue === 0 ? classes.linkSelected : classes.link}
         >
           {content["link1"]}
@@ -153,7 +213,7 @@ export default function Navigation({ tabValue, setTabValue }) {
         <Link
           href="/about"
           color="textPrimary"
-          variant="body2"
+          variant="body1"
           className={tabValue === 1 ? classes.linkSelected : classes.link}
         >
           {content["link2"]}
@@ -161,18 +221,39 @@ export default function Navigation({ tabValue, setTabValue }) {
         <Link
           href="/services"
           color="textPrimary"
-          variant="body2"
+          variant="body1"
           className={tabValue === 2 ? classes.linkSelected : classes.link}
         >
           {content["link3"]}
         </Link>
         <Link
-          href="/contact"
+          href="/free-website-audit"
           color="textPrimary"
-          variant="body2"
+          variant="body1"
           className={tabValue === 3 ? classes.linkSelected : classes.link}
         >
           {content["link4"]}
+        </Link>
+        <Link
+          href="/contact"
+          color="textPrimary"
+          variant="body1"
+          className={
+            tabValue === 4
+              ? classes.linkSelectedDifferent
+              : classes.linkDifferent
+          }
+        >
+          {content["link5"]}
+        </Link>
+        <Link
+          href="https://calendly.com/rangojango/business-strategy-email"
+          color="textPrimary"
+          target="_blank"
+          variant="body1"
+          className={classes.calendlyLink}
+        >
+          {content["link6"]}
         </Link>
         <IconButton
           edge="start"
@@ -196,7 +277,6 @@ export default function Navigation({ tabValue, setTabValue }) {
             borderTop={0}
             borderLeft={0}
             borderRight={0}
-            borderColor="#000000"
           >
             <Link
               href="/"
@@ -205,7 +285,11 @@ export default function Navigation({ tabValue, setTabValue }) {
               variant="h5"
               className={classes.linkBrand}
             >
-              {brand}
+              <img
+                src={content.drawerBrand}
+                alt={"logo of RangoJango"}
+                width={content.brand.width}
+              />{" "}
             </Link>
           </Box>
           <List>
@@ -213,7 +297,6 @@ export default function Navigation({ tabValue, setTabValue }) {
               className={classes.listItem}
               disableRipple
               disableTouchRipple
-              disableFocusRipple
               button
               key={content["link1"]}
               selected={tabValue === 0}
@@ -227,7 +310,6 @@ export default function Navigation({ tabValue, setTabValue }) {
               className={classes.listItem}
               disableRipple
               disableTouchRipple
-              disableFocusRipple
               button
               key={content["link2"]}
               selected={tabValue === 1}
@@ -241,7 +323,6 @@ export default function Navigation({ tabValue, setTabValue }) {
               className={classes.listItem}
               disableRipple
               disableTouchRipple
-              disableFocusRipple
               button
               key={content["link3"]}
               selected={tabValue === 2}
@@ -255,15 +336,42 @@ export default function Navigation({ tabValue, setTabValue }) {
               className={classes.listItem}
               disableRipple
               disableTouchRipple
-              disableFocusRipple
               button
               key={content["link4"]}
               selected={tabValue === 3}
               component={Link}
-              href="/contact"
+              href="/free-website-audit"
               onClick={() => setState({ open: !state.open })}
             >
               <ListItemText primary={content["link4"]} />
+            </ListItem>
+            <ListItem
+              className={classes.listItem}
+              disableRipple
+              disableTouchRipple
+              button
+              key={content["link5"]}
+              selected={tabValue === 4}
+              component={Link}
+              href="/contact"
+              onClick={() => setState({ open: !state.open })}
+            >
+              <ListItemText primary={content["link5"]} />
+            </ListItem>
+
+            <ListItem
+              className={classes.calendlyListItem}
+              disableRipple
+              disableTouchRipple
+              button
+              key={content["link6"]}
+              selected={tabValue === 5}
+              component={Link}
+              href="https://calendly.com/rangojango/business-strategy-email"
+              target="_blank"
+              onClick={() => setState({ open: !state.open })}
+            >
+              <ListItemText primary={content["link6"]} />
             </ListItem>
           </List>
         </div>

@@ -7,11 +7,21 @@ import Typography from "@material-ui/core/Typography";
 
 import Image from "next/image";
 import { useTheme } from "@material-ui/styles";
-import { Fade, Grow, useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+  background: {
+    backgroundColor: theme.palette.darkBlack,
+  },
   card: {
     height: 512,
+  },
+  mainText: {
+    fontWeight: 700,
+  },
+  text: {
+    fontWeight: 400,
+    color: theme.palette.primary.light,
   },
 }));
 
@@ -24,56 +34,76 @@ export default function Content(props) {
 
   const content = {
     "header-p1": "What We Do",
+    "header-p2": "Why us? Let's cut to the chase...",
     description:
-      "RangoJango offers you professional web services at the best prices. We provide UI-UX design, web development and SEO services to help you take your business to the next level. We also provide full e-Commerce solutions.",
+      "Our unique expertise in SEO is what sets up apart from others. ",
+    description2: "You and your business needs always come first. ",
+    description3:
+      "Your goals are the forefront of our mind, we reach your goals by all means necessary.",
+    description4:
+      "Clear and open communication. Know exactly where we are with your project at anytime. ",
+    description5: "Not satisfied with our work? We'll give you a full refund.",
     image: "/assets/devices9.svg",
   };
 
   return (
-    <section>
+    <section className={classes.background}>
       <Container maxWidth="lg">
-        <Box py={12}>
+        <Box py={25}>
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Grid item xs={12} md={6}>
-              <Image
-                alt="a lady jumping up with a website behind her"
-                src={content["image"]}
-                width={512}
-                height={matchesSM ? 300 : 390}
-                data-aos="fade-up"
-                align={matchesSM ? "center" : "inherit"}
-                layout={
-                  matchesXS ? "responsive" : matchesSM ? "fixed" : "responsive"
-                }
-              />
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box display="flex" height="100%">
-                <Box my="auto">
+              <Box display="flex" height="100%" color="common.white">
+                <Box>
                   <Typography variant="h3" component="h3" gutterBottom={true}>
-                    <Typography variant="h3" component="span">
-                      {content["header-p1"]}{" "}
-                    </Typography>
-                    <Typography variant="h3" component="span">
-                      {content["header-p2"]}
+                    <Typography
+                      className={classes.mainText}
+                      variant="h3"
+                      component="span"
+                    >
+                      {content["header-p2"]}{" "}
                     </Typography>
                   </Typography>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Box display="flex" height="100%" color="common.white">
+                <Box my="auto">
                   <Typography
-                    variant="subtitle1"
-                    color="textSecondary"
+                    className={classes.text}
+                    variant="h6"
                     paragraph={true}
                   >
                     {content["description"]}
                   </Typography>
                   <Typography
-                    variant="subtitle1"
-                    color="textSecondary"
+                    variant="h6"
+                    className={classes.text}
                     paragraph={true}
                   >
-                    Whether you are at the beginning of your business or already
-                    in full development, our goal is to provide you with
-                    personalized services that meet the needs of your business.
+                    {content.description2}
                   </Typography>
+                  <Typography
+                    variant="h6"
+                    className={classes.text}
+                    paragraph={true}
+                  >
+                    {content.description3}
+                  </Typography>{" "}
+                  <Typography
+                    variant="h6"
+                    className={classes.text}
+                    paragraph={true}
+                  >
+                    {content.description4}
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    className={classes.text}
+                    paragraph={true}
+                  >
+                    {content.description5}
+                  </Typography>{" "}
                 </Box>
               </Box>
             </Grid>

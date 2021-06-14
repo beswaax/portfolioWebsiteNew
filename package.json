@@ -20,6 +20,7 @@
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-ga": "^3.3.0",
     "react-jss": "^10.5.0",
     "serve": "^11.3.2",
     "swup": "^2.0.14"
@@ -32,7 +33,7 @@
     "postbuild": "node scripts/sitemap.js"
   },
   "devDependencies": {
-    "eslint": "^7.19.0",
+    "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1"
   }
 }

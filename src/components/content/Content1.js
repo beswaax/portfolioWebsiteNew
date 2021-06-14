@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     height: 512,
   },
   cardContainer: {
-    backgroundColor: "#F9FAFB",
     boxShadow: "none",
   },
   button: {
@@ -23,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 20,
     paddingLeft: 20,
     borderRadius: 10,
+    borderBottomRightRadius: 0,
+  },
+  text: {
+    fontWeight: 700,
   },
 }));
 
@@ -34,10 +37,15 @@ export default function Content(props) {
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const content = {
-    "header-p1": "More than just a",
-    "header-p2": "web company",
+    badge: "Pixel perfect websites | Vancouver",
+    "header-p1": "Websites that",
+    "header-p2": "make you money",
     description:
       "At RangoJango we focus on solving the real problems your business might be facing, be it increasing sales, increasing visiblity or targeting the right clients.",
+    description2:
+      "We increase revenue and ensure sustainable long-term growth for your business through powerful custom-built websites.",
+    description3:
+      "Don't settle for anything less than perfect. We guarantee perfect websites and set realistic expectations from the very start, so you know what to results to expect without any disappointments.",
     "primary-action": "Learn More",
     image: "/assets/devices8.svg",
   };
@@ -45,17 +53,10 @@ export default function Content(props) {
   return (
     <section data-aos="fade-up">
       <Container maxWidth="lg">
-        <Box py={12}>
+        <Box pt={18} pb={24}>
           <Grid container spacing={2}>
             <Hidden mdUp>
-              <Grid
-                style={{ backgroundColor: "#F9FAFB" }}
-                item
-                xs={12}
-                md={6}
-                align="center"
-                sm={12}
-              >
+              <Grid item xs={12} md={6} align="center" sm={12}>
                 <Grow mountOnEnter in={true} timeout={1000}>
                   <Image
                     alt="a lady with a futuristic design to the left"
@@ -77,12 +78,30 @@ export default function Content(props) {
             <Grid item xs={12} md={6}>
               <Box display="flex" height="100%">
                 <Box my="auto">
+                  <Typography
+                    variant="subtitle1"
+                    component="span"
+                    color="primary"
+                    className={classes.text}
+                  >
+                    {content.badge}
+                  </Typography>
                   <Typography variant="h3" component="h3" gutterBottom={true}>
-                    <Typography variant="h3" component="span">
+                    <Typography
+                      variant="h3"
+                      component="span"
+                      color="textPrimary"
+                      className={classes.text}
+                    >
                       {content["header-p1"]}{" "}
                     </Typography>
                     <br />
-                    <Typography variant="h3" component="span">
+                    <Typography
+                      variant="h3"
+                      component="span"
+                      color="textPrimary"
+                      className={classes.text}
+                    >
                       {content["header-p2"]}
                     </Typography>
                   </Typography>
@@ -98,15 +117,22 @@ export default function Content(props) {
                     color="textSecondary"
                     paragraph={true}
                   >
-                    We truly care about our customers! We take the time to fully
-                    understand what solutions are required for your business.
+                    {content["description2"]}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    color="textSecondary"
+                    paragraph={true}
+                  >
+                    {content["description3"]}
                   </Typography>
                   <Box mt={3}>
                     <Button
                       component={Link}
                       href="/about"
                       className={classes.button}
-                      variant="contained"
+                      variant="outlined"
+                      size="medium"
                       color="primary"
                     >
                       {content["primary-action"]}
@@ -116,28 +142,20 @@ export default function Content(props) {
               </Box>
             </Grid>
             <Hidden smDown>
-              <Grid
-                style={{ backgroundColor: "#F9FAFB" }}
-                item
-                xs={12}
-                md={6}
-                sm={12}
-              >
-                <Grow mountOnEnter in={true} timeout={1000}>
-                  <Image
-                    src={content["image"]}
-                    width={512}
-                    height={matchesSM ? 300 : 390}
-                    align={matchesSM ? "center" : "inherit"}
-                    layout={
-                      matchesXS
-                        ? "responsive"
-                        : matchesSM
-                        ? "fixed"
-                        : "responsive"
-                    }
-                  />
-                </Grow>
+              <Grid item xs={12} md={6} sm={12}>
+                <Image
+                  src={content["image"]}
+                  width={512}
+                  height={matchesSM ? 300 : 390}
+                  align={matchesSM ? "center" : "inherit"}
+                  layout={
+                    matchesXS
+                      ? "responsive"
+                      : matchesSM
+                      ? "fixed"
+                      : "responsive"
+                  }
+                />
               </Grid>
             </Hidden>
           </Grid>

@@ -4,7 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "../src/components/horizontal-navs/HorizontalNav2";
 import Footer from "../src/components/footers/Footer4";
-import theme from "../src/theme";
+import theme from "../src/theme/index";
 import { useRouter } from "next/router";
 import { PageTransition } from "next-page-transitions";
 import * as gtag from "../lib/gtag";
@@ -23,8 +23,10 @@ const App = (props) => {
       return 1;
     } else if (router.pathname === "/services") {
       return 2;
-    } else if (router.pathname === "/contact") {
+    } else if (router.pathname === "/free-website-audit") {
       return 3;
+    } else if (router.pathname === "/contact") {
+      return 4;
     }
   };
 

@@ -1,13 +1,13 @@
 import React from "react";
 import { Grid, makeStyles, useMediaQuery, useTheme } from "@material-ui/core";
 import Head from "next/head";
-import Header from "../src/components/headers/PageHeader";
+import Header from "../src/components/headers/Header1";
 import Contact from "../src/components/contacts/Contact1";
 import Contact2 from "../src/components/contacts/Contact2";
 
 const useStyles = makeStyles((theme) => ({
   bodyMargin: {
-    backgroundColor: "#F9FAFB",
+    backgroundColor: theme.palette.backgroundPage,
     paddingBottom: "5rem",
   },
 }));
@@ -19,7 +19,9 @@ const LandingPage = ({ tabValue, setTabValue }) => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">Contact | RangoJango Web Design & Development</title>
+        <title key="title">
+          Contact | RangoJango Web Design & Development Vancouver
+        </title>
         <meta
           name="description"
           key="description"
@@ -27,11 +29,11 @@ const LandingPage = ({ tabValue, setTabValue }) => {
         />
         <meta
           name="keywords"
-          content="ecommerce build toronto, help ecommerce vancouver, how build ecommerce vancouver, how build ecommerce usa, build ecommerce vancouver, build ecommerce canada, website design, website development, ecommerce canada, ecommerce canada, ecommerce usa, ecommerce uk, ecommerce tornto, e-commerce development, web development british columbia, website design british columbia, web design, best web design canada, best web developer usa, seo usa, seo north america, seo uk, seo canada, seo usa, website design uk, website design canada, website design usa, web dev canada, usa web dev, website lawyers, vancouver design, web design dentists, web design accountants, build website construction, build website vancouver layers"
+          content="ecommerce build toronto,vancouver web, new website dublin, new website toronto, new website london, help ecommerce vancouver, how build ecommerce vancouver, how build ecommerce usa, build ecommerce vancouver, build ecommerce canada, website design, website development, ecommerce canada, ecommerce canada, ecommerce usa, ecommerce uk, ecommerce tornto, e-commerce development, web development british columbia, website design british columbia, web design, best web design canada, best web developer usa, seo usa, seo north america, seo uk, seo canada, seo usa, website design uk, website design canada, website design usa, web dev canada, usa web dev, website lawyers, vancouver design, web design dentists, web design accountants, build website construction, build website vancouver layers"
         />
         <meta
           property="og:title"
-          content="Contact | RangoJango Web Design & Development"
+          content="Contact | RangoJango Web Design & Development Vancouver"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/contact" />
@@ -46,7 +48,7 @@ const LandingPage = ({ tabValue, setTabValue }) => {
 
         <link rel="canonical" key="canonical" href="/contact" />
       </Head>
-      <Header text={"Contact Us"} />
+      <Header />
       <div style={{ marginTop: "5rem" }}></div>
       <Contact />
       <Contact2 />

@@ -7,7 +7,6 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 
-import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import RoomIcon from "@material-ui/icons/Room";
@@ -30,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.text.secondary,
       textDecoration: "none",
     },
+  },
+  titleText: {
+    fontWeight: 500,
   },
 }));
 
@@ -60,7 +62,11 @@ export default function Contact(props) {
                       <RoomIcon color="primary" fontSize="small" />
                     </Avatar>
                   </Box>
-                  <Typography variant="h6" gutterBottom={true}>
+                  <Typography
+                    variant="h6"
+                    className={classes.titleText}
+                    gutterBottom={true}
+                  >
                     {content["contact1"]}
                   </Typography>
                   <IconButton
@@ -88,7 +94,11 @@ export default function Contact(props) {
                       <EmailIcon color="primary" fontSize="small" />
                     </Avatar>
                   </Box>
-                  <Typography variant="h6" gutterBottom={true}>
+                  <Typography
+                    className={classes.titleText}
+                    variant="h6"
+                    gutterBottom={true}
+                  >
                     {content["contact2"]}
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
@@ -111,7 +121,11 @@ export default function Contact(props) {
                       <PhoneIcon color="primary" fontSize="small" />
                     </Avatar>
                   </Box>
-                  <Typography variant="h6" gutterBottom={true}>
+                  <Typography
+                    className={classes.titleText}
+                    variant="h6"
+                    gutterBottom={true}
+                  >
                     {content["contact3"]}
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
