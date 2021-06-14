@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useMediaQuery, useTheme } from "@material-ui/core";
+import { makeStyles, useTheme } from "@material-ui/core";
 import Head from "next/head";
 import PageHeader from "../src/components/headers/AboutPageHeader";
 import Content2 from "../src/components/content/AboutContent2";
@@ -50,9 +50,7 @@ const About = ({ tabValue, setTabValue }) => {
         <link rel="canonical" key="canonical" href="/about" />
       </Head>
       <PageHeader />
-      {/* <Content1 /> */}
       <Content3 />
-      {/* <CallToAction /> */}
       <Content2 />
       <FAQ />
       <ScheduleCall />
