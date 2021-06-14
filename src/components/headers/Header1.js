@@ -105,7 +105,7 @@ export default function Header(props) {
     <section className={classes.section}>
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white">
-          <Typography variant="h2" component="h2" gutterBottom={true}>
+          <Typography variant="h2" component="h1" gutterBottom={true}>
             <Typography variant="h2" component="span" className={classes.title}>
               We <span className={classes.extra}>*build</span> and{" "}
               <span className={classes.extra}>*rank</span> custom-built
@@ -115,6 +115,7 @@ export default function Header(props) {
           <Container maxWidth="sm">
             <Typography
               variant="h6"
+              component="h2"
               color="textSecondary"
               paragraph={true}
               className={classes.description}

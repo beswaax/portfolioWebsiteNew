@@ -92,7 +92,7 @@ export default function Header(props) {
             </Typography>
           </Badge>
 
-          <Typography variant="h2" component="h2" gutterBottom={true}>
+          <Typography variant="h2" component="h1" gutterBottom={true}>
             <Typography variant="h2" component="span" className={classes.title}>
               {content["header-p1"]}{" "}
             </Typography>
@@ -105,6 +105,7 @@ export default function Header(props) {
             <Typography
               variant="h6"
               color="textSecondary"
+              component="h2"
               paragraph={true}
               className={classes.description}
             >
