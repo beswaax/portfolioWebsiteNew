@@ -41,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     marginBottom: theme.spacing(3),
     backgroundColor: theme.palette.common.white,
+    transition: "transform 0.15s ease-in-out",
+    "&:hover": { transform: "scale3d(1.03, 1.03, 1)" },
   },
   paperDown: {
     marginTop: -1 * theme.spacing(3),

@@ -37,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
   mainText: {
     color: theme.palette.grey[200],
   },
+  gridContainer: {
+    transition: "transform 0.15s ease-in-out",
+    "&:hover": { transform: "scale3d(1.03, 1.03, 1)" },
+  },
 }));
 
 export default function Pricing(props) {
@@ -162,7 +166,13 @@ export default function Pricing(props) {
           </Box>
           <Grid container spacing={3}>
             {content.options.map((option, i) => (
-              <Grid item xs={12} md={4} key={i}>
+              <Grid
+                item
+                xs={12}
+                md={4}
+                key={i}
+                className={classes.gridContainer}
+              >
                 <Card variant="outlined" className={classes.cardContainer}>
                   <CardHeader
                     style={{ color: option["title-color"] }}
