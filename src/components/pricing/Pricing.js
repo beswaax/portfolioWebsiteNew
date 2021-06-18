@@ -28,17 +28,19 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.darkBlack,
     border: `4px solid ${theme.palette.grey[600]}`,
     borderRadius: 0,
+    transition: "transform 0.2s ease-in-out",
     "&:hover": {
       backgroundColor: theme.palette.darkBlack,
       border: `4px solid ${theme.palette.primary.main}`,
       borderRadius: 0,
+      transform: "scale3d(1.03, 1.03, 1)",
     },
   },
   mainText: {
     color: theme.palette.grey[200],
   },
   gridContainer: {
-    transition: "transform 0.15s ease-in-out",
+    transition: "transform 0.3s ease-in-out",
     "&:hover": { transform: "scale3d(1.03, 1.03, 1)" },
   },
 }));
