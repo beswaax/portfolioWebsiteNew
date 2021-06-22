@@ -8,6 +8,7 @@
     "@material-ui/styles": "^4.11.1",
     "aos": "^2.3.4",
     "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
     "clsx": "latest",
     "cors": "^2.8.5",
     "framer-motion": "^3.2.0",
