@@ -20,9 +20,7 @@ const Services = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">
-          Services | RangoJango Web Design & Development Vancouver
-        </title>
+        <title key="title">#1 Vancouver Web Design & SEO | Services</title>
         <meta
           name="description"
           key="description"

@@ -21,7 +21,7 @@ const LandingPage = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          Web Design & Development Company - RangoJango Vancouver
+          #1 Vancouver Web Design & Development | RangoJango
         </title>
         <meta
           name="description"

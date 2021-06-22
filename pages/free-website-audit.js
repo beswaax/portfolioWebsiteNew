@@ -17,9 +17,7 @@ const WebsiteAudit = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">
-          Website Review | RangoJango Web Design & Development Vancouver
-        </title>
+        <title key="title">Vancouver Website Review | Web Design & SEO</title>
         <meta
           name="description"
           key="description"

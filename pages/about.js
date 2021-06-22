@@ -19,9 +19,7 @@ const About = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">
-          About Us | RangoJango Web Design & Development Vancouver
-        </title>
+        <title key="title">#1 Vancouver Web Design & Development | About</title>
         <meta
           name="description"
           key="description"
