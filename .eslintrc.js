@@ -9,9 +9,7 @@ module.exports = {
     SharedArrayBuffer: "readonly",
   },
   parserOptions: {
-    ecmaVersion: 2020,
     sourceType: "module",
-    parser: "babel-eslint",
   },
   rules: {
     indent: ["error", 2],
