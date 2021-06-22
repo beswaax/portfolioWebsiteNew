@@ -9,7 +9,7 @@ import Link from "../../Link";
 import Image from "next/image";
 import { Grow, Hidden, useMediaQuery, useTheme } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   card: {
     height: 512,
   },

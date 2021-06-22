@@ -19,7 +19,7 @@ const About = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">#1 Vancouver Web Design & Development | About</title>
+        <title key="title">About | Vancouver Web Design & Development</title>
         <meta
           name="description"
           key="description"

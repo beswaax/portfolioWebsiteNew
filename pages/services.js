@@ -20,7 +20,7 @@ const Services = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">#1 Vancouver Web Design & SEO | Services</title>
+        <title key="title">1# Vancouver SEO | Web Design & Development</title>
         <meta
           name="description"
           key="description"

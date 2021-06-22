@@ -126,12 +126,7 @@ export default function HowItWorks() {
               </Box>
             </Grid>
             <Grid item xs={12} md={4}>
-              <Box
-                className={classes.stepActive}
-                p={3}
-                pb={4}
-                className={classes.gridCotainer}
-              >
+              <Box p={3} pb={4} className={classes.gridCotainer}>
                 <Box display="flex" justifyContent="center" mt={1} mb={4}>
                   <Avatar className={classes.number}>2</Avatar>
                 </Box>
