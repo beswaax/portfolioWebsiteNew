@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header(props) {
+export default function Header() {
   const classes = useStyles();
 
   const content = {
@@ -79,7 +79,6 @@ export default function Header(props) {
       "If you don't undestand why your website is not getting results, send it over to us and we'll review it for free.",
     "primary-action": "Book A Strategy Call",
     pattern: "nereus-assets/img/bg/pattern2.png",
-    ...props.content,
   };
 
   return (

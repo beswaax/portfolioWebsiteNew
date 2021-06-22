@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Content(props) {
+export default function Content() {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -35,7 +35,6 @@ export default function Content(props) {
       "Delivered Under 24 Hours",
     ],
     image: "/assets/devices1.svg",
-    ...props.content,
   };
 
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));

@@ -8,7 +8,6 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import Button from "@material-ui/core/Button";
-import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -45,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Pricing(props) {
+export default function Pricing() {
   const classes = useStyles();
 
   const content = {
@@ -124,15 +123,6 @@ export default function Pricing(props) {
         "01_primary-action": "Start Your Project",
       },
     ],
-    ...props.content,
-  };
-
-  const [state, setState] = React.useState({
-    checkbox: true,
-  });
-
-  const handleChange = (event) => {
-    setState({ ...state, checkbox: event.target.checked });
   };
 
   return (

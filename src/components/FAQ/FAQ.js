@@ -148,7 +148,7 @@ export default function Team() {
               >
                 {teamData.map((member, i) => {
                   return (
-                    <div key={member.question}>
+                    <div key={i}>
                       <ListItem
                         button
                         disableRipple

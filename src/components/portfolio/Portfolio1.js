@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
@@ -36,9 +36,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Portfolio(props) {
+export default function Portfolio() {
   const classes = useStyles();
-  const [zoomHover, SetZoomHover] = useState(false);
 
   const content = {
     header: "Portfolio",
@@ -54,7 +53,6 @@ export default function Portfolio(props) {
     "02_company": "Client: Gitscape",
     "02_description":
       "That’s us - people who sell the limitless paper in the paperless world.",
-    ...props.content,
   };
 
   return (

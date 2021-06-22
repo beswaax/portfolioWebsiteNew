@@ -30,9 +30,12 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
+    "lint": "next lint",
     "postbuild": "node scripts/sitemap.js"
   },
   "devDependencies": {
-    "eslint": "^7.29.0"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.0"
   }
 }

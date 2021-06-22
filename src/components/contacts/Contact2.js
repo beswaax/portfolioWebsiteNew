@@ -12,7 +12,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import RoomIcon from "@material-ui/icons/Room";
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
-import { Button, IconButton, Link } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   contactWrapper: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Contact(props) {
+export default function Contact() {
   const classes = useStyles();
 
   const content = {
@@ -46,7 +46,6 @@ export default function Contact(props) {
     "contact2-desc": "office@rangojango.com",
     contact3: "Phone",
     "contact3-desc": "(+49) 15901-954-867",
-    ...props.content,
   };
 
   return (

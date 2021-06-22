@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CTA(props) {
+export default function CTA() {
   const classes = useStyles();
 
   const content = {

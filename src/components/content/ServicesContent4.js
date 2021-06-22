@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Image from "next/image";
 import { useTheme } from "@material-ui/styles";
-import { Grow, useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   section: {
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Content(props) {
+export default function Content() {
   const classes = useStyles();
   const theme = useTheme();
 

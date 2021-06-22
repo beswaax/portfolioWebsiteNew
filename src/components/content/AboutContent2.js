@@ -5,7 +5,6 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 
-import Image from "next/image";
 import { useTheme } from "@material-ui/styles";
 import { useMediaQuery } from "@material-ui/core";
 
@@ -25,11 +24,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Content(props) {
+export default function Content() {
   const classes = useStyles();
   const theme = useTheme();
 
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const content = {

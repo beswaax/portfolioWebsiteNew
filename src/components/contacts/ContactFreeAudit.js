@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Axios from "axios";
-import { Snackbar, useMediaQuery, useTheme } from "@material-ui/core";
+import { Snackbar, useTheme } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   halfLg: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   specialText: { color: theme.palette.primary.main },
 }));
 
-export default function Contact(props) {
+export default function Contact() {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -69,7 +69,7 @@ export default function Contact(props) {
         },
       }
     )
-      .then((res) => {
+      .then(() => {
         setLoading(false);
         setWebsite("");
         setFirstName("");
@@ -81,7 +81,7 @@ export default function Contact(props) {
           backgroundColor: theme.palette.success.main,
         });
       })
-      .catch((err) => {
+      .catch(() => {
         setLoading(false);
         setWebsite("");
         setFirstName("");
@@ -105,7 +105,6 @@ export default function Contact(props) {
     description2:
       "You'll receive several improvement recommendations and practical tips on what you can do to reach your goals. 100% free-of-charge!",
     "primary-action": "Submit",
-    ...props.content,
   };
 
   return (

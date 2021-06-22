@@ -5,7 +5,6 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Link from "../../Link";
 import IconButton from "@material-ui/core/IconButton";
-import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
@@ -73,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Footer(props) {
+export default function Footer() {
   const classes = useStyles();
 
   const content = {
@@ -87,7 +86,6 @@ export default function Footer(props) {
     link3: "Services",
     link4: "Free Audit",
     link5: "Contact Us",
-    ...props.content,
   };
 
   let brand;

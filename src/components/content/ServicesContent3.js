@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Content(props) {
+export default function Content() {
   const classes = useStyles();
   const theme = useTheme();
 

@@ -5,8 +5,6 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Axios from "axios";
 import {
   makeStyles,
@@ -15,7 +13,7 @@ import {
   useTheme,
 } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   textField: {
     color: "black",
   },
@@ -24,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Contact(props) {
+export default function Contact() {
   const theme = useTheme();
   const classes = useStyles();
 
@@ -58,7 +56,7 @@ export default function Contact(props) {
         },
       }
     )
-      .then((res) => {
+      .then(() => {
         setLoading(false);
         setMessage("");
         setFirstName("");
@@ -70,7 +68,7 @@ export default function Contact(props) {
           backgroundColor: theme.palette.success.main,
         });
       })
-      .catch((err) => {
+      .catch(() => {
         setLoading(false);
         setMessage("");
         setFirstName("");

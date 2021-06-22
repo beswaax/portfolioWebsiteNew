@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useMediaQuery, useTheme } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import Head from "next/head";
 import Header1 from "../src/components/headers/Header1";
 import Features from "../src/components/features/Features3";
@@ -14,11 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LandingPage = ({ tabValue, setTabValue }) => {
+const LandingPage = () => {
   const classes = useStyles();
-  const theme = useTheme();
-
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className={classes.bodyMargin}>

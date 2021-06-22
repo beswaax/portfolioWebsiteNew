@@ -1,9 +1,8 @@
 import React from "react";
-import { makeStyles, useMediaQuery, useTheme } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import Head from "next/head";
 import PageHeader from "../src/components/headers/FreeAuditHeader";
 import Audit from "../src/components/content/FreeAudit";
-import ScheduleCall from "../src/components/call-to-action/ScheduleCall";
 import Contant from "../src/components/contacts/ContactFreeAudit";
 
 const useStyles = makeStyles((theme) => ({
@@ -12,9 +11,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const WebsiteAudit = ({ tabValue, setTabValue }) => {
+const WebsiteAudit = () => {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <div className={classes.bodyMargin}>

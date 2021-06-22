@@ -6,7 +6,6 @@ import Navbar from "../src/components/horizontal-navs/HorizontalNav2";
 import Footer from "../src/components/footers/Footer4";
 import theme from "../src/theme/index";
 import { useRouter } from "next/router";
-import { PageTransition } from "next-page-transitions";
 import * as gtag from "../lib/gtag";
 import AOS from "aos";
 
@@ -69,31 +68,13 @@ const App = (props) => {
       </Head>
       <ThemeProvider theme={theme}>
         <Navbar tabValue={tabValue} setTabValue={setTabValue} />
-        <PageTransition timeout={100} classNames="page-transition">
-          <Component
-            {...pageProps}
-            tabValue={tabValue}
-            setTabValue={setTabValue}
-          />
-        </PageTransition>
+        <Component
+          {...pageProps}
+          tabValue={tabValue}
+          setTabValue={setTabValue}
+        />
         <Footer tabValue={tabValue} setTabValue={setTabValue} />
       </ThemeProvider>
-      <style jsx global>{`
-        .page-transition-enter {
-          opacity: 0;
-        }
-        .page-transition-enter-active {
-          opacity: 1;
-          transition: opacity 300ms;
-        }
-        .page-transition-exit {
-          opacity: 1;
-        }
-        .page-transition-exit-active {
-          opacity: 0;
-          transition: opacity 300ms;
-        }
-      `}</style>
     </React.Fragment>
   );
 };

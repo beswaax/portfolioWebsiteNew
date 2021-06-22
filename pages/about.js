@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import Head from "next/head";
 import PageHeader from "../src/components/headers/AboutPageHeader";
 import Content2 from "../src/components/content/AboutContent2";
@@ -13,9 +13,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const About = ({ tabValue, setTabValue }) => {
+const About = () => {
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <div className={classes.bodyMargin}>

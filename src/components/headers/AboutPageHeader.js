@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header(props) {
+export default function Header() {
   const classes = useStyles();
 
   const content = {
@@ -104,7 +104,6 @@ export default function Header(props) {
     "primary-action": "Book A Strategy Call",
     "secondary-action": "Get a Free Website Audit",
     badge: "About RangoJango",
-    ...props.content,
   };
 
   return (

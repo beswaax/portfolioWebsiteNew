@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header(props) {
+export default function Header() {
   const classes = useStyles();
 
   const content = {
@@ -98,7 +98,6 @@ export default function Header(props) {
       "We're your team of Web Development and SEO experts focused on increasing your revenue.",
     "primary-action": "Book A Strategy Call",
     "secondary-action": "Get a Free Website Audit",
-    ...props.content,
   };
 
   return (

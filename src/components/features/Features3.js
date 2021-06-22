@@ -11,7 +11,6 @@ import CreateOutlinedIcon from "@material-ui/icons/CreateOutlined";
 import TrendingUpOutlinedIcon from "@material-ui/icons/TrendingUpOutlined";
 import Avatar from "@material-ui/core/Avatar";
 
-import ApartmentIcon from "@material-ui/icons/Apartment";
 import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -55,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Features(props) {
+export default function Features() {
   const classes = useStyles();
   const theme = useTheme();
 

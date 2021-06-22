@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function HowItWorks(props) {
+export default function HowItWorks() {
   const classes = useStyles();
   const theme = useTheme();
 

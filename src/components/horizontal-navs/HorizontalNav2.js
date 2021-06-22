@@ -14,7 +14,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
 import { useRouter } from "next/router";
-import { Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
