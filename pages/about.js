@@ -19,7 +19,9 @@ const About = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">About | Vancouver Web Design & Development</title>
+        <title key="title">
+          #1 Vancouver Ecommerce & Web Design | RangoJango
+        </title>{" "}
         <meta
           name="description"
           key="description"
@@ -35,7 +37,6 @@ const About = () => {
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/about" />
-
         <meta
           property="og:description"
           key="og:description"
@@ -43,7 +44,6 @@ const About = () => {
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />
-
         <link rel="canonical" key="canonical" href="/about" />
       </Head>
       <PageHeader />

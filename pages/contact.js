@@ -19,7 +19,7 @@ const LandingPage = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          Contact | Best Web Design & Development | Vancouver SEO
+          Contact | Best Web Design & Development | Vancouver
         </title>
         <meta
           name="description"
