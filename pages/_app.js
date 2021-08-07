@@ -20,7 +20,7 @@ const App = (props) => {
       return 0;
     } else if (router.pathname === "/about") {
       return 1;
-    } else if (router.pathname === "/services") {
+    } else if (router.pathname === "/blog") {
       return 2;
     } else if (router.pathname === "/free-website-audit") {
       return 3;

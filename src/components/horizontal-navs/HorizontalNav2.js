@@ -193,6 +193,7 @@ export default function Navigation({ tabValue, setTabValue }) {
     link4: "Free Audit",
     link5: "Contact Us",
     link6: "Book a Call",
+    link7: "Blog",
     servicesLinks: {
       link1: "Web Design & Development",
       link2: "E-Commerce",
@@ -230,7 +231,7 @@ export default function Navigation({ tabValue, setTabValue }) {
       setTabValue(0);
     } else if (router.pathname === "/about" && tabValue !== 1) {
       setTabValue(1);
-    } else if (router.pathname === "/services" && tabValue !== 2) {
+    } else if (router.pathname === "/blog" && tabValue !== 2) {
       setTabValue(2);
     } else if (router.pathname === "/free-website-audit" && tabValue !== 3) {
       setTabValue(3);
@@ -308,6 +309,7 @@ export default function Navigation({ tabValue, setTabValue }) {
         >
           {content["link2"]}
         </Link>
+
         {/* <Link
           href="/services"
           color="textPrimary"
@@ -323,7 +325,7 @@ export default function Navigation({ tabValue, setTabValue }) {
           disableRipple
           disableTouchRipple
           variant="subtitle1"
-          className={tabValue === 2 ? classes.linkSelected : classes.link}
+          className={tabValue === 10 ? classes.linkSelected : classes.link}
         >
           <Typography className={classes.services}>
             {content["link3"]}
@@ -374,6 +376,14 @@ export default function Navigation({ tabValue, setTabValue }) {
             {content.servicesLinks.link3}
           </StyledMenuItem>
         </StyledMenu>
+        <Link
+          href="/blog"
+          color="textPrimary"
+          variant="body1"
+          className={tabValue === 2 ? classes.linkSelected : classes.link}
+        >
+          {content["link7"]}
+        </Link>
         <Link
           href="/free-website-audit"
           color="textPrimary"
@@ -532,6 +542,20 @@ export default function Navigation({ tabValue, setTabValue }) {
                 </ListItem>{" "}
               </List>{" "}
             </Collapse>
+
+            <ListItem
+              className={classes.listItem}
+              disableRipple
+              disableTouchRipple
+              button
+              key={content["link7"]}
+              selected={tabValue === 2}
+              component={Link}
+              href="/blog"
+              onClick={() => setState({ open: !state.open })}
+            >
+              <ListItemText primary={content["link7"]} />
+            </ListItem>
             <ListItem
               className={classes.listItem}
               disableRipple

@@ -122,31 +122,36 @@ export default function Header({ content, secondButtonTrue }) {
               <span className={classes.extra}>{content["header-p2"]}</span>{" "}
             </Typography>
           </Typography>
-          <Container maxWidth="sm">
-            <Typography
-              variant="h6"
-              component="h2"
-              color="textSecondary"
-              paragraph={true}
-              className={classes.description}
-            >
-              {content["description"]}
-            </Typography>
-          </Container>
+          {content["description"] ? (
+            <Container maxWidth="sm">
+              <Typography
+                variant="h6"
+                component="h2"
+                color="textSecondary"
+                paragraph={true}
+                className={classes.description}
+              >
+                {content["description"]}
+              </Typography>
+            </Container>
+          ) : null}
           <Box mt={3}>
-            <Button
-              variant="contained"
-              component={Link}
-              fullWidth={false}
-              disableRipple
-              disableFocusRipple
-              disableTouchRipple
-              href="https://calendly.com/rangojango/business-strategy-email"
-              target="_blank"
-              className={classes.secondaryButton}
-            >
-              {content["primary-action"]}
-            </Button>{" "}
+            {content["primary-action"] ? (
+              <Button
+                variant="contained"
+                component={Link}
+                fullWidth={false}
+                disableRipple
+                disableFocusRipple
+                disableTouchRipple
+                href="https://calendly.com/rangojango/business-strategy-email"
+                target="_blank"
+                className={classes.secondaryButton}
+              >
+                {content["primary-action"]}
+              </Button>
+            ) : null}
+
             {secondButtonTrue ? (
               <Button
                 variant="contained"

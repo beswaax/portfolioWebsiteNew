@@ -28,8 +28,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerLink: {
-    marginLeft: theme.spacing(3),
-    marginRight: theme.spacing(3),
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
     color: "#b5b8bc",
     [theme.breakpoints.down("md")]: {
       marginBottom: theme.spacing(2),
@@ -88,6 +88,7 @@ export default function Footer() {
     link7: "SEO",
     link4: "Free Audit",
     link5: "Contact Us",
+    link9: "Blog",
   };
 
   let brand;
@@ -117,6 +118,9 @@ export default function Footer() {
           <Box component="nav" ml="auto" className={classes.footerNav}>
             <Link href="/about" variant="body1" className={classes.footerLink}>
               {content["link2"]}
+            </Link>
+            <Link href="/blog" variant="body1" className={classes.footerLink}>
+              {content["link9"]}
             </Link>
             <Link
               href="/web-development"
@@ -175,7 +179,7 @@ export default function Footer() {
             <IconButton
               disableRipple
               component={"a"}
-              href="https://www.instagram.com/rangojangoweb/"
+              href="https://www.instagram.com/rangojangodev/"
               target="_blank"
               style={{ marginLeft: "0.3rem", marginRight: "0.3rem" }}
               className={classes.icon}
