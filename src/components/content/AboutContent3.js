@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
     paddingBottom: 10,
     paddingRight: 20,
     paddingLeft: 20,
-    borderRadius: 10,
+    borderRadius: 0,
     borderBottomRightRadius: 0,
   },
 }));
@@ -34,29 +34,31 @@ export default function Content() {
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const content = {
-    badge: "#1 Web Development Agency in Vancouver",
+    badge: "#1 Web Design & Development Agency in Vancouver",
     "header-p1": "Hungry to grow",
     "header-p2": "your business?",
     description:
-      "We specialise in building custom websites and running SEO campaings. We can build anything from e-commerce to simple brochure websites. Hand-crafted and user friendly while providing innovative website development and digital marketing that delivers actual results. ",
+      "Welcome to RangoJango, a web design & development company based in Vancouver.. We specialize in building custom websites, web applications and running SEO campaigns. We can build anything from e-commerce websites to complex web applications and simple brochure websites.",
     description2:
-      "We launched RangoJango, as a response to the limited web development options available worldwide. Simply put, most traditional web agencies focus too much on the design of the website, while we focus on helping you grow your business. A beautiful website does not mean anything if it is not put to good use. We provide a fast, no nonsense turnaround.",
-    image: "/assets/devices2.svg",
+      "We launched RangoJango, as a response to the limited authentic web development options available in worldwide. We value your financial investment in your company's website and internet promotion. With a crucial focus on providing the best web design and web development solutions to our clients. Hand-crafted and user friendly while providing innovative website development and digital marketing that delivers actual results. ",
+    description3:
+      "We put our heart and soul into every project we work on, and we strive for perfection at all costs. Building long-term relationships with each of our clients is essential to us, and we collaborate closely to achieve incredible, but realistic, and measurable results.",
+    image: "/assets/3.webp",
     button: "Get in touch",
   };
 
   return (
     <section>
       <Container maxWidth="lg">
-        <Box py={25}>
+        <Box py={15}>
           <Grid container spacing={matchesXS ? 4 : 6}>
             <Hidden mdUp>
               <Grid item xs={12} md={6}>
                 <Image
-                  alt="a lady looking at a website and changing some things on the website"
+                  alt="a worker doing web design work at our Vancouver office"
                   src={content["image"]}
                   width={512}
-                  height={matchesSM ? 300 : 390}
+                  height={matchesSM ? 600 : 670}
                   align={matchesSM ? "center" : "inherit"}
                   data-aos="fade-up"
                   layout={
@@ -107,17 +109,24 @@ export default function Content() {
                   </Typography>
                   <Typography
                     variant="subtitle1"
-                    color="textSecondary"
+                    color="textPrimary"
                     paragraph={true}
                   >
                     {content["description"]}
                   </Typography>
                   <Typography
                     variant="subtitle1"
-                    color="textSecondary"
+                    color="textPrimary"
                     paragraph={true}
                   >
                     {content["description2"]}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    color="textPrimary"
+                    paragraph={true}
+                  >
+                    {content["description3"]}
                   </Typography>
                   <Box>
                     <Button
@@ -143,7 +152,7 @@ export default function Content() {
                   alt="a lady looking at a website and changing some things on the website"
                   src={content["image"]}
                   width={512}
-                  height={matchesSM ? 300 : 390}
+                  height={matchesSM ? 600 : 670}
                   data-aos="fade-up"
                   align={matchesSM ? "center" : "inherit"}
                   layout={

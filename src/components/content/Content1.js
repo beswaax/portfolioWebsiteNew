@@ -21,8 +21,7 @@ const useStyles = makeStyles(() => ({
     paddingBottom: 10,
     paddingRight: 20,
     paddingLeft: 20,
-    borderRadius: 10,
-    borderBottomRightRadius: 0,
+    borderRadius: 0,
   },
   text: {
     fontWeight: 700,
@@ -37,32 +36,35 @@ export default function Content() {
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const content = {
-    badge: "Pixel perfect websites | Vancouver",
-    "header-p1": "Websites that",
-    "header-p2": "make you money",
+    badge: "Pixel perfect websites/web apps | Vancouver",
+    "header-p1": "Grow your business",
+    "header-p2": "with RangoJango.",
     description:
-      "At RangoJango we focus on solving the real problems your business might be facing, be it increasing sales, increasing visiblity or targeting the right clients.",
+      "At RangoJango we focus on solving the real problems your business might be facing, be it increasing sales, increasing visibility or targeting the right clients. We increase revenue and ensure sustainable long-term growth for your business through powerful custom-built websites/web applications.",
     description2:
-      "We increase revenue and ensure sustainable long-term growth for your business through powerful custom-built websites.",
+      "With specialties ranging from web design and development to app development, SEO and ecommerce development. Our talented team delivers innovative strategies and recognizable results. We aren’t afraid to let our imaginations run wild.",
     description3:
-      "Don't settle for anything less than perfect. We guarantee perfect websites and set realistic expectations from the very start, so you know what to results to expect without any disappointments.",
+      "Don't settle for anything less than perfect. We guarantee perfect results and set realistic expectations from the very start, so you know what to results to expect without any disappointments.",
     "primary-action": "Learn More",
-    image: "/assets/devices8.svg",
+    image: "/assets/1.webp",
   };
 
   return (
     <section data-aos="fade-up">
       <Container maxWidth="lg">
-        <Box pt={18} pb={24}>
+        <Box
+          pt={matchesXS ? 0 : matchesSM ? 2 : 10}
+          pb={matchesXS ? 6 : matchesSM ? 6 : 16}
+        >
           <Grid container spacing={2}>
             <Hidden mdUp>
               <Grid item xs={12} md={6} align="center" sm={12}>
                 <Grow mountOnEnter in={true} timeout={1000}>
                   <Image
-                    alt="a lady with a futuristic design to the left"
+                    alt="a worker building a new ecommerce website for a client at our Vancouver office"
                     src={content["image"]}
                     width={512}
-                    height={matchesSM ? 300 : 390}
+                    height={matchesSM ? 600 : 670}
                     align={matchesSM ? "center" : "inherit"}
                     layout={
                       matchesXS
@@ -106,22 +108,22 @@ export default function Content() {
                     </Typography>
                   </Typography>
                   <Typography
-                    variant="subtitle1"
-                    color="textSecondary"
+                    variant="body1"
+                    color="textPrimary"
                     paragraph={true}
                   >
                     {content["description"]}
                   </Typography>
                   <Typography
-                    variant="subtitle1"
-                    color="textSecondary"
+                    variant="body1"
+                    color="textPrimary"
                     paragraph={true}
                   >
                     {content["description2"]}
                   </Typography>
                   <Typography
-                    variant="subtitle1"
-                    color="textSecondary"
+                    variant="body1"
+                    color="textPrimary"
                     paragraph={true}
                   >
                     {content["description3"]}
@@ -144,9 +146,10 @@ export default function Content() {
             <Hidden smDown>
               <Grid item xs={12} md={6} sm={12}>
                 <Image
+                  alt="a worker building a new ecommerce website for a client at our Vancouver office"
                   src={content["image"]}
                   width={512}
-                  height={matchesSM ? 300 : 390}
+                  height={matchesSM ? 600 : 670}
                   align={matchesSM ? "center" : "inherit"}
                   layout={
                     matchesXS

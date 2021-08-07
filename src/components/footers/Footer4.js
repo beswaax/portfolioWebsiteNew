@@ -83,7 +83,9 @@ export default function Footer() {
     copy: "© 2021 RangoJango. All rights reserved.",
     link1: "Home",
     link2: "About",
-    link3: "Services",
+    link3: "Web Development",
+    link6: "E-Commerce",
+    link7: "SEO",
     link4: "Free Audit",
     link5: "Contact Us",
   };
@@ -113,18 +115,25 @@ export default function Footer() {
             {brand}
           </Link>
           <Box component="nav" ml="auto" className={classes.footerNav}>
-            <Link href="/" variant="body1" className={classes.footerLink}>
-              {content["link1"]}
-            </Link>
             <Link href="/about" variant="body1" className={classes.footerLink}>
               {content["link2"]}
             </Link>
             <Link
-              href="/services"
+              href="/web-development"
               variant="body1"
               className={classes.footerLink}
             >
               {content["link3"]}
+            </Link>
+            <Link
+              href="/ecommerce-development"
+              variant="body1"
+              className={classes.footerLink}
+            >
+              {content["link6"]}
+            </Link>
+            <Link href="/seo" variant="body1" className={classes.footerLink}>
+              {content["link7"]}
             </Link>
             <Link
               href="/free-website-audit"

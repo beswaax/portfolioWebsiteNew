@@ -15,7 +15,9 @@ import {
 
 const useStyles = makeStyles(() => ({
   textField: {
-    color: "black",
+    ["& fieldset"]: {
+      borderRadius: 0,
+    },
   },
   mainText: {
     fontWeight: 700,
@@ -137,6 +139,7 @@ export default function Contact() {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
+                    className={classes.textField}
                     variant="outlined"
                     required
                     color="primary"
@@ -153,6 +156,7 @@ export default function Contact() {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
+                    className={classes.textField}
                     variant="outlined"
                     required
                     color="primary"
@@ -169,6 +173,7 @@ export default function Contact() {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
+                    className={classes.textField}
                     variant="outlined"
                     required
                     multiline

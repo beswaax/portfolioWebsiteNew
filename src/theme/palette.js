@@ -13,6 +13,7 @@ const palette = {
   backgroundPage: "#F9FAFB",
   coolNav: "#EBF2F2",
   darkBlack: "#1A1A1A",
+  darkBlackEasier: "#26262A",
   primary: {
     main: "#059669",
     light: "#D1FAE5",

@@ -60,7 +60,10 @@ const App = (props) => {
   return (
     <React.Fragment>
       <Head>
-        <title>RangoJango | Web Design & Development</title>
+        <title>
+          #1 Vancouver Web Design & Development, SEO & ECommerce Company |
+          RangoJango
+        </title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

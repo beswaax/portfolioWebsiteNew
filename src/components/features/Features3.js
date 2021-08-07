@@ -7,9 +7,10 @@ import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import CodeIcon from "@material-ui/icons/Code";
 import StorefrontTwoToneIcon from "@material-ui/icons/StorefrontTwoTone";
-import CreateOutlinedIcon from "@material-ui/icons/CreateOutlined";
 import TrendingUpOutlinedIcon from "@material-ui/icons/TrendingUpOutlined";
 import Avatar from "@material-ui/core/Avatar";
+
+import Link from "../../Link";
 
 import { useMediaQuery } from "@material-ui/core";
 
@@ -39,9 +40,15 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     marginBottom: theme.spacing(3),
+    borderRadius: 0,
     backgroundColor: theme.palette.common.white,
-    transition: "transform 0.15s ease-in-out",
-    "&:hover": { transform: "scale3d(1.03, 1.03, 1)" },
+    transition:
+      "transform 0.25s ease-in-out, background-color 0.40s ease-in-out",
+    textDecoration: "none",
+    "&:hover": {
+      backgroundColor: theme.palette.grey[50],
+      transform: "scale3d(1.03, 1.03, 1)",
+    },
   },
   paperDown: {
     marginTop: -1 * theme.spacing(3),
@@ -51,6 +58,12 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     fontWeight: 700,
+  },
+  link: {
+    textDecoration: "none",
+    "&:hover": {
+      textDecoration: "none",
+    },
   },
 }));
 
@@ -63,7 +76,7 @@ export default function Features() {
   const content = {
     badge: "Save time. Make more money.",
     "header-p1": "Our Services",
-    "col1-header": "Web Development",
+    "col1-header": "Web Design &  Development",
     "col1-desc":
       "Developing websites suitable for your digital needs. From company portfolios to sophisticated back-end systems.",
     "col2-header": "UI - UX Design",
@@ -80,8 +93,8 @@ export default function Features() {
   return (
     <section className={classes.section} data-aos="fade-up">
       <Container maxWidth="lg">
-        <Box pt={15} pb={13}>
-          <Grid container spacing={matchesSM ? 4 : 6}>
+        <Box pt={matchesSM ? 7 : 15} pb={13}>
+          <Grid container spacing={matchesSM ? 4 : 5}>
             <Grid item xs={12} lg={12}>
               <Box display="flex" height="100%">
                 <Container
@@ -119,127 +132,107 @@ export default function Features() {
             </Grid>
             <Grid item xs={12} lg={12} className={classes.features}>
               <Grid container spacing={3}>
-                <Grid item xs={12} md={6}>
-                  <Paper variant="outlined" className={classes.paper}>
-                    <Box p={3}>
-                      <Box mb={2}>
-                        <Avatar
-                          variant="rounded"
-                          className={classes.iconWrapper}
-                        >
-                          <CodeIcon />
-                        </Avatar>
+                <Grid item xs={12} md={4}>
+                  <Link href="/web-development" className={classes.link}>
+                    <Paper variant="outlined" className={classes.paper}>
+                      <Box p={3}>
+                        <Box mb={2}>
+                          <Avatar
+                            variant="rounded"
+                            className={classes.iconWrapper}
+                          >
+                            <CodeIcon />
+                          </Avatar>
+                        </Box>
+                        <div>
+                          <Typography
+                            variant="h6"
+                            component="h3"
+                            gutterBottom={true}
+                            color="textPrimary"
+                            className={classes.text}
+                          >
+                            {content["col1-header"]}
+                          </Typography>
+                          <Typography
+                            variant="body1"
+                            className={classes.textDesc}
+                            component="p"
+                            color="textSecondary"
+                          >
+                            {content["col1-desc"]}
+                          </Typography>
+                        </div>
                       </Box>
-                      <div>
-                        <Typography
-                          variant="h6"
-                          component="h3"
-                          gutterBottom={true}
-                          className={classes.text}
-                        >
-                          {content["col1-header"]}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          component="p"
-                          color="textSecondary"
-                        >
-                          {content["col1-desc"]}
-                        </Typography>
-                      </div>
-                    </Box>
-                  </Paper>
-
-                  <Paper variant="outlined" className={classes.paper}>
-                    <Box p={3}>
-                      <Box mb={2}>
-                        <Avatar
-                          variant="rounded"
-                          className={classes.iconWrapper}
-                        >
-                          <CreateOutlinedIcon />
-                        </Avatar>
-                      </Box>
-                      <div>
-                        <Typography
-                          variant="h6"
-                          className={classes.text}
-                          component="h3"
-                          gutterBottom={true}
-                        >
-                          {content["col2-header"]}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          component="p"
-                          color="textSecondary"
-                        >
-                          {content["col2-desc"]}
-                        </Typography>
-                      </div>
-                    </Box>
-                  </Paper>
+                    </Paper>
+                  </Link>
                 </Grid>
-                <Grid item xs={12} md={6}>
-                  <Paper variant="outlined" className={classes.paper}>
-                    <Box p={3}>
-                      <Box mb={2}>
-                        <Avatar
-                          variant="rounded"
-                          className={classes.iconWrapper}
-                        >
-                          <StorefrontTwoToneIcon />
-                        </Avatar>
+                <Grid item xs={12} md={4}>
+                  <Link href="/ecommerce-development" className={classes.link}>
+                    <Paper variant="outlined" className={classes.paper}>
+                      <Box p={3}>
+                        <Box mb={2}>
+                          <Avatar
+                            variant="rounded"
+                            className={classes.iconWrapper}
+                          >
+                            <StorefrontTwoToneIcon />
+                          </Avatar>
+                        </Box>
+                        <div>
+                          <Typography
+                            variant="h6"
+                            className={classes.text}
+                            component="h3"
+                            gutterBottom={true}
+                          >
+                            {content["col3-header"]}
+                          </Typography>
+                          <Typography
+                            variant="body1"
+                            component="p"
+                            color="textSecondary"
+                          >
+                            {content["col3-desc"]}
+                          </Typography>
+                        </div>
                       </Box>
-                      <div>
-                        <Typography
-                          variant="h6"
-                          className={classes.text}
-                          component="h3"
-                          gutterBottom={true}
-                        >
-                          {content["col3-header"]}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          component="p"
-                          color="textSecondary"
-                        >
-                          {content["col3-desc"]}
-                        </Typography>
-                      </div>
-                    </Box>
-                  </Paper>
+                    </Paper>
+                  </Link>
+                </Grid>
 
-                  <Paper variant="outlined" className={classes.paper}>
-                    <Box p={3}>
-                      <Box mb={2}>
-                        <Avatar
-                          variant="rounded"
-                          className={classes.iconWrapper}
-                        >
-                          <TrendingUpOutlinedIcon />
-                        </Avatar>
+                <Grid item xs={12} md={4}>
+                  <Link href="/seo" className={classes.link}>
+                    <Paper variant="outlined" className={classes.paper}>
+                      <Box p={3}>
+                        <Box mb={2}>
+                          <Avatar
+                            variant="rounded"
+                            className={classes.iconWrapper}
+                          >
+                            <TrendingUpOutlinedIcon />
+                          </Avatar>
+                        </Box>
+                        <div>
+                          <Typography
+                            className={classes.text}
+                            variant="h6"
+                            component="h3"
+                            gutterBottom={true}
+                          >
+                            {content["col4-header"]}
+                          </Typography>
+                          <Typography
+                            variant="body1"
+                            component="p"
+                            color="textSecondary"
+                          >
+                            {content["col4-desc"]}
+                          </Typography>
+                        </div>
                       </Box>
-                      <div>
-                        <Typography
-                          className={classes.text}
-                          variant="h6"
-                          component="h3"
-                          gutterBottom={true}
-                        >
-                          {content["col4-header"]}
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          component="p"
-                          color="textSecondary"
-                        >
-                          {content["col4-desc"]}
-                        </Typography>
-                      </div>
-                    </Box>
-                  </Paper>
+                    </Paper>
+                  </Link>
                 </Grid>
               </Grid>
             </Grid>

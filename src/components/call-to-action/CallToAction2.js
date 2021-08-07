@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundColor: theme.palette.heavyBlue,
+    backgroundColor: theme.palette.darkBlack,
     marginBottom: "3rem",
   },
   description: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   primaryAction: {
     marginRight: theme.spacing(2),
-    borderRadius: 8,
+    borderRadius: 0,
     color: theme.palette.grey[300],
     borderBottomRightRadius: 0,
     [theme.breakpoints.down("sm")]: {
@@ -39,8 +39,7 @@ export default function CTA() {
   const classes = useStyles();
 
   const content = {
-    description:
-      "Whether you're a dentist from Vancouver or a construction company from London, we achieve great results for everyone!",
+    description: "Authentic Web Design & Web Development in Vancouver",
     "primary-action": "BOOK CONSULTATION",
   };
 

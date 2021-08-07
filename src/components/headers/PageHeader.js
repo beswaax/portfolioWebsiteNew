@@ -11,6 +11,7 @@ import { Badge } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   section: {
     backgroundRepeat: "no-repeat",
+
     backgroundSize: "cover",
     backgroundColor: theme.palette.heavyBlue,
     paddingTop: theme.spacing(20),
@@ -44,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 9,
     paddingRight: 19,
     paddingLeft: 19,
-    borderRadius: 9,
+    borderRadius: 0,
     [theme.breakpoints.down("sm")]: {
       width: "90%",
       marginRight: theme.spacing(0),
@@ -70,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 9,
     paddingRight: 19,
     paddingLeft: 19,
-    borderRadius: 9,
+    borderRadius: 0,
     [theme.breakpoints.down("sm")]: {
       width: "90%",
       marginRight: theme.spacing(0),
@@ -96,22 +97,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header() {
+export default function Header({ content, secondButtonTrue }) {
   const classes = useStyles();
 
-  const content = {
-    "header-p1": "Custom websites that get you the results",
-    "header-p2": "*you need",
-    description:
-      "We have the technical skills, experience, and ability to deliver perfect websites to help reach your goals.",
-    "primary-action": "Book A Strategy Call",
-    "secondary-action": "Get a Free Website Audit",
-    badge: "Web Development in",
-    location: "Vancouver",
-  };
-
   return (
-    <section className={classes.section}>
+    <section
+      className={classes.section}
+      style={{
+        backgroundImage: `url("${content.backgroundImage}")`,
+      }}
+    >
       <Container maxWidth="md">
         <Box textAlign="center" color="common.white">
           <Badge>
@@ -152,18 +147,20 @@ export default function Header() {
             >
               {content["primary-action"]}
             </Button>{" "}
-            <Button
-              variant="contained"
-              component={Link}
-              fullWidth={false}
-              disableRipple
-              disableFocusRipple
-              disableTouchRipple
-              href="/free-website-audit"
-              className={classes.primaryButton}
-            >
-              {content["secondary-action"]}
-            </Button>
+            {secondButtonTrue ? (
+              <Button
+                variant="contained"
+                component={Link}
+                fullWidth={false}
+                disableRipple
+                disableFocusRipple
+                disableTouchRipple
+                href="/free-website-audit"
+                className={classes.primaryButton}
+              >
+                {content["secondary-action"]}
+              </Button>
+            ) : null}
           </Box>
         </Box>
       </Container>

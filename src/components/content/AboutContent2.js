@@ -34,8 +34,8 @@ export default function Content() {
     "header-p1": "What We Do",
     "header-p2": "Why us? Let's cut to the chase...",
     description:
-      "Our unique expertise in SEO is what sets up apart from others. ",
-    description2: "You and your business needs always come first. ",
+      "Our unique expertise in Web Development is what sets up apart from others. ",
+    description2: "You and your business's needs always come first. ",
     description3:
       "Your goals are the forefront of our mind, we reach your goals by all means necessary.",
     description4:

@@ -14,6 +14,17 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
 import { useRouter } from "next/router";
+import {
+  ButtonBase,
+  Menu,
+  Collapse,
+  Typography,
+  MenuItem,
+  useTheme,
+} from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
+
+import { ExpandLess, ExpandMore } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -98,13 +109,16 @@ const useStyles = makeStyles((theme) => ({
   listItem: {
     backgroundColor: theme.palette.common.white,
     boxShadow: "none",
-    borderRadius: 10,
+    borderRadius: 0,
+    "&:hover": {
+      backgroundColor: theme.palette.primary.light,
+    },
   },
   calendlyListItem: {
     marginTop: "0.2rem",
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.common.white,
-    borderRadius: 2,
+    borderRadius: 0,
     "&:hover": {
       backgroundColor: theme.palette.primary.dark,
       color: theme.palette.common.white,
@@ -126,16 +140,49 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 9,
     paddingRight: 19,
     paddingLeft: 19,
-    borderRadius: 9,
+    borderRadius: 0,
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
+  },
+  listItemSmaller: {
+    paddingLeft: "2rem",
+    boxShadow: "none",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.light,
+    },
+    borderRadius: 1,
+  },
+  collapseContainer: {
+    backgroundImage: [theme.palette.grey[200]],
   },
 }));
 
 export default function Navigation({ tabValue, setTabValue }) {
   const classes = useStyles();
   const router = useRouter();
+  const theme = useTheme();
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [openCollapse, setOpenCollapse] = React.useState(false);
+  const [state, setState] = React.useState({ open: false });
+
+  const closeCollapseAndMenu = () => {
+    setState({ open: !state.open });
+    setOpenCollapse(!openCollapse);
+  };
+
+  function handleOpenSettings() {
+    setOpenCollapse(!openCollapse);
+  }
+
+  const handleClickMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseMenu = () => {
+    setAnchorEl(null);
+  };
 
   const content = {
     brand: { image: "/assets/logo2/vector/logo-single-white.svg", width: 180 },
@@ -146,6 +193,11 @@ export default function Navigation({ tabValue, setTabValue }) {
     link4: "Free Audit",
     link5: "Contact Us",
     link6: "Book a Call",
+    servicesLinks: {
+      link1: "Web Design & Development",
+      link2: "E-Commerce",
+      link3: "SEO Services",
+    },
   };
 
   let brand;
@@ -161,8 +213,6 @@ export default function Navigation({ tabValue, setTabValue }) {
   } else {
     brand = content.brand.text || "";
   }
-
-  const [state, setState] = React.useState({ open: false });
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -188,6 +238,47 @@ export default function Navigation({ tabValue, setTabValue }) {
       setTabValue(4);
     }
   }, [setTabValue, tabValue, router.pathname]);
+
+  const StyledMenu = withStyles({
+    paper: {
+      backgroundColor: theme.palette.primary.dark,
+
+      borderRadius: 0,
+    },
+  })((props) => (
+    <Menu
+      elevation={0}
+      getContentAnchorEl={null}
+      anchorOrigin={{
+        vertical: "bottom",
+        horizontal: "right",
+      }}
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "center",
+      }}
+      {...props}
+    />
+  ));
+
+  const StyledMenuItem = withStyles((theme) => ({
+    root: {
+      paddingLeft: 35,
+      paddingRight: 35,
+      paddingTop: 10,
+      paddingBottom: 10,
+      color: theme.palette.primary.light,
+      fontWeight: 400,
+      "&:hover": {
+        backgroundColor: theme.palette.grey[200],
+        color: theme.palette.primary.dark,
+
+        "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
+          // color: theme.palette.secondary.dark,
+        },
+      },
+    },
+  }))(MenuItem);
 
   return (
     <AppBar position="static" color="inherit" className={classes.appBar}>
@@ -217,14 +308,72 @@ export default function Navigation({ tabValue, setTabValue }) {
         >
           {content["link2"]}
         </Link>
-        <Link
+        {/* <Link
           href="/services"
           color="textPrimary"
           variant="body1"
           className={tabValue === 2 ? classes.linkSelected : classes.link}
         >
           {content["link3"]}
-        </Link>
+        </Link> */}
+        <ButtonBase
+          aria-controls="simple-menu"
+          aria-haspopup="true"
+          onClick={handleClickMenu}
+          disableRipple
+          disableTouchRipple
+          variant="subtitle1"
+          className={tabValue === 2 ? classes.linkSelected : classes.link}
+        >
+          <Typography className={classes.services}>
+            {content["link3"]}
+          </Typography>
+        </ButtonBase>
+        <StyledMenu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleCloseMenu}
+        >
+          <StyledMenuItem
+            disableRipple
+            disableTouchRipple
+            onClick={handleCloseMenu}
+            component={Link}
+            href="/web-development"
+            color="textPrimary"
+            variant="subtitle1"
+            className={classes.linkMenu}
+          >
+            {" "}
+            {content.servicesLinks.link1}
+          </StyledMenuItem>
+          <StyledMenuItem
+            disableRipple
+            disableTouchRipple
+            onClick={handleCloseMenu}
+            component={Link}
+            href="/ecommerce-development"
+            color="textPrimary"
+            variant="subtitle1"
+            className={classes.linkMenu}
+          >
+            {content.servicesLinks.link2}
+          </StyledMenuItem>
+          <StyledMenuItem
+            disableRipple
+            component={Link}
+            disableTouchRipple
+            onClick={handleCloseMenu}
+            href="/seo"
+            color="textPrimary"
+            variant="subtitle1"
+            className={classes.linkMenu}
+          >
+            {content.servicesLinks.link3}
+          </StyledMenuItem>
+        </StyledMenu>
         <Link
           href="/free-website-audit"
           color="textPrimary"
@@ -324,13 +473,65 @@ export default function Navigation({ tabValue, setTabValue }) {
               disableTouchRipple
               button
               key={content["link3"]}
-              selected={tabValue === 2}
-              component={Link}
-              href="/services"
-              onClick={() => setState({ open: !state.open })}
+              onClick={handleOpenSettings}
             >
+              {" "}
               <ListItemText primary={content["link3"]} />
+              {openCollapse ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
+            <Collapse
+              in={openCollapse}
+              timeout="auto"
+              unmountOnExit
+              className={classes.collapseContainer}
+            >
+              <List
+                component="div"
+                disablePadding
+                className={classes.collapseContainer}
+              >
+                <ListItem
+                  className={classes.listItemSmaller}
+                  disableRipple
+                  disableTouchRipple
+                  button
+                  key={content.servicesLinks.link1}
+                  component={Link}
+                  href="/web-development"
+                  onClick={closeCollapseAndMenu}
+                >
+                  <ListItemText primary={content.servicesLinks.link1} />
+                </ListItem>{" "}
+              </List>
+              <List component="div" disablePadding>
+                <ListItem
+                  className={classes.listItemSmaller}
+                  disableRipple
+                  disableTouchRipple
+                  button
+                  key={content.servicesLinks.link2}
+                  component={Link}
+                  href="/ecommerce-development"
+                  onClick={closeCollapseAndMenu}
+                >
+                  <ListItemText primary={content.servicesLinks.link2} />
+                </ListItem>{" "}
+              </List>{" "}
+              <List component="div" disablePadding>
+                <ListItem
+                  className={classes.listItemSmaller}
+                  disableRipple
+                  disableTouchRipple
+                  button
+                  key={content.servicesLinks.link3}
+                  component={Link}
+                  href="/seo"
+                  onClick={closeCollapseAndMenu}
+                >
+                  <ListItemText primary={content.servicesLinks.link3} />
+                </ListItem>{" "}
+              </List>{" "}
+            </Collapse>
             <ListItem
               className={classes.listItem}
               disableRipple

@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 9,
     paddingRight: 19,
     paddingLeft: 19,
-    borderRadius: 9,
+    borderRadius: 0,
   },
   primaryAction: {
     marginRight: theme.spacing(2),

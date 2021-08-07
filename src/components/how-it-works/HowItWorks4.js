@@ -10,13 +10,17 @@ import { useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   number: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: "transparent",
     padding: 10,
-    borderRadius: 10,
+    fontSize: "4rem",
+
+    fontWeight: 800,
     [theme.breakpoints.down("xs")]: {
-      borderRadius: 8,
+      borderRadius: 0,
     },
-    color: theme.palette.primary.dark,
+    color: theme.palette.grey[200],
+    borderRadius: 0,
+    alignContent: "left",
   },
   img: {
     maxWidth: 256,
@@ -25,14 +29,17 @@ const useStyles = makeStyles((theme) => ({
   stepActive: {
     border: "1px solid",
     borderColor: theme.palette.background.secondary,
-    borderRadius: theme.shape.borderRadius,
+    borderRadius: 0,
   },
-  gridCotainer: {
-    backgroundColor: theme.palette.white,
+  gridContainer: {
+    backgroundColor: "#00bc77",
+    border: "5px solid white",
+    paddingBottom: 35,
+    paddingTop: 20,
   },
   section: {
-    marginBottom: "5rem",
-    marginTop: "4rem",
+    backgroundColor: theme.palette.darkBlackEasier,
+
     [theme.breakpoints.down("sm")]: {
       marginBottom: "2rem",
       marginTop: "2rem",
@@ -43,10 +50,21 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mainText: {
-    fontWeight: 700,
+    fontWeight: 600,
+    color: theme.palette.common.white,
   },
   specialText: {
     color: theme.palette.primary.main,
+  },
+  desc: {
+    color: theme.palette.grey[200],
+  },
+  desc2: {
+    color: theme.palette.grey[100],
+  },
+  title: {
+    color: theme.palette.grey[50],
+    fontWeight: 600,
   },
 }));
 
@@ -57,24 +75,27 @@ export default function HowItWorks() {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const content = {
-    "header-p1": "3 steps to more",
+    "header-p1": "WHY RANGOJANGO?",
     "header-p2": "sales",
     description:
-      "We live and breathe Web Development and SEO. No really, we do. We offer you the best experience possbile. We never give up until our customers are fully satisfied.",
-    "col1-header": "Phone Call",
+      "We live and breathe Web Development and SEO. No really, we do. We offer you the best experience possible. We never give up until our customers are fully satisfied.",
+    "col1-header": "Customer Focused",
     "col1-desc":
-      "On the call we will get to know each other and discuss the needs of your business.",
-    "col2-header": "Custom Strategy",
+      "You and your business needs always come first. We treat you like one of our own. Our loyalty lies with you.",
+    "col2-header": "Results Driven",
     "col2-desc":
-      "We'll create a strategy focused on solving the problems your business may face.",
-    "col3-header": "More Sales!",
+      "Your goals are the forefront of our mind when executing your strategy. We reach your goals by all means necessary.",
+    "col3-header": "Satisfaction Guarantee",
     "col3-desc":
-      "Start generating more traffic and more interest in your business today.",
+      "Not satisfied with our work? We will give you a full refund on the entire project. No questions asked.",
+    "col4-header": "Fully Transparent",
+    "col4-desc":
+      "Clear and open communication. Know exactly where we are with your project at any time.",
   };
   return (
     <section className={classes.section} data-aos="fade-up">
-      <Container maxWidth="lg">
-        <Box py={21} textAlign="center">
+      <Container style={{ maxWidth: "60rem" }}>
+        <Box py={10} textAlign="center">
           <Box mb={8}>
             <Container maxWidth="sm">
               <Typography
@@ -86,80 +107,123 @@ export default function HowItWorks() {
                 <Typography
                   variant="h3"
                   component="span"
-                  className={classes.mainText}
-                  color="textPrimary"
+                  className={classes.title}
                 >
                   {content["header-p1"]}{" "}
-                  <span className={classes.specialText}>
+                  {/* <span className={classes.specialText}>
                     {content["header-p2"]}
-                  </span>
+                  </span> */}
                 </Typography>
               </Typography>
-              <Typography
+              {/* <Typography
                 variant="subtitle1"
-                color="textSecondary"
                 paragraph={true}
+                className={classes.desc}
               >
                 {" "}
                 {content["description"]}{" "}
-              </Typography>
+              </Typography> */}
             </Container>
           </Box>
           <Grid container spacing={matchesSM ? 4 : 6}>
-            <Grid item xs={12} md={4}>
-              <Box p={3} pb={4} className={classes.gridCotainer}>
-                <Box display="flex" justifyContent="center" mt={1} mb={4}>
-                  <Avatar className={classes.number}>1</Avatar>
+            <Grid item xs={12} md={6}>
+              <Box p={3} pb={4} className={classes.gridContainer}>
+                <Box display="flex" justifyContent="flex-start" mt={1} mb={4}>
+                  <Avatar align="left" className={classes.number}>
+                    1
+                  </Avatar>
                 </Box>
                 <Typography
                   className={classes.mainText}
-                  variant="h5"
+                  variant="h4"
+                  align="left"
                   component="h2"
                   gutterBottom={true}
-                  color="textPrimary"
                 >
                   {content["col1-header"]}
                 </Typography>
-                <Typography variant="body1" component="p" color="textSecondary">
+                <Typography
+                  variant="body1"
+                  align="left"
+                  component="p"
+                  className={classes.desc2}
+                >
                   {content["col1-desc"]}
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
-              <Box p={3} pb={4} className={classes.gridCotainer}>
-                <Box display="flex" justifyContent="center" mt={1} mb={4}>
+            <Grid item xs={12} md={6}>
+              <Box p={3} pb={4} className={classes.gridContainer}>
+                <Box display="flex" justifyContent="flex-start" mt={1} mb={4}>
                   <Avatar className={classes.number}>2</Avatar>
                 </Box>
                 <Typography
                   className={classes.mainText}
-                  variant="h5"
+                  variant="h4"
                   component="h2"
+                  align="left"
                   gutterBottom={true}
-                  color="textPrimary"
                 >
                   {content["col2-header"]}
                 </Typography>
-                <Typography variant="body1" component="p" color="textSecondary">
+                <Typography
+                  variant="body1"
+                  align="left"
+                  component="p"
+                  className={classes.desc2}
+                >
                   {content["col2-desc"]}
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={4}>
-              <Box p={3} pb={4} className={classes.gridCotainer}>
-                <Box display="flex" justifyContent="center" mt={1} mb={4}>
+            <Grid item xs={12} md={6}>
+              <Box p={3} pb={4} className={classes.gridContainer}>
+                <Box display="flex" justifyContent="flex-start" mt={1} mb={4}>
                   <Avatar className={classes.number}>3</Avatar>
                 </Box>
                 <Typography
                   className={classes.mainText}
-                  variant="h5"
+                  variant="h4"
                   component="h2"
+                  align="left"
                   gutterBottom={true}
-                  color="textPrimary"
                 >
                   {content["col3-header"]}
                 </Typography>
-                <Typography variant="body1" component="p" color="textSecondary">
+                <Typography
+                  variant="body1"
+                  component="p"
+                  className={classes.desc2}
+                  align="left"
+                >
                   {content["col3-desc"]}
+                </Typography>
+              </Box>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Box p={3} pb={4} className={classes.gridContainer}>
+                <Box display="flex" justifyContent="flex-start" mt={1} mb={4}>
+                  <Avatar align="left" className={classes.number}>
+                    4
+                  </Avatar>
+                </Box>
+                <Typography
+                  className={classes.mainText}
+                  variant="h4"
+                  align="left"
+                  component="h2"
+                  gutterBottom={true}
+                >
+                  {content["col4-header"]}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  align="left"
+                  component="p"
+                  className={classes.desc2}
+                >
+                  {content["col4-desc"]}
                 </Typography>
               </Box>
             </Grid>

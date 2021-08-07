@@ -19,20 +19,20 @@ const LandingPage = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          Contact | Best Web Design & Development | Vancouver
+          Contact Us | Web Design, SEO, Ecommerce | RangoJango
         </title>
         <meta
           name="description"
           key="description"
-          content="Have a web design or web development question? Are you looking for an SEO quote? You want a new website and don't know where to start? We can't wait to hear from you."
+          content="Contact us below to ask a question, get a quote or start a project. We will respond within 24 hours."
         />
         <meta
           name="keywords"
-          content="ecommerce build toronto,vancouver web, new website dublin, new website toronto, new website london, help ecommerce vancouver, how build ecommerce vancouver, how build ecommerce usa, build ecommerce vancouver, build ecommerce canada, website design, website development, ecommerce canada, ecommerce canada, ecommerce usa, ecommerce uk, ecommerce tornto, e-commerce development, web development british columbia, website design british columbia, web design, best web design canada, best web developer usa, seo usa, seo north america, seo uk, seo canada, seo usa, website design uk, website design canada, website design usa, web dev canada, usa web dev, website lawyers, vancouver design, web design dentists, web design accountants, build website construction, build website vancouver layers"
+          content="web development company vancouver, website design company vancouver, best site design firm in vancouver, ecommerce design in vancouver, seo in vancouver bc"
         />
         <meta
           property="og:title"
-          content="Contact | RangoJango Web Design & Development Vancouver"
+          content="Contact Us | Web Design, SEO, Ecommerce | RangoJango"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/contact" />
@@ -40,7 +40,7 @@ const LandingPage = () => {
         <meta
           property="og:description"
           key="og:description"
-          content="Have a web design or web development question? Are you looking for an SEO quote? You want a new website and don't know where to start? We can't wait to hear from you."
+          content="Contact us below to ask a question, get a quote or start a project. We will respond within 24 hours."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

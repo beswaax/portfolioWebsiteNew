@@ -62,11 +62,6 @@ export default function Team() {
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
   const [open4, setOpen4] = useState(false);
-  const [open5, setOpen5] = useState(false);
-  const [open6, setOpen6] = useState(false);
-  const [open7, setOpen7] = useState(false);
-  const [open8, setOpen8] = useState(false);
-  const [open9, setOpen9] = useState(false);
 
   const content = {
     title: "FAQ",
@@ -76,67 +71,32 @@ export default function Team() {
 
   const teamData = [
     {
-      question: "How much do you charge to build a website?",
+      question: "What results can I expect?",
       answer:
-        "There is no single answer to this question. Use the prices above to get an idea of what your website might cost. A quote will be given based on the requirements of each individual project. Every website is unique and requires different components; we design and develop custom websites specifically for your company. We will ask lots of questions, evaluate your needs, and provide you with a price quote based on this evaluation.",
+        "If your website is brand new and has no organic traffic, it will take 10-12 months to establish an organic presence and begin receiving traffic and leads. If you already have a site with organic traffic, we can usually guarantee a massive increase in traffic within the first 2-4 months!",
       openPosition: open1,
       setOpenPosition: setOpen1,
     },
     {
-      question: "How long will it take to complete my website?",
+      question: "Are results guaranteed?",
       answer:
-        "Our standard time to complete a website is 2-6 weeks. However, this depends on the project as the size and pace of a project is determined by each client. How much input you can give in the early stages, your feedback, how quickly the content is delivered - all of these affect the speed of completion. The required features and revisions also play a role in your timeline.",
+        "While SEO isn't an exact science, we can guarantee results. The amount of competition, the number of search queries, and the overall quality of your business all play a role in how high your site ranks on Google. While each situation is unique, we guarantee a significant and measurable increase in your search engine ranking and traffic.",
       openPosition: open2,
       setOpenPosition: setOpen2,
     },
     {
-      question: "Do you provide website hosting and domain?",
+      question: "How long do I need to do SEO?",
       answer:
-        "We encourage you to be responsible for hosting the website and the domain. This will ensure that you have full access to your website. However, we can also handle it ourselves.",
+        "All SEO contracts require a 6-month minimum commitment. SEO isn't a one-time investment. To maintain a high volume of traffic and a solid ranking, it requires monthly input. While the degree to which we approach it and the budget with which we do so may vary, SEO work will always be required in order to establish and grow your online presence.",
       openPosition: open3,
       setOpenPosition: setOpen3,
     },
     {
-      question: "Will my website be mobile-friendly?",
+      question: "Will you be able to outperform other SEO firms?",
       answer:
-        "Yes! A mobile-friendly website is more important than ever! We work hard to ensure your website is responsive on modern devices and browsers.",
+        "There are some excellent SEO firms out there, but far too many fail to deliver and take advantage of their customers. We are dedicated to being the most open and honest SEO firm you've ever worked with.",
       openPosition: open4,
       setOpenPosition: setOpen4,
-    },
-    {
-      question: "Do you create WordPress / Webflow websites?",
-      answer:
-        "No, every website is built from scratch using the latest technology and we do not use Wordpress, Webflow or other similar website building tool. A website built from scratch is better in every way. It ensures perfect SEO and speed.",
-      openPosition: open5,
-      setOpenPosition: setOpen5,
-    },
-    {
-      question: "Will you maintain our website for us?",
-      answer:
-        "We can help maintain your website, or you can do so yourself with the more minor changes. The choice is up to you. We provide on-going support for many of our clients but it is not mandatory. You can contact us as you require updates to your website and we will provide an hourly quote based on your requests.",
-      openPosition: open6,
-      setOpenPosition: setOpen6,
-    },
-    {
-      question: "How much input do I have in the website design process?",
-      answer:
-        "A lot! Your input and feedback is crucial to this website design and development process. We’ll start with a lot of questions about your needs, your likes, your wants and work with you to develop just the right look and functionality. We also request you to provide sample websites before we begin your project. Remember this is your website and we need your help and direction as to your final vision. We’re a team and look forward to hearing your ideas.",
-      openPosition: open7,
-      setOpenPosition: setOpen7,
-    },
-    {
-      question: "Who writes the text/content for the website?",
-      answer:
-        "We require that you provide all of the text content for your website. You are the expert on your business, so it’s always best if it comes from you. If you need  assistance, we have a copywriter on our team who can help clean up or write original content for you at an additional cost.",
-      openPosition: open8,
-      setOpenPosition: setOpen8,
-    },
-    {
-      question: "What if I need help on my website down the road?",
-      answer:
-        "We are here to help you! You can contact us as you require updates to your website and we will provide an hourly quote based on your requests.",
-      openPosition: open9,
-      setOpenPosition: setOpen9,
     },
   ];
 
