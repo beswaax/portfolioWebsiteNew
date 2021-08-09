@@ -564,6 +564,20 @@ export default function Navigation({ tabValue, setTabValue }) {
               disableRipple
               disableTouchRipple
               button
+              key={content["link8"]}
+              selected={tabValue === 5}
+              component={Link}
+              href="/portfolio"
+              onClick={() => setState({ open: !state.open })}
+            >
+              <ListItemText primary={content["link8"]} />
+            </ListItem>
+
+            <ListItem
+              className={classes.listItem}
+              disableRipple
+              disableTouchRipple
+              button
               key={content["link7"]}
               selected={tabValue === 2}
               component={Link}
@@ -605,7 +619,7 @@ export default function Navigation({ tabValue, setTabValue }) {
               disableTouchRipple
               button
               key={content["link6"]}
-              selected={tabValue === 5}
+              selected={tabValue === 9}
               component={Link}
               href="https://calendly.com/rangojango/business-strategy-email"
               target="_blank"
