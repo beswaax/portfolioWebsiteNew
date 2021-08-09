@@ -42,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
   link: {
     marginRight: theme.spacing(5),
     color: theme.palette.grey[400],
+    [theme.breakpoints.down("md")]: {
+      marginRight: theme.spacing(3.5),
+    },
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -194,6 +197,7 @@ export default function Navigation({ tabValue, setTabValue }) {
     link5: "Contact Us",
     link6: "Book a Call",
     link7: "Blog",
+    link8: "Portfolio",
     servicesLinks: {
       link1: "Web Design & Development",
       link2: "E-Commerce",
@@ -237,6 +241,8 @@ export default function Navigation({ tabValue, setTabValue }) {
       setTabValue(3);
     } else if (router.pathname === "/contact" && tabValue !== 4) {
       setTabValue(4);
+    } else if (router.pathname === "/portfolio" && tabValue !== 5) {
+      setTabValue(5);
     }
   }, [setTabValue, tabValue, router.pathname]);
 
@@ -377,6 +383,14 @@ export default function Navigation({ tabValue, setTabValue }) {
           </StyledMenuItem>
         </StyledMenu>
         <Link
+          href="/portfolio"
+          color="textPrimary"
+          variant="body1"
+          className={tabValue === 5 ? classes.linkSelected : classes.link}
+        >
+          {content["link8"]}
+        </Link>
+        <Link
           href="/blog"
           color="textPrimary"
           variant="body1"
@@ -384,6 +398,7 @@ export default function Navigation({ tabValue, setTabValue }) {
         >
           {content["link7"]}
         </Link>
+
         <Link
           href="/free-website-audit"
           color="textPrimary"
@@ -392,6 +407,7 @@ export default function Navigation({ tabValue, setTabValue }) {
         >
           {content["link4"]}
         </Link>
+
         <Link
           href="/contact"
           color="textPrimary"

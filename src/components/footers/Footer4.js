@@ -89,6 +89,7 @@ export default function Footer() {
     link4: "Free Audit",
     link5: "Contact Us",
     link9: "Blog",
+    link10: "Portfolio",
   };
 
   let brand;
@@ -118,6 +119,13 @@ export default function Footer() {
           <Box component="nav" ml="auto" className={classes.footerNav}>
             <Link href="/about" variant="body1" className={classes.footerLink}>
               {content["link2"]}
+            </Link>
+            <Link
+              href="/portfolio"
+              variant="body1"
+              className={classes.footerLink}
+            >
+              {content["link10"]}
             </Link>
             <Link href="/blog" variant="body1" className={classes.footerLink}>
               {content["link9"]}

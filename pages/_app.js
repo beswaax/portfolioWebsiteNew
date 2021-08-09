@@ -26,6 +26,8 @@ const App = (props) => {
       return 3;
     } else if (router.pathname === "/contact") {
       return 4;
+    } else if (router.pathname === "/portfolio") {
+      return 5;
     }
   };
 
