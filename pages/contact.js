@@ -28,7 +28,7 @@ const LandingPage = () => {
         />
         <meta
           name="keywords"
-          content="web development company vancouver, website design company vancouver, best site design firm in vancouver, ecommerce design in vancouver, seo in vancouver bc"
+          content="web development company florida, website design company florida, best site design firm in florida, ecommerce design in florida, seo in florida"
         />
         <meta
           property="og:title"

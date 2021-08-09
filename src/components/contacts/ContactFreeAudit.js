@@ -33,6 +33,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 700,
   },
   specialText: { color: theme.palette.primary.main },
+  textField: {
+    ["& fieldset"]: {
+      borderRadius: 0,
+    },
+  },
 }));
 
 export default function Contact() {
@@ -147,14 +152,14 @@ export default function Contact() {
                   </Typography>
                   <Typography
                     variant="subtitle1"
-                    color="textSecondary"
+                    color="textPrimary"
                     paragraph={true}
                   >
                     {content["description"]}
                   </Typography>
                   <Typography
                     variant="subtitle1"
-                    color="textSecondary"
+                    color="textPrimary"
                     paragraph={true}
                   >
                     {content["description2"]}
@@ -191,6 +196,7 @@ export default function Contact() {
                     </Grid>
                     <Grid item xs={12}>
                       <TextField
+                        className={classes.textField}
                         variant="outlined"
                         required
                         color="primary"
@@ -207,6 +213,7 @@ export default function Contact() {
                     </Grid>
                     <Grid item xs={12}>
                       <TextField
+                        className={classes.textField}
                         variant="outlined"
                         required
                         color="primary"
@@ -223,6 +230,7 @@ export default function Contact() {
                     </Grid>
                     <Grid item xs={12}>
                       <TextField
+                        className={classes.textField}
                         variant="outlined"
                         required
                         color="primary"

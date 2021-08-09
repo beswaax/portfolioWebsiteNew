@@ -39,7 +39,7 @@ export default function CTA() {
   const classes = useStyles();
 
   const content = {
-    description: "Authentic Web Design & Web Development in Vancouver",
+    description: "Authentic Web Design & Web Development in Florida",
     "primary-action": "BOOK CONSULTATION",
   };
 

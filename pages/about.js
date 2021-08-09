@@ -38,27 +38,27 @@ const About = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          #1 Web Design & Development and SEO Company in Vancouver | RangoJango
+          #1 Web Design & Development and SEO Company in Florida | RangoJango
         </title>{" "}
         <meta
           name="description"
           key="description"
-          content="Are you looking for web design & development in Vancouver? We are #1! Specializing in Web Design, Web Development, Ecommerce Development, and SEO."
+          content="Are you looking for web design & development in Florida? We are #1! Specializing in Web Design, Web Development, Ecommerce Development, and SEO."
         />
         <meta
           name="keywords"
-          content="web design, ecommerce vancouver, web designers, website designers vancouver, web development vancouver"
+          content="web design, ecommerce florida, web designers, website designers florida, web development florida"
         />
         <meta
           property="og:title"
-          content="#1 Web Design & Development and SEO Company in Vancouver | RangoJango"
+          content="#1 Web Design & Development and SEO Company in Florida | RangoJango"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/about" />
         <meta
           property="og:description"
           key="og:description"
-          content="Are you looking for web design & development in Vancouver? We are #1! Specializing in Web Design, Web Development, Ecommerce Development, and SEO."
+          content="Are you looking for web design & development in Florida? We are #1! Specializing in Web Design, Web Development, Ecommerce Development, and SEO."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

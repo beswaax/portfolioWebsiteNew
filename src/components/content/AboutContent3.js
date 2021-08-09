@@ -34,11 +34,11 @@ export default function Content() {
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const content = {
-    badge: "#1 Web Design & Development Agency in Vancouver",
+    badge: "#1 Web Design & Development Agency in Florida",
     "header-p1": "Hungry to grow",
     "header-p2": "your business?",
     description:
-      "Welcome to RangoJango, a web design & development company based in Vancouver.. We specialize in building custom websites, web applications and running SEO campaigns. We can build anything from e-commerce websites to complex web applications and simple brochure websites.",
+      "Welcome to RangoJango, a web design & development company based in Florida. We specialize in building custom websites, web applications and running SEO campaigns. We can build anything from e-commerce websites to complex web applications and simple brochure websites.",
     description2:
       "We launched RangoJango, as a response to the limited authentic web development options available in worldwide. We value your financial investment in your company's website and internet promotion. With a crucial focus on providing the best web design and web development solutions to our clients. Hand-crafted and user friendly while providing innovative website development and digital marketing that delivers actual results. ",
     description3:
@@ -55,7 +55,7 @@ export default function Content() {
             <Hidden mdUp>
               <Grid item xs={12} md={6}>
                 <Image
-                  alt="a worker doing web design work at our Vancouver office"
+                  alt="a worker doing web design work at our Florida office"
                   src={content["image"]}
                   width={512}
                   height={matchesSM ? 600 : 670}

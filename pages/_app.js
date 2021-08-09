@@ -63,7 +63,7 @@ const App = (props) => {
     <React.Fragment>
       <Head>
         <title>
-          #1 Vancouver Web Design & Development, SEO & ECommerce Company |
+          #1 Florida Web Design & Development, SEO & ECommerce Company |
           RangoJango
         </title>
         <meta

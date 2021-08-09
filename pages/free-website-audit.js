@@ -32,7 +32,7 @@ const WebsiteAudit = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          Website Review | RangoJango Vancouver Web Design & SEO
+          Website Review | RangoJango Florida Web Design & SEO
         </title>
         <meta
           name="description"
@@ -41,11 +41,11 @@ const WebsiteAudit = () => {
         />
         <meta
           name="keywords"
-          content="cheap web design vancouver bc, ecommerce website design vancouver, ecommerce website development vancouver, cheap SEO agency Vancouver, best SEO company Vancouver"
+          content="cheap web design florida tampa, ecommerce website design florida, ecommerce website development florida, cheap SEO agency florida, best SEO company Florida Tampa"
         />
         <meta
           property="og:title"
-          content="Website Review | RangoJango Vancouver Web Design & SEO"
+          content="Website Review | RangoJango Florida Web Design & SEO"
           key="og:title"
         />
         <meta

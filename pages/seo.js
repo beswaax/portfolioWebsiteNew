@@ -27,7 +27,7 @@ const Seo = () => {
     "primary-action": "Book A Strategy Call",
     "secondary-action": "Get a Free Website Audit",
     badge: "SEO Campaigns in",
-    location: "Vancouver",
+    location: "Florida",
     backgroundImage:
       "data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7f7f7' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E",
   };
@@ -102,7 +102,7 @@ const Seo = () => {
   };
 
   const servicesContent1 = {
-    desc: "You most likely found this SEO page by doing a Google search for 'Vancouver SEO'. You found RangoJango because we practice what we preach and know the most important Google ranking factors.",
+    desc: "You most likely found this SEO page by doing a Google search for 'Florida SEO'. You found RangoJango because we practice what we preach and know the most important Google ranking factors.",
   };
 
   const servicesContent2 = {
@@ -112,7 +112,7 @@ const Seo = () => {
     description2:
       "We've perfected our approach to SEO strategies over the years through trial and error. Only the best SEO practices are used in our strategy, and we prioritize quality over quantity. It simply works.",
     description3:
-      "We are passionate and confident that our company will place your website on the first page of Google (consistently) through highly adaptable custom Vancouver SEO strategies that make sense with your business and industry, based on our extensive experience and a process of reverse engineering success.",
+      "We are passionate and confident that our company will place your website on the first page of Google (consistently) through highly adaptable custom Florida SEO strategies that make sense with your business and industry, based on our extensive experience and a process of reverse engineering success.",
     image: "/assets/ecompictures/2.webp",
     button: "BOOK SEO CONSULTATION",
   };
@@ -124,7 +124,7 @@ const Seo = () => {
     description2:
       "We target keywords that your ideal customers will type into search engines to bring them to your website. As a result, you'll be able to attract the right audience and increase your chances of converting them into long-term, loyal, and paying customers.",
     description3:
-      "Years of trial and error, as well as reverse engineering, have led to our current understanding. There is no online course or ‘SEO plug-in' that will allow you to tap into the expertise of our Vancouver team of SEO experts.",
+      "Years of trial and error, as well as reverse engineering, have led to our current understanding. There is no online course or ‘SEO plug-in' that will allow you to tap into the expertise of our Florida team of SEO experts.",
     image: "/assets/4.webp",
     button: "BOOK SEO CONSULTATION",
   };
@@ -132,19 +132,19 @@ const Seo = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">1# Vancouver SEO Agency | RangoJango</title>
+        <title key="title">1# Florida SEO Agency | RangoJango</title>
         <meta
           name="description"
           key="description"
-          content="SEO Agency in Vancouver. Get More Customers by Improving Your Google Rankings! Discover the Right Keywords, Find Harmful Issues, Track Your Rankings - Free Consultation"
+          content="SEO Agency in florida. Get More Customers by Improving Your Google Rankings! Discover the Right Keywords, Find Harmful Issues, Track Your Rankings - Free Consultation"
         />
         <meta
           name="keywords"
-          content="vancouver seo agency, guaranteed seo vancouver, seo consultant vancouver, seo services in vancouver, seo specialist vancouver, best seo vancouver bc"
+          content="florida seo agency, guaranteed seo florida, seo consultant florida, seo services in florida, seo specialist florida, best seo florida"
         />
         <meta
           property="og:title"
-          content="1# Vancouver SEO Agency | RangoJango"
+          content="1# Florida SEO Agency | RangoJango"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/seo" />
@@ -152,7 +152,7 @@ const Seo = () => {
         <meta
           property="og:description"
           key="og:description"
-          content="SEO Agency in Vancouver. Get More Customers by Improving Your Google Rankings! Discover the Right Keywords, Find Harmful Issues, Track Your Rankings - Free Consultation"
+          content="SEO Agency in Florida. Get More Customers by Improving Your Google Rankings! Discover the Right Keywords, Find Harmful Issues, Track Your Rankings - Free Consultation"
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

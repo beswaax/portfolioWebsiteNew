@@ -21,21 +21,21 @@ const LandingPage = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          #1 Vancouver Web Design & Development, SEO & ECommerce Company |
+          #1 Florida Web Design & Development, SEO & ECommerce Company |
           RangoJango
         </title>
         <meta
           name="description"
           key="description"
-          content="RangoJango is a Vancouver based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
+          content="RangoJango is a Florida based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
         />
         <meta
           name="keywords"
-          content="web design agency vancouver, website designer vancouver, best web design agency vancouver, vancouver web development agency, vancouver seo, vancouver ecommerce design"
+          content="web design agency florida, website designer tampa, best web design agency tampa bay, tampa bay web development agency, florida seo, florida ecommerce design"
         />
         <meta
           property="og:title"
-          content="#1 Vancouver Web Design & Development, SEO & ECommerce Company | RangoJango"
+          content="#1 Florida Web Design & Development, SEO & ECommerce Company | RangoJango"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/" />
@@ -43,7 +43,7 @@ const LandingPage = () => {
         <meta
           property="og:description"
           key="og:description"
-          content="RangoJango is a Vancouver based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
+          content="RangoJango is a Florida based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />
