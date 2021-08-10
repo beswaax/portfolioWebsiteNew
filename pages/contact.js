@@ -19,7 +19,7 @@ const LandingPage = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          Contact Us | Web Design, SEO, Ecommerce | RangoJango
+          Contact Us | Web Design, SEO, Ecommerce | RangoDev
         </title>
         <meta
           name="description"
@@ -32,7 +32,7 @@ const LandingPage = () => {
         />
         <meta
           property="og:title"
-          content="Contact Us | Web Design, SEO, Ecommerce | RangoJango"
+          content="Contact Us | Web Design, SEO, Ecommerce | RangoDev"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/contact" />

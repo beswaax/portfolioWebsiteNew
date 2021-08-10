@@ -188,7 +188,7 @@ export default function Navigation({ tabValue, setTabValue }) {
   };
 
   const content = {
-    brand: { image: "/assets/logo2/vector/logo-single-white.svg", width: 180 },
+    brand: { image: "/assets/logo2/vector/logo-single-white.svg", width: 160 },
     drawerBrand: "/assets/logo2/vector/logo-single.svg",
     link1: "Home",
     link2: "About",
@@ -211,7 +211,7 @@ export default function Navigation({ tabValue, setTabValue }) {
     brand = (
       <img
         src={content.brand.image}
-        alt="logo of RangoJango"
+        alt="logo of RangoDev"
         width={content.brand.width}
       />
     );
@@ -461,7 +461,7 @@ export default function Navigation({ tabValue, setTabValue }) {
             >
               <img
                 src={content.drawerBrand}
-                alt={"logo of RangoJango"}
+                alt={"logo of RangoDev"}
                 width={content.brand.width}
               />{" "}
             </Link>

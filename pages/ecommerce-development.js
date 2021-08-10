@@ -115,7 +115,7 @@ const Seo = () => {
     description2:
       "We evaluate trends on the internet and advise on sustainable, successful changes. We accompany the introduction of new systems and show the weak points in existing processes. With one eye on the future and feasibility, with the other on budget and costs.",
     description3:
-      "Our eCommerce developers have been honing their skills and implementing the most cutting-edge technologies to assist our clients in achieving their online sales objectives year after year. At RangoJango, we believe that successful eCommerce solutions are built on great web design, great user experience, and rock solid technology.",
+      "Our eCommerce developers have been honing their skills and implementing the most cutting-edge technologies to assist our clients in achieving their online sales objectives year after year. At RangoDev, we believe that successful eCommerce solutions are built on great web design, great user experience, and rock solid technology.",
     image: "/assets/ecompictures/4.webp",
     button: "BOOK ECOMMERCE CONSULTATION",
   };
@@ -161,7 +161,7 @@ const Seo = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          E-Commerce Website Design & Development Agency in Florida | RangoJango
+          E-Commerce Website Design & Development Agency in Florida | RangoDev
         </title>
         <meta
           name="description"
@@ -174,7 +174,7 @@ const Seo = () => {
         />
         <meta
           property="og:title"
-          content="E-Commerce Website Design & Development Agency in Florida | RangoJango"
+          content="E-Commerce Website Design & Development Agency in Florida | RangoDev"
           key="og:title"
         />
         <meta

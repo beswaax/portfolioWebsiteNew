@@ -75,7 +75,7 @@ export default function HowItWorks() {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   const content = {
-    "header-p1": "WHY RANGOJANGO?",
+    "header-p1": "WHY RANGODEV?",
     "header-p2": "sales",
     description:
       "We live and breathe Web Development and SEO. No really, we do. We offer you the best experience possible. We never give up until our customers are fully satisfied.",

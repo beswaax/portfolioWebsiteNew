@@ -22,12 +22,12 @@ const LandingPage = () => {
       <Head>
         <title key="title">
           #1 Florida Web Design & Development, SEO & ECommerce Company |
-          RangoJango
+          RangoDev
         </title>
         <meta
           name="description"
           key="description"
-          content="RangoJango is a Florida based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
+          content="RangoDev is a Florida based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
         />
         <meta
           name="keywords"
@@ -35,7 +35,7 @@ const LandingPage = () => {
         />
         <meta
           property="og:title"
-          content="#1 Florida Web Design & Development, SEO & ECommerce Company | RangoJango"
+          content="#1 Florida Web Design & Development, SEO & ECommerce Company | RangoDev"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/" />
@@ -43,7 +43,7 @@ const LandingPage = () => {
         <meta
           property="og:description"
           key="og:description"
-          content="RangoJango is a Florida based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
+          content="RangoDev is a Florida based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

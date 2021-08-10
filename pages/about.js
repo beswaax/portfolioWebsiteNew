@@ -19,7 +19,7 @@ const About = () => {
 
   const content = {
     badge: "About",
-    location: "RangoJango",
+    location: "RangoDev",
     "header-p1": "Trusted Web Development agency with a",
     "header-p2": "*vision",
     description:
@@ -38,7 +38,7 @@ const About = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          #1 Web Design & Development and SEO Company in Florida | RangoJango
+          #1 Web Design & Development and SEO Company in Florida | RangoDev
         </title>{" "}
         <meta
           name="description"
@@ -51,7 +51,7 @@ const About = () => {
         />
         <meta
           property="og:title"
-          content="#1 Web Design & Development and SEO Company in Florida | RangoJango"
+          content="#1 Web Design & Development and SEO Company in Florida | RangoDev"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/about" />

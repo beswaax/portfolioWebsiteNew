@@ -102,7 +102,7 @@ const Seo = () => {
   };
 
   const servicesContent1 = {
-    desc: "You most likely found this SEO page by doing a Google search for 'Florida SEO'. You found RangoJango because we practice what we preach and know the most important Google ranking factors.",
+    desc: "You most likely found this SEO page by doing a Google search for 'Florida SEO'. You found RangoDev because we practice what we preach and know the most important Google ranking factors.",
   };
 
   const servicesContent2 = {
@@ -132,7 +132,7 @@ const Seo = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">1# Florida SEO Agency | RangoJango</title>
+        <title key="title">1# Florida SEO Agency | RangoDev</title>
         <meta
           name="description"
           key="description"
@@ -144,7 +144,7 @@ const Seo = () => {
         />
         <meta
           property="og:title"
-          content="1# Florida SEO Agency | RangoJango"
+          content="1# Florida SEO Agency | RangoDev"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/seo" />

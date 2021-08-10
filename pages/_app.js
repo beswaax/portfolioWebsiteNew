@@ -64,7 +64,7 @@ const App = (props) => {
       <Head>
         <title>
           #1 Florida Web Design & Development, SEO & ECommerce Company |
-          RangoJango
+          RangoDev
         </title>
         <meta
           name="viewport"

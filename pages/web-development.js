@@ -122,7 +122,7 @@ const WebDev = () => {
     description2:
       "We have provided professional and dependable website design and web development with measurable results to startups, small businesses, and large corporations. We've helped dozens of businesses in Florida and throughout the world acquire a competitive advantage in their sector.",
     description3:
-      "Our designers and developers have been honing their skills and implementing the most cutting-edge technologies to assist our clients in achieving their online sales objectives year after year. At RangoJango, we believe that successful web development solutions are built on great web design, great user experience, and rock solid technology.",
+      "Our designers and developers have been honing their skills and implementing the most cutting-edge technologies to assist our clients in achieving their online sales objectives year after year. At RangoDev, we believe that successful web development solutions are built on great web design, great user experience, and rock solid technology.",
     image: "/assets/2.webp",
     button: "Book a WEB DESIGN CONSULTATION",
   };
@@ -170,12 +170,12 @@ const WebDev = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          Web Design & Development Agency | RangoJango Florida
+          Web Design & Development Agency | RangoDev Florida
         </title>
         <meta
           name="description"
           key="description"
-          content="RangoJango's web design team will assist you in creating a stunning website. We stand out because we provide hands-on revisions and a quick turnaround. Schedule a strategy call today."
+          content="RangoDev's web design team will assist you in creating a stunning website. We stand out because we provide hands-on revisions and a quick turnaround. Schedule a strategy call today."
         />
         <meta
           name="keywords"
@@ -183,7 +183,7 @@ const WebDev = () => {
         />
         <meta
           property="og:title"
-          content="Web Design & Development Agency | RangoJango Florida"
+          content="Web Design & Development Agency | RangoDev Florida"
           key="og:title"
         />
         <meta
@@ -195,7 +195,7 @@ const WebDev = () => {
         <meta
           property="og:description"
           key="og:description"
-          content="RangoJango's web design team will assist you in creating a stunning website. We stand out because we provide hands-on revisions and a quick turnaround. Schedule a strategy call today."
+          content="RangoDev's web design team will assist you in creating a stunning website. We stand out because we provide hands-on revisions and a quick turnaround. Schedule a strategy call today."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

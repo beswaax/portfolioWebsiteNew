@@ -38,9 +38,9 @@ export default function Content() {
   const content = {
     badge: "Pixel perfect websites/web apps | Florida",
     "header-p1": "Grow your business",
-    "header-p2": "with RangoJango.",
+    "header-p2": "with RangoDev.",
     description:
-      "At RangoJango we focus on solving the real problems your business might be facing, be it increasing sales, increasing visibility or targeting the right clients. We increase revenue and ensure sustainable long-term growth for your business through powerful custom-built websites/web applications.",
+      "At RangoDev we focus on solving the real problems your business might be facing, be it increasing sales, increasing visibility or targeting the right clients. We increase revenue and ensure sustainable long-term growth for your business through powerful custom-built websites/web applications.",
     description2:
       "With specialties ranging from web design and development to app development, SEO and ecommerce development. Our talented team delivers innovative strategies and recognizable results. We aren’t afraid to let our imaginations run wild.",
     description3:

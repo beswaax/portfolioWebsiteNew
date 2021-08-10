@@ -88,7 +88,7 @@ export default function Team() {
     {
       question: "How long have you been in business?",
       answer:
-        "We started our company in 2020, RangoJango is led by an experienced team of web development veterans with years of professional experience.",
+        "We started our company in 2020, RangoDev is led by an experienced team of web development veterans with years of professional experience.",
       openPosition: open3,
       setOpenPosition: setOpen3,
     },

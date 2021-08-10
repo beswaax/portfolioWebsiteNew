@@ -78,9 +78,9 @@ export default function Footer() {
   const content = {
     brand: {
       image: "/assets/logo2/vector/logo-single-white.svg",
-      width: 190,
+      width: 170,
     },
-    copy: "© 2021 RangoJango. All rights reserved.",
+    copy: "© 2021 RangoDev. All rights reserved.",
     link1: "Home",
     link2: "About",
     link3: "Web Development",

@@ -32,7 +32,7 @@ const WebsiteAudit = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          Website Review | RangoJango Florida Web Design & SEO
+          Website Review | RangoDev Florida Web Design & SEO
         </title>
         <meta
           name="description"
@@ -45,7 +45,7 @@ const WebsiteAudit = () => {
         />
         <meta
           property="og:title"
-          content="Website Review | RangoJango Florida Web Design & SEO"
+          content="Website Review | RangoDev Florida Web Design & SEO"
           key="og:title"
         />
         <meta
