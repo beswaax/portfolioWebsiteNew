@@ -71,13 +71,13 @@ export default function Contact() {
                   <IconButton
                     className={classes.icon}
                     target="_blank"
-                    href="https://www.instagram.com/rangojangoweb/"
+                    href="https://www.instagram.com/rangodevelopment/"
                   >
                     <InstagramIcon />
                   </IconButton>
                   <IconButton
                     className={classes.icon}
-                    href="https://www.linkedin.com/company/rangojango/"
+                    href="https://www.linkedin.com/company/rangodev/"
                     target="_blank"
                   >
                     <LinkedInIcon />

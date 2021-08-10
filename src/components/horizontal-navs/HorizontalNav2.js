@@ -421,7 +421,7 @@ export default function Navigation({ tabValue, setTabValue }) {
           {content["link5"]}
         </Link>
         <Link
-          href="https://calendly.com/rangojango/business-strategy-email"
+          href="https://calendly.com/rangodev/business-strategy-call"
           color="textPrimary"
           target="_blank"
           variant="body1"
@@ -621,7 +621,7 @@ export default function Navigation({ tabValue, setTabValue }) {
               key={content["link6"]}
               selected={tabValue === 9}
               component={Link}
-              href="https://calendly.com/rangojango/business-strategy-email"
+              href="https://calendly.com/rangodev/business-strategy-call"
               target="_blank"
               onClick={() => setState({ open: !state.open })}
             >

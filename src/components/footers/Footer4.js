@@ -187,7 +187,7 @@ export default function Footer() {
             <IconButton
               disableRipple
               component={"a"}
-              href="https://www.instagram.com/rangojangodev/"
+              href="https://www.instagram.com/rangodevelopment/"
               target="_blank"
               style={{ marginLeft: "0.3rem", marginRight: "0.3rem" }}
               className={classes.icon}
@@ -201,7 +201,7 @@ export default function Footer() {
               style={{ marginLeft: "0.3rem", marginRight: "0.3rem" }}
               className={classes.icon}
               aria-label="Instagram"
-              href="https://www.linkedin.com/company/rangojango/"
+              href="https://www.linkedin.com/company/rangodev/"
             >
               <LinkedInIcon />
             </IconButton>

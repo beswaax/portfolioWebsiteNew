@@ -131,7 +131,7 @@ export default function Header() {
               disableRipple
               disableFocusRipple
               disableTouchRipple
-              href="https://calendly.com/rangojango/business-strategy-email"
+              href="https://calendly.com/rangodev/business-strategy-call"
               target="_blank"
               className={classes.secondaryButton}
             >

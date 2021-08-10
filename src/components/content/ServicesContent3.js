@@ -92,7 +92,7 @@ export default function Content({ content }) {
                       color="primary"
                       disableTouchRipple
                       disableRipple
-                      href="https://calendly.com/rangojango/business-strategy-email"
+                      href="https://calendly.com/rangodev/business-strategy-call"
                       target="_blank"
                       variant="contained"
                       className={classes.button}

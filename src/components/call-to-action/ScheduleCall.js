@@ -78,7 +78,7 @@ export default function CTA() {
                     disableRipple
                     disableTouchRipple
                     disableFocusRipple
-                    href="https://calendly.com/rangojango/business-strategy-email"
+                    href="https://calendly.com/rangodev/business-strategy-call"
                     variant="contained"
                     target="_blank"
                     color="primary"
