@@ -36,7 +36,7 @@ export default function Content() {
   const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   const content = {
-    badge: "Pixel perfect websites/web apps | Florida",
+    badge: "Pixel perfect websites/web apps | Affordable & Reliable",
     "header-p1": "Grow your business",
     "header-p2": "with RangoDev.",
     description:
@@ -61,7 +61,7 @@ export default function Content() {
               <Grid item xs={12} md={6} align="center" sm={12}>
                 <Grow mountOnEnter in={true} timeout={1000}>
                   <Image
-                    alt="a worker building a new ecommerce website for a client at our Florida office"
+                    alt="a worker building a new ecommerce website for a client at our   office"
                     src={content["image"]}
                     width={512}
                     height={matchesSM ? 600 : 670}
@@ -146,7 +146,7 @@ export default function Content() {
             <Hidden smDown>
               <Grid item xs={12} md={6} sm={12}>
                 <Image
-                  alt="a worker building a new ecommerce website for a client at our Florida office"
+                  alt="a worker building a new ecommerce website for a client at our office"
                   src={content["image"]}
                   width={512}
                   height={matchesSM ? 600 : 670}

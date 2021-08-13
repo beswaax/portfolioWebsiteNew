@@ -65,7 +65,7 @@ export default function Portfolio() {
       desc1:
         "Your website may contain critical errors that are causing your ranking to suffer.",
       desc2:
-        "Our SEO experts in Florida perform a full website audit, examining over 200 factors to ensure that search engines can index and rank your site.",
+        "Our SEO experts perform a full website audit, examining over 200 factors to ensure that search engines can index and rank your site.",
       desc3:
         "The best part is that we'll show you how to get those errors fixed.",
     },
@@ -75,7 +75,7 @@ export default function Portfolio() {
       desc1:
         "Keywords are the foundation of any successful SEO campaign; these are the exact words and phrases that your potential customers will use to find your website in search engines.",
       desc2:
-        "Our SEO consultants in Florida delve into keyword data such as volume, keyword difficulty, competitive density, and more.",
+        "Our SEO consultants delve into keyword data such as volume, keyword difficulty, competitive density, and more.",
     },
     {
       id: 2,

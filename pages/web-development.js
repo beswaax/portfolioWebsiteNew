@@ -26,8 +26,8 @@ const WebDev = () => {
       "We have the technical skills, experience, and ability to deliver perfect websites to help reach your goals.",
     "primary-action": "Book A Strategy Call",
     "secondary-action": "Get a Free Website Audit",
-    badge: "Web Development in",
-    location: "Florida",
+    badge: "Web Development | ",
+    location: "RangoDev",
     backgroundImage:
       "data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7f7f7' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E",
   };
@@ -120,7 +120,7 @@ const WebDev = () => {
     description:
       "Having a website is a necessity in today’s business world. They give you one central, public location to let people know who you are, what you do, and why you’re the best at it. From simply having your hours posted to having a full fledged online store, making yourself as accessible as possible to users online drives growth and enables you to reach new customers.",
     description2:
-      "We have provided professional and dependable website design and web development with measurable results to startups, small businesses, and large corporations. We've helped dozens of businesses in Florida and throughout the world acquire a competitive advantage in their sector.",
+      "We have provided professional and dependable website design and web development with measurable results to startups, small businesses, and large corporations. We've helped dozens of businesses in the US, the UK and throughout the world acquire a competitive advantage in their sector.",
     description3:
       "Our designers and developers have been honing their skills and implementing the most cutting-edge technologies to assist our clients in achieving their online sales objectives year after year. At RangoDev, we believe that successful web development solutions are built on great web design, great user experience, and rock solid technology.",
     image: "/assets/2.webp",
@@ -131,7 +131,7 @@ const WebDev = () => {
     badge: "SEO and Digital Marketing",
     "header-p1": "INDUSTRIES WE SERVE",
     description2:
-      "We have built websites and web applications for clients in many different industries. We’ve had the opportunity to work with some great clients in Florida, The United States of America, South America, Europe and Canada.",
+      "We have built websites and web applications for clients in many different industries. We’ve had the opportunity to work with some great clients in the United States of America, the United Kingdom, Ireland, Canada and Europe.",
     industries: [
       "Architecture",
       "Business",
@@ -169,9 +169,7 @@ const WebDev = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">
-          Web Design & Development Agency | RangoDev Florida
-        </title>
+        <title key="title">Web Design & Development Agency | RangoDev</title>
         <meta
           name="description"
           key="description"
@@ -179,11 +177,11 @@ const WebDev = () => {
         />
         <meta
           name="keywords"
-          content="web design agency tampa, website design tampa cheap, web development company florida, web design in tampa, web page design in tampa, website design tampa"
+          content="cms web design, web development agency uk, website development agency, web development company website, professional web design company"
         />
         <meta
           property="og:title"
-          content="Web Design & Development Agency | RangoDev Florida"
+          content="Web Design & Development Agency | RangoDev"
           key="og:title"
         />
         <meta

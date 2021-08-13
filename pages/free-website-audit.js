@@ -31,9 +31,7 @@ const WebsiteAudit = () => {
   return (
     <div className={classes.bodyMargin}>
       <Head>
-        <title key="title">
-          Website Review | RangoDev Florida Web Design & SEO
-        </title>
+        <title key="title">Website Review | RangoDev Web Design & SEO</title>
         <meta
           name="description"
           key="description"
@@ -41,11 +39,11 @@ const WebsiteAudit = () => {
         />
         <meta
           name="keywords"
-          content="cheap web design florida tampa, ecommerce website design florida, ecommerce website development florida, cheap SEO agency florida, best SEO company Florida Tampa"
+          content="cheap web design services, web development agency, cheap SEO company, best website development agency, web design and development company"
         />
         <meta
           property="og:title"
-          content="Website Review | RangoDev Florida Web Design & SEO"
+          content="Website Review | RangoDev Web Design & SEO"
           key="og:title"
         />
         <meta

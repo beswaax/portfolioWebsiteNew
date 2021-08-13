@@ -38,27 +38,27 @@ const About = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          #1 Web Design & Development and SEO Company in Florida | RangoDev
+          #1 Web Design & Development and SEO Company | RangoDev
         </title>{" "}
         <meta
           name="description"
           key="description"
-          content="Are you looking for web design & development in Florida? We are #1! Specializing in Web Design, Web Development, Ecommerce Development, and SEO."
+          content="Are you looking for web design & development? We are #1! Specializing in Web Design, Web Development, Ecommerce Development, and SEO."
         />
         <meta
           name="keywords"
-          content="web design, ecommerce florida, web designers, website designers florida, web development florida"
+          content="web design agency cheap, ecommerce design agency, web designers cheap, best website designers, web development companies"
         />
         <meta
           property="og:title"
-          content="#1 Web Design & Development and SEO Company in Florida | RangoDev"
+          content="#1 Web Design & Development and SEO Company | RangoDev"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/about" />
         <meta
           property="og:description"
           key="og:description"
-          content="Are you looking for web design & development in Florida? We are #1! Specializing in Web Design, Web Development, Ecommerce Development, and SEO."
+          content="Are you looking for web design & development? We are #1! Specializing in Web Design, Web Development, E-Commerce Development, and SEO."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

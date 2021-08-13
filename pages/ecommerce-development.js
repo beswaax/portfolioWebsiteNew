@@ -26,8 +26,8 @@ const Seo = () => {
       "Custom website development for e-commerce websites. We help eCommerce businesses grow.",
     "primary-action": "Book A Strategy Call",
     "secondary-action": "Get a Free Website Audit",
-    badge: "eCommerce Development in",
-    location: "Florida",
+    badge: "eCommerce Development | ",
+    location: "RangoDev",
     backgroundImage:
       "data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7f7f7' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E",
   };
@@ -124,7 +124,7 @@ const Seo = () => {
     badge: "SEO and Digital Marketing",
     "header-p1": "ECOMMERCE INDUSTRIES",
     description2:
-      "We have built eCommerce websites for clients in many different industries. We’ve had the opportunity to work with some great clients in Florida, the United States of America, Ireland, the United Kingdom, Germany and Canada.",
+      "We have built eCommerce websites for clients in many different industries. We’ve had the opportunity to work with some great clients in the United States of America, Ireland, the United Kingdom, Germany and Canada.",
     industries: [
       "Electronics",
       "Cannabis",
@@ -161,20 +161,20 @@ const Seo = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          E-Commerce Website Design & Development Agency in Florida | RangoDev
+          E-Commerce Website Design & Development Agency | RangoDev
         </title>
         <meta
           name="description"
           key="description"
-          content="We create custom ecommerce websites that boost conversion rates and online visibility. Get fast, secure & scalable ecommerce web solutions in Florida. Schedule a strategy call today!"
+          content="We create custom ecommerce websites that boost conversion rates and online visibility. We are pro Woocommerce, BigCommerce, Shopify website builders. Schedule a strategy call today!"
         />
         <meta
           name="keywords"
-          content="ecommerce web design florida, ecommerce florida, ecommerce website development florida, best ecommerce website design florida, website design ecommerce cheap"
+          content="ecommerce website designing company, e commerce website creation, ecommerce website design services, shopify website builders, ecommerce developers, website design ecommerce cheap"
         />
         <meta
           property="og:title"
-          content="E-Commerce Website Design & Development Agency in Florida | RangoDev"
+          content="E-Commerce Website Design & Development Agency | RangoDev"
           key="og:title"
         />
         <meta
@@ -186,7 +186,7 @@ const Seo = () => {
         <meta
           property="og:description"
           key="og:description"
-          content="We create custom ecommerce websites that boost conversion rates and online visibility. Get fast, secure & scalable ecommerce web solutions in Florida. Schedule a strategy call today!"
+          content="We create custom ecommerce websites that boost conversion rates and online visibility. We are pro Woocommerce, BigCommerce, Shopify website builders. Schedule a strategy call today!"
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

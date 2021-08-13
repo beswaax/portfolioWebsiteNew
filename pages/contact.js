@@ -28,7 +28,7 @@ const LandingPage = () => {
         />
         <meta
           name="keywords"
-          content="web development company florida, website design company florida, best site design firm in florida, ecommerce design in florida, seo in florida"
+          content="web development company, best website design agency, best site design firm, ecommerce web design agency, seo agencies cheap"
         />
         <meta
           property="og:title"

@@ -21,21 +21,20 @@ const LandingPage = () => {
     <div className={classes.bodyMargin}>
       <Head>
         <title key="title">
-          #1 Florida Web Design & Development, SEO & ECommerce Company |
-          RangoDev
+          #1 Web Design & Development, SEO & E-Commerce Company | RangoDev
         </title>
         <meta
           name="description"
           key="description"
-          content="RangoDev is a Florida based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
+          content="RangoDev is a web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
         />
         <meta
           name="keywords"
-          content="web design agency florida, website designer tampa, best web design agency tampa bay, tampa bay web development agency, florida seo, florida ecommerce design"
+          content="internet design, best website builders for small business, web design agency, web developer company, website builders near me, cheap web design companies"
         />
         <meta
           property="og:title"
-          content="#1 Florida Web Design & Development, SEO & ECommerce Company | RangoDev"
+          content="#1 Web Design & Development, SEO & ECommerce Company | RangoDev"
           key="og:title"
         />
         <meta property="og:url" key="og:url" content="rangojango.com/" />
@@ -43,7 +42,7 @@ const LandingPage = () => {
         <meta
           property="og:description"
           key="og:description"
-          content="RangoDev is a Florida based web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
+          content="RangoDev is a web agency that specializes in website design, web development, SEO and eCommerce development. We create amazing websites for amazing businesses and then rank them on Google."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

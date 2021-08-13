@@ -15,7 +15,7 @@ const LandingPage = () => {
   const classes = useStyles();
 
   const headerContent = {
-    "header-p1": "Insights and advice from our Florida team of",
+    "header-p1": "Insights and advice from our team of",
     "header-p2": "experts",
     description:
       "In-depth articles that will teach you more about web design, web development, eCommerce and SEO.",
@@ -36,11 +36,11 @@ const LandingPage = () => {
         <meta
           name="description"
           key="description"
-          content="In-depth articles that will teach you more about web design, web development and SEO. Take a look at what the top Florida web design company is up to these days."
+          content="In-depth articles that will teach you more about web design, web development and SEO. Take a look at what the top web design company is up to these days."
         />
         <meta
           name="keywords"
-          content="web design tips in florida, florida website design company, web development companies Florida, best website design Florida"
+          content="web design tips, web design company, web development companies, best website design agency"
         />
         <meta
           property="og:title"
@@ -52,7 +52,7 @@ const LandingPage = () => {
         <meta
           property="og:description"
           key="og:description"
-          content="In-depth articles that will teach you more about web design, web development and SEO. Take a look at what the top florida web design company is up to these days."
+          content="In-depth articles that will teach you more about web design, web development and SEO. Take a look at what the top web design company is up to these days."
         />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta property="og:type" key="og:type" content="website" />

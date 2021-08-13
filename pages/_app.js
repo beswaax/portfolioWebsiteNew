@@ -63,8 +63,7 @@ const App = (props) => {
     <React.Fragment>
       <Head>
         <title>
-          #1 Florida Web Design & Development, SEO & ECommerce Company |
-          RangoDev
+          #1 Web Design & Development, SEO & ECommerce Company | RangoDev
         </title>
         <meta
           name="viewport"
