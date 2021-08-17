@@ -241,8 +241,6 @@ export default function Navigation({ tabValue, setTabValue }) {
       setTabValue(3);
     } else if (router.pathname === "/contact" && tabValue !== 4) {
       setTabValue(4);
-    } else if (router.pathname === "/portfolio" && tabValue !== 5) {
-      setTabValue(5);
     }
   }, [setTabValue, tabValue, router.pathname]);
 
@@ -382,14 +380,14 @@ export default function Navigation({ tabValue, setTabValue }) {
             {content.servicesLinks.link3}
           </StyledMenuItem>
         </StyledMenu>
-        <Link
+        {/* <Link
           href="/portfolio"
           color="textPrimary"
           variant="body1"
           className={tabValue === 5 ? classes.linkSelected : classes.link}
         >
           {content["link8"]}
-        </Link>
+        </Link> */}
         <Link
           href="/blog"
           color="textPrimary"
@@ -559,7 +557,7 @@ export default function Navigation({ tabValue, setTabValue }) {
               </List>{" "}
             </Collapse>
 
-            <ListItem
+            {/* <ListItem
               className={classes.listItem}
               disableRipple
               disableTouchRipple
@@ -571,7 +569,7 @@ export default function Navigation({ tabValue, setTabValue }) {
               onClick={() => setState({ open: !state.open })}
             >
               <ListItemText primary={content["link8"]} />
-            </ListItem>
+            </ListItem> */}
 
             <ListItem
               className={classes.listItem}

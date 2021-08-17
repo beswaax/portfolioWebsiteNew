@@ -120,13 +120,13 @@ export default function Footer() {
             <Link href="/about" variant="body1" className={classes.footerLink}>
               {content["link2"]}
             </Link>
-            <Link
+            {/* <Link
               href="/portfolio"
               variant="body1"
               className={classes.footerLink}
             >
               {content["link10"]}
-            </Link>
+            </Link> */}
             <Link href="/blog" variant="body1" className={classes.footerLink}>
               {content["link9"]}
             </Link>
@@ -205,11 +205,6 @@ export default function Footer() {
             >
               <LinkedInIcon />
             </IconButton>
-            {/*
-            <IconButton className={classes.icon} aria-label="LinkedIn">
-              <LinkedInIcon />
-            </IconButton>
-              */}
           </Box>
         </Box>
       </Container>
